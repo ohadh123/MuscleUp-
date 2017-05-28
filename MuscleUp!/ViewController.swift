@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import SAConfettiView
 
 class ViewController: UIViewController {
 
+    var confettiView = SAConfettiView()
+    var confettiIsActive: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,6 +68,19 @@ class ViewController: UIViewController {
         creditsButton.backgroundColor = .blue
         creditsButton.addTarget(self, action: #selector(creditsButtonMethod), for: .touchDown)
         view.addSubview(creditsButton)
+        
+        let confettiButton = UIButton(frame: CGRect(x: 0, y: 0, width: 75, height: 30))
+        confettiButton.center.x = view.frame.width/2
+        confettiButton.center.y = view.frame.height/2
+        confettiButton.setTitle("Confetti", for: .normal)
+        confettiButton.backgroundColor = .blue
+        confettiButton.addTarget(self, action: #selector(confettiButtonMethod), for: .touchDown)
+        
+        confettiView = SAConfettiView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height/3))
+        confettiView.intensity = 1
+        view.addSubview(confettiView)
+        
+        view.addSubview(confettiButton)
 
         
         
@@ -74,6 +91,7 @@ class ViewController: UIViewController {
         let playViewController = PlayViewController()
         playViewController.modalTransitionStyle = .flipHorizontal
         self.present(playViewController, animated: true, completion: nil)
+        
     }
     
     
@@ -98,6 +116,31 @@ class ViewController: UIViewController {
         let creditsViewController = CreditsViewController()
         creditsViewController.modalTransitionStyle = .crossDissolve
         self.present(creditsViewController, animated: true, completion: nil)
+    }
+    
+    func confettiButtonMethod(){
+        print("Confetti pressed")
+        
+        
+        
+        if confettiIsActive {
+            print("Disabling Confetti")
+            confettiView.stopConfetti()
+            confettiIsActive = false
+            
+        }
+        else{
+            print("Starting Confetti")
+            confettiView.startConfetti()
+            confettiIsActive = true
+            
+        }
+        print("Adding to view")
+        
+       
+        
+        
+        
     }
     
 

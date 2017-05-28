@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		903700D66C50D47C5FE4346B /* Pods_MuscleUp_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A08B101ED11D33C5DCB447 /* Pods_MuscleUp_.framework */; };
 		DC35BD3E1EDA31A500236A74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC35BD3D1EDA31A500236A74 /* AppDelegate.swift */; };
 		DC35BD401EDA31A500236A74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC35BD3F1EDA31A500236A74 /* ViewController.swift */; };
 		DC35BD451EDA31A500236A74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC35BD441EDA31A500236A74 /* Assets.xcassets */; };
@@ -18,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AC0075521E74FDA1BB03877 /* Pods-MuscleUp!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUp!.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MuscleUp!/Pods-MuscleUp!.debug.xcconfig"; sourceTree = "<group>"; };
+		265FDCCAC3E86CE6727D45D6 /* Pods-MuscleUp!.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUp!.release.xcconfig"; path = "Pods/Target Support Files/Pods-MuscleUp!/Pods-MuscleUp!.release.xcconfig"; sourceTree = "<group>"; };
+		B2A08B101ED11D33C5DCB447 /* Pods_MuscleUp_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleUp_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC35BD3A1EDA31A500236A74 /* MuscleUp!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MuscleUp!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC35BD3D1EDA31A500236A74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC35BD3F1EDA31A500236A74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				903700D66C50D47C5FE4346B /* Pods_MuscleUp_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B3CEFF56ADCCC3DA30994CAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2A08B101ED11D33C5DCB447 /* Pods_MuscleUp_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DC35BD311EDA31A400236A74 = {
 			isa = PBXGroup;
 			children = (
 				DC35BD3C1EDA31A500236A74 /* MuscleUp! */,
 				DC35BD3B1EDA31A500236A74 /* Products */,
+				E7587A6DCAFA162D2BB8BD83 /* Pods */,
+				B3CEFF56ADCCC3DA30994CAC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +88,15 @@
 			path = "MuscleUp!";
 			sourceTree = "<group>";
 		};
+		E7587A6DCAFA162D2BB8BD83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0AC0075521E74FDA1BB03877 /* Pods-MuscleUp!.debug.xcconfig */,
+				265FDCCAC3E86CE6727D45D6 /* Pods-MuscleUp!.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC35BD4C1EDA31A500236A74 /* Build configuration list for PBXNativeTarget "MuscleUp!" */;
 			buildPhases = (
+				9D39087EC0CE7E66896FC1F5 /* [CP] Check Pods Manifest.lock */,
 				DC35BD361EDA31A500236A74 /* Sources */,
 				DC35BD371EDA31A500236A74 /* Frameworks */,
 				DC35BD381EDA31A500236A74 /* Resources */,
+				57344FC8E50ADEF185CBE94D /* [CP] Embed Pods Frameworks */,
+				D55CEFD69A869ED9406D199A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,6 +165,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		57344FC8E50ADEF185CBE94D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MuscleUp!/Pods-MuscleUp!-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D39087EC0CE7E66896FC1F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D55CEFD69A869ED9406D199A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MuscleUp!/Pods-MuscleUp!-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DC35BD361EDA31A500236A74 /* Sources */ = {
@@ -262,6 +337,7 @@
 		};
 		DC35BD4D1EDA31A500236A74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AC0075521E74FDA1BB03877 /* Pods-MuscleUp!.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "MuscleUp!/Info.plist";
@@ -274,6 +350,7 @@
 		};
 		DC35BD4E1EDA31A500236A74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 265FDCCAC3E86CE6727D45D6 /* Pods-MuscleUp!.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "MuscleUp!/Info.plist";

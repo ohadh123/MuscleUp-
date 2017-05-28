@@ -1,0 +1,697 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C5D7AE83E08D9AA874C2F2BF7FBF883 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3917A50EB224EEDBC66971700D698782 /* UIKit.framework */; };
+		247D3E253C4B551114D2DAB8A52B9A20 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F0061AB6154942EC511ABF317542F99 /* star.png */; };
+		33F988BB80D7DBDBF4A70CE2C3BE5093 /* SAConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6F816E0189053030EAD9052DCBAC79 /* SAConfettiView.swift */; };
+		3980BB58823E128045D2747621F6D7CD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7751D4D791D1183FB66D3CCA52CD8E /* QuartzCore.framework */; };
+		5EAA4100889867351E79133E5F936CB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
+		7B5C1FE579D51F9106A807A265AD96CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
+		973925C944ABE1E21A62D551BFA76834 /* Pods-MuscleUp!-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 90C0686758231F47111E0FBBC0BD0E6E /* Pods-MuscleUp!-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADEFBC0C16D2F9041D934F444298AD97 /* confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = 0742B689852050DE210B67493B82E6DE /* confetti.png */; };
+		BD060B37245AF6DD9C914F397219FF51 /* SAConfettiView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 255BF3F8529F86C43983D5D47F90539E /* SAConfettiView.bundle */; };
+		BE731F9A1D5C61AF2E801F3E5904E162 /* triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D17A13919FCB806D344D6DD9C753618 /* triangle.png */; };
+		C3FEC0F94E2FCF6939F2CD4770E5BFFC /* SAConfettiView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A2120B4D3CC5D48C45E5FD8B8B9A7B /* SAConfettiView-dummy.m */; };
+		C76E5AC640FF9F770DE9237946BE5709 /* SAConfettiView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A98044BC37885F8FE72702B8E9568421 /* SAConfettiView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB5D613F47C9DD9E3A5136FBCDDE24F2 /* diamond.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE00F1440F835366DA4E5E92177E157 /* diamond.png */; };
+		ED2778679CE158FD47FFD2E0F1CA8BB2 /* Pods-MuscleUp!-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3448BB212311DE977CF85A0F3829850 /* Pods-MuscleUp!-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0214CC7954416C57EAC70B1830C0CF28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C33E1922A1F85E92BB046708631BA0FB;
+			remoteInfo = "SAConfettiView-SAConfettiView";
+		};
+		0565E1B281762891460B3CF05A9605D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8233D16982A4503793D3AD3A4CBB093;
+			remoteInfo = SAConfettiView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0742B689852050DE210B67493B82E6DE /* confetti.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = confetti.png; path = Pod/Assets/confetti.png; sourceTree = "<group>"; };
+		0D17A13919FCB806D344D6DD9C753618 /* triangle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = triangle.png; path = Pod/Assets/triangle.png; sourceTree = "<group>"; };
+		255BF3F8529F86C43983D5D47F90539E /* SAConfettiView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SAConfettiView.bundle; path = SAConfettiView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3917A50EB224EEDBC66971700D698782 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		430F9DAB0E67F6EC0BDEA0357E3A5824 /* Pods-MuscleUp!-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MuscleUp!-resources.sh"; sourceTree = "<group>"; };
+		4A6F816E0189053030EAD9052DCBAC79 /* SAConfettiView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SAConfettiView.swift; path = Pod/Classes/SAConfettiView.swift; sourceTree = "<group>"; };
+		4C2339C547D6184C0FBE0FC811653350 /* SAConfettiView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SAConfettiView.framework; path = SAConfettiView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EA27E37BE0F2AB88F8082D64DC1C055 /* Pods-MuscleUp!.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MuscleUp!.release.xcconfig"; sourceTree = "<group>"; };
+		6F0061AB6154942EC511ABF317542F99 /* star.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = star.png; path = Pod/Assets/star.png; sourceTree = "<group>"; };
+		8B8E73F218599B2DFF1A3F629228206C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D53102A6BDE1C10F328B6CE0098F9BE /* Pods-MuscleUp!-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MuscleUp!-frameworks.sh"; sourceTree = "<group>"; };
+		8FE00F1440F835366DA4E5E92177E157 /* diamond.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = diamond.png; path = Pod/Assets/diamond.png; sourceTree = "<group>"; };
+		90C0686758231F47111E0FBBC0BD0E6E /* Pods-MuscleUp!-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MuscleUp!-umbrella.h"; sourceTree = "<group>"; };
+		92A2120B4D3CC5D48C45E5FD8B8B9A7B /* SAConfettiView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SAConfettiView-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9889EEF1842E59B5DE9024F89FB2A879 /* Pods_MuscleUp_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MuscleUp_.framework; path = "Pods-MuscleUp!.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		999D7A60F1F03F984E15F9862D017965 /* Pods-MuscleUp!-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MuscleUp!-acknowledgements.plist"; sourceTree = "<group>"; };
+		A3448BB212311DE977CF85A0F3829850 /* Pods-MuscleUp!-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MuscleUp!-dummy.m"; sourceTree = "<group>"; };
+		A98044BC37885F8FE72702B8E9568421 /* SAConfettiView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAConfettiView-umbrella.h"; sourceTree = "<group>"; };
+		B3E2C84EA8B7D07DA70DA0567E1314D6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA74B9B1136D8539623AD6D29EFC7CE8 /* SAConfettiView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAConfettiView-prefix.pch"; sourceTree = "<group>"; };
+		CCC0A29CAF2C183634DA0F7EEDC6099D /* Pods-MuscleUp!.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MuscleUp!.modulemap"; sourceTree = "<group>"; };
+		CE844EE9E16DD07CE307E329DC3992F6 /* SAConfettiView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SAConfettiView.xcconfig; sourceTree = "<group>"; };
+		E0346FF3EF24351C359A64C44B2A8C6D /* SAConfettiView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SAConfettiView.modulemap; sourceTree = "<group>"; };
+		EFF53EFDBC8485DC3D569F2D1B63997C /* Pods-MuscleUp!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MuscleUp!.debug.xcconfig"; sourceTree = "<group>"; };
+		F3A0EFDA969046D7C69A45EE28DC46C5 /* Pods-MuscleUp!-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MuscleUp!-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F533D5284FC13D37FD06FB2710C8B9F2 /* ResourceBundle-SAConfettiView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SAConfettiView-Info.plist"; sourceTree = "<group>"; };
+		FB7751D4D791D1183FB66D3CCA52CD8E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE1FC33282866851AD3808482B28939E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA86DD12EDD31BCAD785839596129813 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EAA4100889867351E79133E5F936CB7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC30D56782582A2D31AA81732AA638EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B5C1FE579D51F9106A807A265AD96CB /* Foundation.framework in Frameworks */,
+				3980BB58823E128045D2747621F6D7CD /* QuartzCore.framework in Frameworks */,
+				0C5D7AE83E08D9AA874C2F2BF7FBF883 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		078D6B93811998B1D6F91074BB737DFA /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B20B6070F48660B5B9A3695F0FC8824 /* Pods-MuscleUp! */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93A319F2C1969B7AA0B17444A3F8BA22 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1B20B6070F48660B5B9A3695F0FC8824 /* Pods-MuscleUp! */ = {
+			isa = PBXGroup;
+			children = (
+				B3E2C84EA8B7D07DA70DA0567E1314D6 /* Info.plist */,
+				CCC0A29CAF2C183634DA0F7EEDC6099D /* Pods-MuscleUp!.modulemap */,
+				F3A0EFDA969046D7C69A45EE28DC46C5 /* Pods-MuscleUp!-acknowledgements.markdown */,
+				999D7A60F1F03F984E15F9862D017965 /* Pods-MuscleUp!-acknowledgements.plist */,
+				A3448BB212311DE977CF85A0F3829850 /* Pods-MuscleUp!-dummy.m */,
+				8D53102A6BDE1C10F328B6CE0098F9BE /* Pods-MuscleUp!-frameworks.sh */,
+				430F9DAB0E67F6EC0BDEA0357E3A5824 /* Pods-MuscleUp!-resources.sh */,
+				90C0686758231F47111E0FBBC0BD0E6E /* Pods-MuscleUp!-umbrella.h */,
+				EFF53EFDBC8485DC3D569F2D1B63997C /* Pods-MuscleUp!.debug.xcconfig */,
+				4EA27E37BE0F2AB88F8082D64DC1C055 /* Pods-MuscleUp!.release.xcconfig */,
+			);
+			name = "Pods-MuscleUp!";
+			path = "Target Support Files/Pods-MuscleUp!";
+			sourceTree = "<group>";
+		};
+		271191552F2784497C776D9EBC9A2E77 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92665AE6D8B5E43E1938545C2F78A8B1 /* SAConfettiView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2F3A8B128B3B82DCB427110FBBE25EA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9889EEF1842E59B5DE9024F89FB2A879 /* Pods_MuscleUp_.framework */,
+				255BF3F8529F86C43983D5D47F90539E /* SAConfettiView.bundle */,
+				4C2339C547D6184C0FBE0FC811653350 /* SAConfettiView.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43EFFAFEDD1588BA076432264B2B5935 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0742B689852050DE210B67493B82E6DE /* confetti.png */,
+				8FE00F1440F835366DA4E5E92177E157 /* diamond.png */,
+				6F0061AB6154942EC511ABF317542F99 /* star.png */,
+				0D17A13919FCB806D344D6DD9C753618 /* triangle.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				271191552F2784497C776D9EBC9A2E77 /* Pods */,
+				2F3A8B128B3B82DCB427110FBBE25EA3 /* Products */,
+				078D6B93811998B1D6F91074BB737DFA /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		92665AE6D8B5E43E1938545C2F78A8B1 /* SAConfettiView */ = {
+			isa = PBXGroup;
+			children = (
+				4A6F816E0189053030EAD9052DCBAC79 /* SAConfettiView.swift */,
+				43EFFAFEDD1588BA076432264B2B5935 /* Resources */,
+				BFEE152500B0906A5926024AFB8DCB2B /* Support Files */,
+			);
+			name = SAConfettiView;
+			path = SAConfettiView;
+			sourceTree = "<group>";
+		};
+		93A319F2C1969B7AA0B17444A3F8BA22 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */,
+				FB7751D4D791D1183FB66D3CCA52CD8E /* QuartzCore.framework */,
+				3917A50EB224EEDBC66971700D698782 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		BFEE152500B0906A5926024AFB8DCB2B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B8E73F218599B2DFF1A3F629228206C /* Info.plist */,
+				F533D5284FC13D37FD06FB2710C8B9F2 /* ResourceBundle-SAConfettiView-Info.plist */,
+				E0346FF3EF24351C359A64C44B2A8C6D /* SAConfettiView.modulemap */,
+				CE844EE9E16DD07CE307E329DC3992F6 /* SAConfettiView.xcconfig */,
+				92A2120B4D3CC5D48C45E5FD8B8B9A7B /* SAConfettiView-dummy.m */,
+				CA74B9B1136D8539623AD6D29EFC7CE8 /* SAConfettiView-prefix.pch */,
+				A98044BC37885F8FE72702B8E9568421 /* SAConfettiView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SAConfettiView";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		00EB65784F2D221A356869BB7836B433 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C76E5AC640FF9F770DE9237946BE5709 /* SAConfettiView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EE03D4AAC7C4281BAD8E81EAECB953C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				973925C944ABE1E21A62D551BFA76834 /* Pods-MuscleUp!-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C33E1922A1F85E92BB046708631BA0FB /* SAConfettiView-SAConfettiView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCFEA8D2DBE16FAF28393F0CCF496091 /* Build configuration list for PBXNativeTarget "SAConfettiView-SAConfettiView" */;
+			buildPhases = (
+				C77DB89B7BC83B15C5ACAC824B623D6E /* Sources */,
+				EE1FC33282866851AD3808482B28939E /* Frameworks */,
+				B420CC9106051146E22D0529AEDA524B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SAConfettiView-SAConfettiView";
+			productName = "SAConfettiView-SAConfettiView";
+			productReference = 255BF3F8529F86C43983D5D47F90539E /* SAConfettiView.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		CCF1CFFD4EAE45FC7455B9FEE434DAD1 /* Pods-MuscleUp! */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F100F05772D451DCB4C0AE13855BBC82 /* Build configuration list for PBXNativeTarget "Pods-MuscleUp!" */;
+			buildPhases = (
+				2EF248DE6C9A9CB7B58FCEE7E82B4DAD /* Sources */,
+				FA86DD12EDD31BCAD785839596129813 /* Frameworks */,
+				5EE03D4AAC7C4281BAD8E81EAECB953C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAA14C7ED58345C6190D2EEF9D4D1116 /* PBXTargetDependency */,
+			);
+			name = "Pods-MuscleUp!";
+			productName = "Pods-MuscleUp!";
+			productReference = 9889EEF1842E59B5DE9024F89FB2A879 /* Pods_MuscleUp_.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F8233D16982A4503793D3AD3A4CBB093 /* SAConfettiView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD0ED8A979CBB358BCE4829825997D08 /* Build configuration list for PBXNativeTarget "SAConfettiView" */;
+			buildPhases = (
+				8B6F80B32ACAE875369E651B3D6A0741 /* Sources */,
+				FC30D56782582A2D31AA81732AA638EB /* Frameworks */,
+				EAE6E311823A0F7FFB3E4846ABAF0F8A /* Resources */,
+				00EB65784F2D221A356869BB7836B433 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C71BAE5F344B682BE83334DFA5C92D7 /* PBXTargetDependency */,
+			);
+			name = SAConfettiView;
+			productName = SAConfettiView;
+			productReference = 4C2339C547D6184C0FBE0FC811653350 /* SAConfettiView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 2F3A8B128B3B82DCB427110FBBE25EA3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCF1CFFD4EAE45FC7455B9FEE434DAD1 /* Pods-MuscleUp! */,
+				F8233D16982A4503793D3AD3A4CBB093 /* SAConfettiView */,
+				C33E1922A1F85E92BB046708631BA0FB /* SAConfettiView-SAConfettiView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B420CC9106051146E22D0529AEDA524B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADEFBC0C16D2F9041D934F444298AD97 /* confetti.png in Resources */,
+				CB5D613F47C9DD9E3A5136FBCDDE24F2 /* diamond.png in Resources */,
+				247D3E253C4B551114D2DAB8A52B9A20 /* star.png in Resources */,
+				BE731F9A1D5C61AF2E801F3E5904E162 /* triangle.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAE6E311823A0F7FFB3E4846ABAF0F8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD060B37245AF6DD9C914F397219FF51 /* SAConfettiView.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2EF248DE6C9A9CB7B58FCEE7E82B4DAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED2778679CE158FD47FFD2E0F1CA8BB2 /* Pods-MuscleUp!-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B6F80B32ACAE875369E651B3D6A0741 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3FEC0F94E2FCF6939F2CD4770E5BFFC /* SAConfettiView-dummy.m in Sources */,
+				33F988BB80D7DBDBF4A70CE2C3BE5093 /* SAConfettiView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C77DB89B7BC83B15C5ACAC824B623D6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C71BAE5F344B682BE83334DFA5C92D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SAConfettiView-SAConfettiView";
+			target = C33E1922A1F85E92BB046708631BA0FB /* SAConfettiView-SAConfettiView */;
+			targetProxy = 0214CC7954416C57EAC70B1830C0CF28 /* PBXContainerItemProxy */;
+		};
+		AAA14C7ED58345C6190D2EEF9D4D1116 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SAConfettiView;
+			target = F8233D16982A4503793D3AD3A4CBB093 /* SAConfettiView */;
+			targetProxy = 0565E1B281762891460B3CF05A9605D7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		163D87BE96A63549B0EACF1CC31A2E90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		24A590641F95016E3F71E98F8201594B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EA27E37BE0F2AB88F8082D64DC1C055 /* Pods-MuscleUp!.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MuscleUp!/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MuscleUp!/Pods-MuscleUp!.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MuscleUp_;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3D40DCAC87FCAD94D512565AA2D00E9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE844EE9E16DD07CE307E329DC3992F6 /* SAConfettiView.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SAConfettiView";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/SAConfettiView/ResourceBundle-SAConfettiView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = SAConfettiView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		437B37E121ABF7058539C4DBA5F10690 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE844EE9E16DD07CE307E329DC3992F6 /* SAConfettiView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SAConfettiView/SAConfettiView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SAConfettiView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SAConfettiView/SAConfettiView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SAConfettiView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4F6D3783DA0AC87CF30C3EE257D2A7FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE844EE9E16DD07CE307E329DC3992F6 /* SAConfettiView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SAConfettiView/SAConfettiView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SAConfettiView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SAConfettiView/SAConfettiView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SAConfettiView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		67DEBC9968411763E257E33B6C62A516 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE844EE9E16DD07CE307E329DC3992F6 /* SAConfettiView.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SAConfettiView";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/SAConfettiView/ResourceBundle-SAConfettiView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = SAConfettiView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		707B86CFB21B645E37109F39754D4051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B7D1F9F4F4488CDA467664C40676AAD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFF53EFDBC8485DC3D569F2D1B63997C /* Pods-MuscleUp!.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MuscleUp!/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MuscleUp!/Pods-MuscleUp!.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MuscleUp_;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				163D87BE96A63549B0EACF1CC31A2E90 /* Debug */,
+				707B86CFB21B645E37109F39754D4051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD0ED8A979CBB358BCE4829825997D08 /* Build configuration list for PBXNativeTarget "SAConfettiView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				437B37E121ABF7058539C4DBA5F10690 /* Debug */,
+				4F6D3783DA0AC87CF30C3EE257D2A7FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCFEA8D2DBE16FAF28393F0CCF496091 /* Build configuration list for PBXNativeTarget "SAConfettiView-SAConfettiView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67DEBC9968411763E257E33B6C62A516 /* Debug */,
+				3D40DCAC87FCAD94D512565AA2D00E9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F100F05772D451DCB4C0AE13855BBC82 /* Build configuration list for PBXNativeTarget "Pods-MuscleUp!" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7D1F9F4F4488CDA467664C40676AAD1 /* Debug */,
+				24A590641F95016E3F71E98F8201594B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
