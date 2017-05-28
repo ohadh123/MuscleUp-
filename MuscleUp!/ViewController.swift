@@ -8,10 +8,13 @@
 
 import UIKit
 import SAConfettiView
+import JSSAlertView
 
 class ViewController: UIViewController {
 
     var confettiView = SAConfettiView()
+    var confettiView2 = SAConfettiView()
+    var confettiView3 = SAConfettiView()
     var confettiIsActive: Bool = false
     
     override func viewDidLoad() {
@@ -80,6 +83,14 @@ class ViewController: UIViewController {
         confettiView.intensity = 1
         view.addSubview(confettiView)
         
+        confettiView2 = SAConfettiView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height/3))
+        confettiView2.intensity = 1
+        view.addSubview(confettiView2)
+        
+        confettiView3 = SAConfettiView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height/3))
+        confettiView3.intensity = 1
+        view.addSubview(confettiView3)
+        
         view.addSubview(confettiButton)
 
         
@@ -121,25 +132,30 @@ class ViewController: UIViewController {
     func confettiButtonMethod(){
         print("Confetti pressed")
         
-        
+        JSSAlertView().show(
+            self,
+            title: "Congratulations! You Muscled Up!",
+            text: "You reached Level 3 in Upper Body Workout. Gnarly!",
+            buttonText: "Right on!",
+            color: .cyan,
+            iconImage: #imageLiteral(resourceName: "CongratsStar")
+            //delay: 10000
+        )
         
         if confettiIsActive {
-            print("Disabling Confetti")
             confettiView.stopConfetti()
+            confettiView2.stopConfetti()
+            confettiView3.stopConfetti()
             confettiIsActive = false
             
         }
         else{
-            print("Starting Confetti")
             confettiView.startConfetti()
+            confettiView2.startConfetti()
+            confettiView3.startConfetti()
             confettiIsActive = true
             
         }
-        print("Adding to view")
-        
-       
-        
-        
         
     }
     

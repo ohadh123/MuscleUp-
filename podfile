@@ -3,4 +3,5 @@ use_frameworks!
 
 target 'MuscleUp!' do
 pod "SAConfettiView"
+pod 'JSSAlertView'
 end

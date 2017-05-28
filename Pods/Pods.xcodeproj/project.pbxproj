@@ -7,100 +7,146 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C5D7AE83E08D9AA874C2F2BF7FBF883 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3917A50EB224EEDBC66971700D698782 /* UIKit.framework */; };
-		247D3E253C4B551114D2DAB8A52B9A20 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F0061AB6154942EC511ABF317542F99 /* star.png */; };
-		33F988BB80D7DBDBF4A70CE2C3BE5093 /* SAConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6F816E0189053030EAD9052DCBAC79 /* SAConfettiView.swift */; };
-		3980BB58823E128045D2747621F6D7CD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7751D4D791D1183FB66D3CCA52CD8E /* QuartzCore.framework */; };
-		5EAA4100889867351E79133E5F936CB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
-		7B5C1FE579D51F9106A807A265AD96CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
-		973925C944ABE1E21A62D551BFA76834 /* Pods-MuscleUp!-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 90C0686758231F47111E0FBBC0BD0E6E /* Pods-MuscleUp!-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ADEFBC0C16D2F9041D934F444298AD97 /* confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = 0742B689852050DE210B67493B82E6DE /* confetti.png */; };
-		BD060B37245AF6DD9C914F397219FF51 /* SAConfettiView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 255BF3F8529F86C43983D5D47F90539E /* SAConfettiView.bundle */; };
-		BE731F9A1D5C61AF2E801F3E5904E162 /* triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D17A13919FCB806D344D6DD9C753618 /* triangle.png */; };
-		C3FEC0F94E2FCF6939F2CD4770E5BFFC /* SAConfettiView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A2120B4D3CC5D48C45E5FD8B8B9A7B /* SAConfettiView-dummy.m */; };
-		C76E5AC640FF9F770DE9237946BE5709 /* SAConfettiView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A98044BC37885F8FE72702B8E9568421 /* SAConfettiView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB5D613F47C9DD9E3A5136FBCDDE24F2 /* diamond.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE00F1440F835366DA4E5E92177E157 /* diamond.png */; };
-		ED2778679CE158FD47FFD2E0F1CA8BB2 /* Pods-MuscleUp!-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3448BB212311DE977CF85A0F3829850 /* Pods-MuscleUp!-dummy.m */; };
+		090527B8DF2FFC49DD3F7C77883FEB18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
+		1A3493E186EEDBA5358459065FB8F852 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7751D4D791D1183FB66D3CCA52CD8E /* QuartzCore.framework */; };
+		1FDE3F51EBA16211CA4CA86ED4411B8C /* JSSAlertViewResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19230F2677DF5A8DA1F4C1924799C376 /* JSSAlertViewResponder.swift */; };
+		2E7AA5C7EFF40BC34343AE82B096866E /* JSSAlertView+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E364A1AC3FD8B423C4FDC94CB1615F43 /* JSSAlertView+UIColor.swift */; };
+		2E8BB2C70FF725DBF79AA6A86741D031 /* JSSAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE789BC958F7DA5E500287DA587B51D7 /* JSSAlertView-dummy.m */; };
+		31E624889F448B54A96EE070D6825DC8 /* JSSAlertView+Predefined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F5F9F1AD06DBB7B70C30CC9B72A1E7 /* JSSAlertView+Predefined.swift */; };
+		42ADD3B935B6DA8E5130E231F5A0EDAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3917A50EB224EEDBC66971700D698782 /* UIKit.framework */; };
+		42FCC789D514062F88D147AF33BD52F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
+		43437A54B21B0035B78B798965C59A6A /* SAConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C92FED3137E5A67DE87CC57B5B71870 /* SAConfettiView.swift */; };
+		469B2E58DBCB508524BB966FA06D3760 /* JSSAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A79BF929922A325898DAEA8E2CF38BB /* JSSAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E68D813C895FF9339E921B7D53DC322 /* SAConfettiView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F12FA580CFBE66585780DBE21D8BC36 /* SAConfettiView-dummy.m */; };
+		65494A5B51723EF495C81220690D1DFD /* diamond.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E83B1A1A43E6219BAF3B7D59D25C53F /* diamond.png */; };
+		95CCEEF66BECE31C97DC53B195F5E388 /* SAConfettiView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1868AA0340203B85DD33B008F105B1E6 /* SAConfettiView.bundle */; };
+		98A31FE5275862CFF88A0FB635E68C7A /* confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = 3681BB77E435A13365599A5AE0CFE1C0 /* confetti.png */; };
+		9C0AD81E17F2DE18B7EFBC4953421B21 /* SAConfettiView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0D5A1D666C1E7B9349E9B5D7394C25 /* SAConfettiView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5A19AFEC802DF6EC15C22F839186EF9 /* Pods-MuscleUp!-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3448BB212311DE977CF85A0F3829850 /* Pods-MuscleUp!-dummy.m */; };
+		B0B964042B62D04C5759A8F27D20C8A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
+		B713E6D96B28A5ED3ED165A58E85DB3C /* JSSAlertView+Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383E73C6085072DCFC2A0ADCDCB60D4 /* JSSAlertView+Timer.swift */; };
+		B9A6235B46F3EC2C5CB735CEDBA5E5B6 /* Pods-MuscleUp!-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 90C0686758231F47111E0FBBC0BD0E6E /* Pods-MuscleUp!-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBB62EEF2B7EB0B2C77461D6724589DE /* triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 63340EB5F698E347A4856B7DCFFDF67E /* triangle.png */; };
+		D48280C1455DE0EE3D7AB4CE0B4CF5A6 /* JSSAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518BFF0A395233DBD1DD7A47FF5D2825 /* JSSAlertView.swift */; };
+		EB750C6DF3380807E05EDF9F3BD2EB68 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = AA3CDCADDF64ED776542DE1178E3B7C6 /* star.png */; };
+		FD95C2EF9504DEA869960063A5288476 /* JSSAlertView+Depricated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C7F1ADA426E2243B0ED8D067B846C0 /* JSSAlertView+Depricated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0214CC7954416C57EAC70B1830C0CF28 /* PBXContainerItemProxy */ = {
+		73A909352460F1B6B07CDF713AFE593A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C33E1922A1F85E92BB046708631BA0FB;
-			remoteInfo = "SAConfettiView-SAConfettiView";
-		};
-		0565E1B281762891460B3CF05A9605D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F8233D16982A4503793D3AD3A4CBB093;
+			remoteGlobalIDString = 7F03E8734FFAEDB349860088CC5E45D2;
 			remoteInfo = SAConfettiView;
+		};
+		BA9AEC460FC9E760411347D8E95FF256 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D368184BEED712B6A15E4767FE420BE5;
+			remoteInfo = JSSAlertView;
+		};
+		D07BA6DA85A754534CE58ED1C302008F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2BDAA51BA114AAB6C3EC57FFC34B2B2;
+			remoteInfo = "SAConfettiView-SAConfettiView";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0742B689852050DE210B67493B82E6DE /* confetti.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = confetti.png; path = Pod/Assets/confetti.png; sourceTree = "<group>"; };
-		0D17A13919FCB806D344D6DD9C753618 /* triangle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = triangle.png; path = Pod/Assets/triangle.png; sourceTree = "<group>"; };
-		255BF3F8529F86C43983D5D47F90539E /* SAConfettiView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SAConfettiView.bundle; path = SAConfettiView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		067748BE5734BF4436C30C894620A09E /* JSSAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JSSAlertView.framework; path = JSSAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A79BF929922A325898DAEA8E2CF38BB /* JSSAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSSAlertView-umbrella.h"; sourceTree = "<group>"; };
+		1383E73C6085072DCFC2A0ADCDCB60D4 /* JSSAlertView+Timer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JSSAlertView+Timer.swift"; path = "JSSAlertView/Classes/JSSAlertView+Timer.swift"; sourceTree = "<group>"; };
+		1868AA0340203B85DD33B008F105B1E6 /* SAConfettiView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SAConfettiView.bundle; path = SAConfettiView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		19230F2677DF5A8DA1F4C1924799C376 /* JSSAlertViewResponder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSSAlertViewResponder.swift; path = JSSAlertView/Classes/JSSAlertViewResponder.swift; sourceTree = "<group>"; };
+		1E83B1A1A43E6219BAF3B7D59D25C53F /* diamond.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = diamond.png; path = Pod/Assets/diamond.png; sourceTree = "<group>"; };
 		33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3681BB77E435A13365599A5AE0CFE1C0 /* confetti.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = confetti.png; path = Pod/Assets/confetti.png; sourceTree = "<group>"; };
 		3917A50EB224EEDBC66971700D698782 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		3B2328D35217B04ADF68C6407541FE6A /* Pods_MuscleUp_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MuscleUp_.framework; path = "Pods-MuscleUp!.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D0D5A1D666C1E7B9349E9B5D7394C25 /* SAConfettiView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAConfettiView-umbrella.h"; sourceTree = "<group>"; };
+		41C7F1ADA426E2243B0ED8D067B846C0 /* JSSAlertView+Depricated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JSSAlertView+Depricated.swift"; path = "JSSAlertView/Classes/JSSAlertView+Depricated.swift"; sourceTree = "<group>"; };
 		430F9DAB0E67F6EC0BDEA0357E3A5824 /* Pods-MuscleUp!-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MuscleUp!-resources.sh"; sourceTree = "<group>"; };
-		4A6F816E0189053030EAD9052DCBAC79 /* SAConfettiView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SAConfettiView.swift; path = Pod/Classes/SAConfettiView.swift; sourceTree = "<group>"; };
-		4C2339C547D6184C0FBE0FC811653350 /* SAConfettiView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SAConfettiView.framework; path = SAConfettiView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		456E78034A7185DE890EE6C12F2BC7CA /* JSSAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JSSAlertView.xcconfig; sourceTree = "<group>"; };
 		4EA27E37BE0F2AB88F8082D64DC1C055 /* Pods-MuscleUp!.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MuscleUp!.release.xcconfig"; sourceTree = "<group>"; };
-		6F0061AB6154942EC511ABF317542F99 /* star.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = star.png; path = Pod/Assets/star.png; sourceTree = "<group>"; };
-		8B8E73F218599B2DFF1A3F629228206C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		518BFF0A395233DBD1DD7A47FF5D2825 /* JSSAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSSAlertView.swift; path = JSSAlertView/Classes/JSSAlertView.swift; sourceTree = "<group>"; };
+		59571A8E3AF2B72D29CFE45AD2B651C6 /* SAConfettiView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAConfettiView-prefix.pch"; sourceTree = "<group>"; };
+		63340EB5F698E347A4856B7DCFFDF67E /* triangle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = triangle.png; path = Pod/Assets/triangle.png; sourceTree = "<group>"; };
+		6C92FED3137E5A67DE87CC57B5B71870 /* SAConfettiView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SAConfettiView.swift; path = Pod/Classes/SAConfettiView.swift; sourceTree = "<group>"; };
+		78F5F9F1AD06DBB7B70C30CC9B72A1E7 /* JSSAlertView+Predefined.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JSSAlertView+Predefined.swift"; path = "JSSAlertView/Classes/JSSAlertView+Predefined.swift"; sourceTree = "<group>"; };
+		7963FF812A4AAD77EAB2B766E9ACFFF7 /* JSSAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = JSSAlertView.modulemap; sourceTree = "<group>"; };
+		7A73F0D26FB601EF1413704BE8FE3FEE /* SAConfettiView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SAConfettiView.framework; path = SAConfettiView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CB5A7A536B68DCF2A5715C797C41010 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D53102A6BDE1C10F328B6CE0098F9BE /* Pods-MuscleUp!-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MuscleUp!-frameworks.sh"; sourceTree = "<group>"; };
-		8FE00F1440F835366DA4E5E92177E157 /* diamond.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = diamond.png; path = Pod/Assets/diamond.png; sourceTree = "<group>"; };
+		8F12FA580CFBE66585780DBE21D8BC36 /* SAConfettiView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SAConfettiView-dummy.m"; sourceTree = "<group>"; };
 		90C0686758231F47111E0FBBC0BD0E6E /* Pods-MuscleUp!-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MuscleUp!-umbrella.h"; sourceTree = "<group>"; };
-		92A2120B4D3CC5D48C45E5FD8B8B9A7B /* SAConfettiView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SAConfettiView-dummy.m"; sourceTree = "<group>"; };
+		92341B453CCD93B23C3DAB9DA92E33DC /* ResourceBundle-SAConfettiView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SAConfettiView-Info.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9889EEF1842E59B5DE9024F89FB2A879 /* Pods_MuscleUp_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MuscleUp_.framework; path = "Pods-MuscleUp!.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		999D7A60F1F03F984E15F9862D017965 /* Pods-MuscleUp!-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MuscleUp!-acknowledgements.plist"; sourceTree = "<group>"; };
 		A3448BB212311DE977CF85A0F3829850 /* Pods-MuscleUp!-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MuscleUp!-dummy.m"; sourceTree = "<group>"; };
-		A98044BC37885F8FE72702B8E9568421 /* SAConfettiView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAConfettiView-umbrella.h"; sourceTree = "<group>"; };
+		AA3CDCADDF64ED776542DE1178E3B7C6 /* star.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = star.png; path = Pod/Assets/star.png; sourceTree = "<group>"; };
 		B3E2C84EA8B7D07DA70DA0567E1314D6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA74B9B1136D8539623AD6D29EFC7CE8 /* SAConfettiView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAConfettiView-prefix.pch"; sourceTree = "<group>"; };
+		B7A8F6E42A93E14676E3983ABB18F084 /* SAConfettiView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SAConfettiView.xcconfig; sourceTree = "<group>"; };
+		C3B0D3967B5B13B530911B61DFAE7AC6 /* SAConfettiView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SAConfettiView.modulemap; sourceTree = "<group>"; };
 		CCC0A29CAF2C183634DA0F7EEDC6099D /* Pods-MuscleUp!.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MuscleUp!.modulemap"; sourceTree = "<group>"; };
-		CE844EE9E16DD07CE307E329DC3992F6 /* SAConfettiView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SAConfettiView.xcconfig; sourceTree = "<group>"; };
-		E0346FF3EF24351C359A64C44B2A8C6D /* SAConfettiView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SAConfettiView.modulemap; sourceTree = "<group>"; };
+		CE789BC958F7DA5E500287DA587B51D7 /* JSSAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JSSAlertView-dummy.m"; sourceTree = "<group>"; };
+		D8F62D5709EC3F2B81CAD5E1E9174DA2 /* JSSAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSSAlertView-prefix.pch"; sourceTree = "<group>"; };
+		E364A1AC3FD8B423C4FDC94CB1615F43 /* JSSAlertView+UIColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JSSAlertView+UIColor.swift"; path = "JSSAlertView/Classes/JSSAlertView+UIColor.swift"; sourceTree = "<group>"; };
 		EFF53EFDBC8485DC3D569F2D1B63997C /* Pods-MuscleUp!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MuscleUp!.debug.xcconfig"; sourceTree = "<group>"; };
 		F3A0EFDA969046D7C69A45EE28DC46C5 /* Pods-MuscleUp!-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MuscleUp!-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F533D5284FC13D37FD06FB2710C8B9F2 /* ResourceBundle-SAConfettiView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SAConfettiView-Info.plist"; sourceTree = "<group>"; };
 		FB7751D4D791D1183FB66D3CCA52CD8E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		FCE9D26976C86F620880942EE9EE4FD3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EE1FC33282866851AD3808482B28939E /* Frameworks */ = {
+		07B5BD778D3D603E8DE6B00D0A32F4A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0B964042B62D04C5759A8F27D20C8A1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CCC6ECE406F7F8B4CE9DB4E041AB681 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				090527B8DF2FFC49DD3F7C77883FEB18 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B7581356B6368B552828DF3C835F88F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA86DD12EDD31BCAD785839596129813 /* Frameworks */ = {
+		B5369FA547B24B20D99931F2542A09E0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EAA4100889867351E79133E5F936CB7 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC30D56782582A2D31AA81732AA638EB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7B5C1FE579D51F9106A807A265AD96CB /* Foundation.framework in Frameworks */,
-				3980BB58823E128045D2747621F6D7CD /* QuartzCore.framework in Frameworks */,
-				0C5D7AE83E08D9AA874C2F2BF7FBF883 /* UIKit.framework in Frameworks */,
+				42FCC789D514062F88D147AF33BD52F1 /* Foundation.framework in Frameworks */,
+				1A3493E186EEDBA5358459065FB8F852 /* QuartzCore.framework in Frameworks */,
+				42ADD3B935B6DA8E5130E231F5A0EDAE /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01E69CF33F8C8880640A458801637B8B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9BB938DF46706762A7F8F1D16E899DC8 /* JSSAlertView */,
+				1C30D24877DA685973463F929556580D /* SAConfettiView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		078D6B93811998B1D6F91074BB737DFA /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +161,31 @@
 				93A319F2C1969B7AA0B17444A3F8BA22 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		12A6279CFE3CDB885AFF3E7E73030B46 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3681BB77E435A13365599A5AE0CFE1C0 /* confetti.png */,
+				1E83B1A1A43E6219BAF3B7D59D25C53F /* diamond.png */,
+				AA3CDCADDF64ED776542DE1178E3B7C6 /* star.png */,
+				63340EB5F698E347A4856B7DCFFDF67E /* triangle.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		14F4511A7811FAD4AD2DE839B9E3102A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8CB5A7A536B68DCF2A5715C797C41010 /* Info.plist */,
+				7963FF812A4AAD77EAB2B766E9ACFFF7 /* JSSAlertView.modulemap */,
+				456E78034A7185DE890EE6C12F2BC7CA /* JSSAlertView.xcconfig */,
+				CE789BC958F7DA5E500287DA587B51D7 /* JSSAlertView-dummy.m */,
+				D8F62D5709EC3F2B81CAD5E1E9174DA2 /* JSSAlertView-prefix.pch */,
+				0A79BF929922A325898DAEA8E2CF38BB /* JSSAlertView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JSSAlertView";
 			sourceTree = "<group>";
 		};
 		1B20B6070F48660B5B9A3695F0FC8824 /* Pods-MuscleUp! */ = {
@@ -135,33 +206,26 @@
 			path = "Target Support Files/Pods-MuscleUp!";
 			sourceTree = "<group>";
 		};
-		271191552F2784497C776D9EBC9A2E77 /* Pods */ = {
+		1C30D24877DA685973463F929556580D /* SAConfettiView */ = {
 			isa = PBXGroup;
 			children = (
-				92665AE6D8B5E43E1938545C2F78A8B1 /* SAConfettiView */,
+				6C92FED3137E5A67DE87CC57B5B71870 /* SAConfettiView.swift */,
+				12A6279CFE3CDB885AFF3E7E73030B46 /* Resources */,
+				A6CE2F360253BBC6EB0975302F398BA1 /* Support Files */,
 			);
-			name = Pods;
+			name = SAConfettiView;
+			path = SAConfettiView;
 			sourceTree = "<group>";
 		};
-		2F3A8B128B3B82DCB427110FBBE25EA3 /* Products */ = {
+		40B717FE99F2E5874EC2286A8930504B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9889EEF1842E59B5DE9024F89FB2A879 /* Pods_MuscleUp_.framework */,
-				255BF3F8529F86C43983D5D47F90539E /* SAConfettiView.bundle */,
-				4C2339C547D6184C0FBE0FC811653350 /* SAConfettiView.framework */,
+				067748BE5734BF4436C30C894620A09E /* JSSAlertView.framework */,
+				3B2328D35217B04ADF68C6407541FE6A /* Pods_MuscleUp_.framework */,
+				1868AA0340203B85DD33B008F105B1E6 /* SAConfettiView.bundle */,
+				7A73F0D26FB601EF1413704BE8FE3FEE /* SAConfettiView.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		43EFFAFEDD1588BA076432264B2B5935 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				0742B689852050DE210B67493B82E6DE /* confetti.png */,
-				8FE00F1440F835366DA4E5E92177E157 /* diamond.png */,
-				6F0061AB6154942EC511ABF317542F99 /* star.png */,
-				0D17A13919FCB806D344D6DD9C753618 /* triangle.png */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -169,21 +233,10 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				271191552F2784497C776D9EBC9A2E77 /* Pods */,
-				2F3A8B128B3B82DCB427110FBBE25EA3 /* Products */,
+				01E69CF33F8C8880640A458801637B8B /* Pods */,
+				40B717FE99F2E5874EC2286A8930504B /* Products */,
 				078D6B93811998B1D6F91074BB737DFA /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		92665AE6D8B5E43E1938545C2F78A8B1 /* SAConfettiView */ = {
-			isa = PBXGroup;
-			children = (
-				4A6F816E0189053030EAD9052DCBAC79 /* SAConfettiView.swift */,
-				43EFFAFEDD1588BA076432264B2B5935 /* Resources */,
-				BFEE152500B0906A5926024AFB8DCB2B /* Support Files */,
-			);
-			name = SAConfettiView;
-			path = SAConfettiView;
 			sourceTree = "<group>";
 		};
 		93A319F2C1969B7AA0B17444A3F8BA22 /* iOS */ = {
@@ -196,16 +249,31 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		BFEE152500B0906A5926024AFB8DCB2B /* Support Files */ = {
+		9BB938DF46706762A7F8F1D16E899DC8 /* JSSAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				8B8E73F218599B2DFF1A3F629228206C /* Info.plist */,
-				F533D5284FC13D37FD06FB2710C8B9F2 /* ResourceBundle-SAConfettiView-Info.plist */,
-				E0346FF3EF24351C359A64C44B2A8C6D /* SAConfettiView.modulemap */,
-				CE844EE9E16DD07CE307E329DC3992F6 /* SAConfettiView.xcconfig */,
-				92A2120B4D3CC5D48C45E5FD8B8B9A7B /* SAConfettiView-dummy.m */,
-				CA74B9B1136D8539623AD6D29EFC7CE8 /* SAConfettiView-prefix.pch */,
-				A98044BC37885F8FE72702B8E9568421 /* SAConfettiView-umbrella.h */,
+				518BFF0A395233DBD1DD7A47FF5D2825 /* JSSAlertView.swift */,
+				41C7F1ADA426E2243B0ED8D067B846C0 /* JSSAlertView+Depricated.swift */,
+				78F5F9F1AD06DBB7B70C30CC9B72A1E7 /* JSSAlertView+Predefined.swift */,
+				1383E73C6085072DCFC2A0ADCDCB60D4 /* JSSAlertView+Timer.swift */,
+				E364A1AC3FD8B423C4FDC94CB1615F43 /* JSSAlertView+UIColor.swift */,
+				19230F2677DF5A8DA1F4C1924799C376 /* JSSAlertViewResponder.swift */,
+				14F4511A7811FAD4AD2DE839B9E3102A /* Support Files */,
+			);
+			name = JSSAlertView;
+			path = JSSAlertView;
+			sourceTree = "<group>";
+		};
+		A6CE2F360253BBC6EB0975302F398BA1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FCE9D26976C86F620880942EE9EE4FD3 /* Info.plist */,
+				92341B453CCD93B23C3DAB9DA92E33DC /* ResourceBundle-SAConfettiView-Info.plist */,
+				C3B0D3967B5B13B530911B61DFAE7AC6 /* SAConfettiView.modulemap */,
+				B7A8F6E42A93E14676E3983ABB18F084 /* SAConfettiView.xcconfig */,
+				8F12FA580CFBE66585780DBE21D8BC36 /* SAConfettiView-dummy.m */,
+				59571A8E3AF2B72D29CFE45AD2B651C6 /* SAConfettiView-prefix.pch */,
+				3D0D5A1D666C1E7B9349E9B5D7394C25 /* SAConfettiView-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SAConfettiView";
@@ -214,32 +282,78 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		00EB65784F2D221A356869BB7836B433 /* Headers */ = {
+		5A4F47E7F6861FB86AF39E2F256EDE98 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C76E5AC640FF9F770DE9237946BE5709 /* SAConfettiView-umbrella.h in Headers */,
+				9C0AD81E17F2DE18B7EFBC4953421B21 /* SAConfettiView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5EE03D4AAC7C4281BAD8E81EAECB953C /* Headers */ = {
+		C217385F9E73B10516653E90E7CC93F9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				973925C944ABE1E21A62D551BFA76834 /* Pods-MuscleUp!-umbrella.h in Headers */,
+				B9A6235B46F3EC2C5CB735CEDBA5E5B6 /* Pods-MuscleUp!-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D87F5775512CA763703A20770249949E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				469B2E58DBCB508524BB966FA06D3760 /* JSSAlertView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C33E1922A1F85E92BB046708631BA0FB /* SAConfettiView-SAConfettiView */ = {
+		79DF0409AF4179D0A9369E932EF88DF3 /* Pods-MuscleUp! */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DCFEA8D2DBE16FAF28393F0CCF496091 /* Build configuration list for PBXNativeTarget "SAConfettiView-SAConfettiView" */;
+			buildConfigurationList = FF7C8CC8E3BB1CBB120A62B8A799EFAB /* Build configuration list for PBXNativeTarget "Pods-MuscleUp!" */;
 			buildPhases = (
-				C77DB89B7BC83B15C5ACAC824B623D6E /* Sources */,
-				EE1FC33282866851AD3808482B28939E /* Frameworks */,
-				B420CC9106051146E22D0529AEDA524B /* Resources */,
+				6579718C43C60E33963345FC1A1F3D78 /* Sources */,
+				0CCC6ECE406F7F8B4CE9DB4E041AB681 /* Frameworks */,
+				C217385F9E73B10516653E90E7CC93F9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E53DCF0E7D995B0A63247E4385BBB105 /* PBXTargetDependency */,
+				276EA420008D1B01AF5FAFE5BB4822C6 /* PBXTargetDependency */,
+			);
+			name = "Pods-MuscleUp!";
+			productName = "Pods-MuscleUp!";
+			productReference = 3B2328D35217B04ADF68C6407541FE6A /* Pods_MuscleUp_.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7F03E8734FFAEDB349860088CC5E45D2 /* SAConfettiView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05EF5FEB617B668EEF809DB6E5143D42 /* Build configuration list for PBXNativeTarget "SAConfettiView" */;
+			buildPhases = (
+				E843C13E6CDD0A1A135D283958DF30C7 /* Sources */,
+				B5369FA547B24B20D99931F2542A09E0 /* Frameworks */,
+				48D4E88C6E862B71A6DE5FA52A969B62 /* Resources */,
+				5A4F47E7F6861FB86AF39E2F256EDE98 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D93FC1BA6DB20C203CF69FB63BE691F /* PBXTargetDependency */,
+			);
+			name = SAConfettiView;
+			productName = SAConfettiView;
+			productReference = 7A73F0D26FB601EF1413704BE8FE3FEE /* SAConfettiView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C2BDAA51BA114AAB6C3EC57FFC34B2B2 /* SAConfettiView-SAConfettiView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7ED288DA8EEF594E87F10F2905B979E6 /* Build configuration list for PBXNativeTarget "SAConfettiView-SAConfettiView" */;
+			buildPhases = (
+				C40362C0BC6CACA1F67EF2BF8D795935 /* Sources */,
+				7B7581356B6368B552828DF3C835F88F /* Frameworks */,
+				40E50A501B208155C2E41C764D3A8397 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -247,44 +361,24 @@
 			);
 			name = "SAConfettiView-SAConfettiView";
 			productName = "SAConfettiView-SAConfettiView";
-			productReference = 255BF3F8529F86C43983D5D47F90539E /* SAConfettiView.bundle */;
+			productReference = 1868AA0340203B85DD33B008F105B1E6 /* SAConfettiView.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		CCF1CFFD4EAE45FC7455B9FEE434DAD1 /* Pods-MuscleUp! */ = {
+		D368184BEED712B6A15E4767FE420BE5 /* JSSAlertView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F100F05772D451DCB4C0AE13855BBC82 /* Build configuration list for PBXNativeTarget "Pods-MuscleUp!" */;
+			buildConfigurationList = 1CD1CED9945240491459C24757BB2514 /* Build configuration list for PBXNativeTarget "JSSAlertView" */;
 			buildPhases = (
-				2EF248DE6C9A9CB7B58FCEE7E82B4DAD /* Sources */,
-				FA86DD12EDD31BCAD785839596129813 /* Frameworks */,
-				5EE03D4AAC7C4281BAD8E81EAECB953C /* Headers */,
+				3E3A426E412A3A73E67A37BA9F9D5A70 /* Sources */,
+				07B5BD778D3D603E8DE6B00D0A32F4A8 /* Frameworks */,
+				D87F5775512CA763703A20770249949E /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AAA14C7ED58345C6190D2EEF9D4D1116 /* PBXTargetDependency */,
 			);
-			name = "Pods-MuscleUp!";
-			productName = "Pods-MuscleUp!";
-			productReference = 9889EEF1842E59B5DE9024F89FB2A879 /* Pods_MuscleUp_.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		F8233D16982A4503793D3AD3A4CBB093 /* SAConfettiView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AD0ED8A979CBB358BCE4829825997D08 /* Build configuration list for PBXNativeTarget "SAConfettiView" */;
-			buildPhases = (
-				8B6F80B32ACAE875369E651B3D6A0741 /* Sources */,
-				FC30D56782582A2D31AA81732AA638EB /* Frameworks */,
-				EAE6E311823A0F7FFB3E4846ABAF0F8A /* Resources */,
-				00EB65784F2D221A356869BB7836B433 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5C71BAE5F344B682BE83334DFA5C92D7 /* PBXTargetDependency */,
-			);
-			name = SAConfettiView;
-			productName = SAConfettiView;
-			productReference = 4C2339C547D6184C0FBE0FC811653350 /* SAConfettiView.framework */;
+			name = JSSAlertView;
+			productName = JSSAlertView;
+			productReference = 067748BE5734BF4436C30C894620A09E /* JSSAlertView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -304,78 +398,99 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 2F3A8B128B3B82DCB427110FBBE25EA3 /* Products */;
+			productRefGroup = 40B717FE99F2E5874EC2286A8930504B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CCF1CFFD4EAE45FC7455B9FEE434DAD1 /* Pods-MuscleUp! */,
-				F8233D16982A4503793D3AD3A4CBB093 /* SAConfettiView */,
-				C33E1922A1F85E92BB046708631BA0FB /* SAConfettiView-SAConfettiView */,
+				D368184BEED712B6A15E4767FE420BE5 /* JSSAlertView */,
+				79DF0409AF4179D0A9369E932EF88DF3 /* Pods-MuscleUp! */,
+				7F03E8734FFAEDB349860088CC5E45D2 /* SAConfettiView */,
+				C2BDAA51BA114AAB6C3EC57FFC34B2B2 /* SAConfettiView-SAConfettiView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B420CC9106051146E22D0529AEDA524B /* Resources */ = {
+		40E50A501B208155C2E41C764D3A8397 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADEFBC0C16D2F9041D934F444298AD97 /* confetti.png in Resources */,
-				CB5D613F47C9DD9E3A5136FBCDDE24F2 /* diamond.png in Resources */,
-				247D3E253C4B551114D2DAB8A52B9A20 /* star.png in Resources */,
-				BE731F9A1D5C61AF2E801F3E5904E162 /* triangle.png in Resources */,
+				98A31FE5275862CFF88A0FB635E68C7A /* confetti.png in Resources */,
+				65494A5B51723EF495C81220690D1DFD /* diamond.png in Resources */,
+				EB750C6DF3380807E05EDF9F3BD2EB68 /* star.png in Resources */,
+				CBB62EEF2B7EB0B2C77461D6724589DE /* triangle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EAE6E311823A0F7FFB3E4846ABAF0F8A /* Resources */ = {
+		48D4E88C6E862B71A6DE5FA52A969B62 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD060B37245AF6DD9C914F397219FF51 /* SAConfettiView.bundle in Resources */,
+				95CCEEF66BECE31C97DC53B195F5E388 /* SAConfettiView.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2EF248DE6C9A9CB7B58FCEE7E82B4DAD /* Sources */ = {
+		3E3A426E412A3A73E67A37BA9F9D5A70 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED2778679CE158FD47FFD2E0F1CA8BB2 /* Pods-MuscleUp!-dummy.m in Sources */,
+				FD95C2EF9504DEA869960063A5288476 /* JSSAlertView+Depricated.swift in Sources */,
+				31E624889F448B54A96EE070D6825DC8 /* JSSAlertView+Predefined.swift in Sources */,
+				B713E6D96B28A5ED3ED165A58E85DB3C /* JSSAlertView+Timer.swift in Sources */,
+				2E7AA5C7EFF40BC34343AE82B096866E /* JSSAlertView+UIColor.swift in Sources */,
+				2E8BB2C70FF725DBF79AA6A86741D031 /* JSSAlertView-dummy.m in Sources */,
+				D48280C1455DE0EE3D7AB4CE0B4CF5A6 /* JSSAlertView.swift in Sources */,
+				1FDE3F51EBA16211CA4CA86ED4411B8C /* JSSAlertViewResponder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B6F80B32ACAE875369E651B3D6A0741 /* Sources */ = {
+		6579718C43C60E33963345FC1A1F3D78 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3FEC0F94E2FCF6939F2CD4770E5BFFC /* SAConfettiView-dummy.m in Sources */,
-				33F988BB80D7DBDBF4A70CE2C3BE5093 /* SAConfettiView.swift in Sources */,
+				A5A19AFEC802DF6EC15C22F839186EF9 /* Pods-MuscleUp!-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C77DB89B7BC83B15C5ACAC824B623D6E /* Sources */ = {
+		C40362C0BC6CACA1F67EF2BF8D795935 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E843C13E6CDD0A1A135D283958DF30C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E68D813C895FF9339E921B7D53DC322 /* SAConfettiView-dummy.m in Sources */,
+				43437A54B21B0035B78B798965C59A6A /* SAConfettiView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5C71BAE5F344B682BE83334DFA5C92D7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "SAConfettiView-SAConfettiView";
-			target = C33E1922A1F85E92BB046708631BA0FB /* SAConfettiView-SAConfettiView */;
-			targetProxy = 0214CC7954416C57EAC70B1830C0CF28 /* PBXContainerItemProxy */;
-		};
-		AAA14C7ED58345C6190D2EEF9D4D1116 /* PBXTargetDependency */ = {
+		276EA420008D1B01AF5FAFE5BB4822C6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SAConfettiView;
-			target = F8233D16982A4503793D3AD3A4CBB093 /* SAConfettiView */;
-			targetProxy = 0565E1B281762891460B3CF05A9605D7 /* PBXContainerItemProxy */;
+			target = 7F03E8734FFAEDB349860088CC5E45D2 /* SAConfettiView */;
+			targetProxy = 73A909352460F1B6B07CDF713AFE593A /* PBXContainerItemProxy */;
+		};
+		6D93FC1BA6DB20C203CF69FB63BE691F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SAConfettiView-SAConfettiView";
+			target = C2BDAA51BA114AAB6C3EC57FFC34B2B2 /* SAConfettiView-SAConfettiView */;
+			targetProxy = D07BA6DA85A754534CE58ED1C302008F /* PBXContainerItemProxy */;
+		};
+		E53DCF0E7D995B0A63247E4385BBB105 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JSSAlertView;
+			target = D368184BEED712B6A15E4767FE420BE5 /* JSSAlertView */;
+			targetProxy = BA9AEC460FC9E760411347D8E95FF256 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -428,9 +543,9 @@
 			};
 			name = Debug;
 		};
-		24A590641F95016E3F71E98F8201594B /* Release */ = {
+		3366A70A91684B7FECE338DABBCB7585 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4EA27E37BE0F2AB88F8082D64DC1C055 /* Pods-MuscleUp!.release.xcconfig */;
+			baseConfigurationReference = 456E78034A7185DE890EE6C12F2BC7CA /* JSSAlertView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -444,18 +559,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MuscleUp!/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/JSSAlertView/JSSAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JSSAlertView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MuscleUp!/Pods-MuscleUp!.modulemap";
+				MODULEMAP_FILE = "Target Support Files/JSSAlertView/JSSAlertView.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MuscleUp_;
+				PRODUCT_NAME = JSSAlertView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -466,9 +577,9 @@
 			};
 			name = Release;
 		};
-		3D40DCAC87FCAD94D512565AA2D00E9C /* Release */ = {
+		3BFCB0913EB5ED7DBCE7BF8509C33253 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE844EE9E16DD07CE307E329DC3992F6 /* SAConfettiView.xcconfig */;
+			baseConfigurationReference = B7A8F6E42A93E14676E3983ABB18F084 /* SAConfettiView.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SAConfettiView";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -482,92 +593,6 @@
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
-		};
-		437B37E121ABF7058539C4DBA5F10690 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE844EE9E16DD07CE307E329DC3992F6 /* SAConfettiView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SAConfettiView/SAConfettiView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SAConfettiView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SAConfettiView/SAConfettiView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SAConfettiView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4F6D3783DA0AC87CF30C3EE257D2A7FF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE844EE9E16DD07CE307E329DC3992F6 /* SAConfettiView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SAConfettiView/SAConfettiView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SAConfettiView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SAConfettiView/SAConfettiView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SAConfettiView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		67DEBC9968411763E257E33B6C62A516 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE844EE9E16DD07CE307E329DC3992F6 /* SAConfettiView.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SAConfettiView";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/SAConfettiView/ResourceBundle-SAConfettiView-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = SAConfettiView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
 		};
 		707B86CFB21B645E37109F39754D4051 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -613,7 +638,93 @@
 			};
 			name = Release;
 		};
-		B7D1F9F4F4488CDA467664C40676AAD1 /* Debug */ = {
+		86BD516D6E29D95AD7372D2AEEE1878B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 456E78034A7185DE890EE6C12F2BC7CA /* JSSAlertView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JSSAlertView/JSSAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JSSAlertView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JSSAlertView/JSSAlertView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = JSSAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		87F9F562AC6FE2F6403AED5150F76846 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7A8F6E42A93E14676E3983ABB18F084 /* SAConfettiView.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SAConfettiView";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/SAConfettiView/ResourceBundle-SAConfettiView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = SAConfettiView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		B84613DD873BA1BDC2A2B91C0D08D212 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7A8F6E42A93E14676E3983ABB18F084 /* SAConfettiView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SAConfettiView/SAConfettiView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SAConfettiView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SAConfettiView/SAConfettiView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SAConfettiView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C87E7103E326887205FD2621F87281F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EFF53EFDBC8485DC3D569F2D1B63997C /* Pods-MuscleUp!.debug.xcconfig */;
 			buildSettings = {
@@ -652,9 +763,100 @@
 			};
 			name = Debug;
 		};
+		CB06803B3022E9DB704E6C23ABBBA9F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7A8F6E42A93E14676E3983ABB18F084 /* SAConfettiView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SAConfettiView/SAConfettiView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SAConfettiView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SAConfettiView/SAConfettiView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SAConfettiView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EEF44C4AE8CAAFDF8DCFA2BE575B3B4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EA27E37BE0F2AB88F8082D64DC1C055 /* Pods-MuscleUp!.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MuscleUp!/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MuscleUp!/Pods-MuscleUp!.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MuscleUp_;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		05EF5FEB617B668EEF809DB6E5143D42 /* Build configuration list for PBXNativeTarget "SAConfettiView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB06803B3022E9DB704E6C23ABBBA9F7 /* Debug */,
+				B84613DD873BA1BDC2A2B91C0D08D212 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CD1CED9945240491459C24757BB2514 /* Build configuration list for PBXNativeTarget "JSSAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86BD516D6E29D95AD7372D2AEEE1878B /* Debug */,
+				3366A70A91684B7FECE338DABBCB7585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -664,29 +866,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AD0ED8A979CBB358BCE4829825997D08 /* Build configuration list for PBXNativeTarget "SAConfettiView" */ = {
+		7ED288DA8EEF594E87F10F2905B979E6 /* Build configuration list for PBXNativeTarget "SAConfettiView-SAConfettiView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				437B37E121ABF7058539C4DBA5F10690 /* Debug */,
-				4F6D3783DA0AC87CF30C3EE257D2A7FF /* Release */,
+				87F9F562AC6FE2F6403AED5150F76846 /* Debug */,
+				3BFCB0913EB5ED7DBCE7BF8509C33253 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DCFEA8D2DBE16FAF28393F0CCF496091 /* Build configuration list for PBXNativeTarget "SAConfettiView-SAConfettiView" */ = {
+		FF7C8CC8E3BB1CBB120A62B8A799EFAB /* Build configuration list for PBXNativeTarget "Pods-MuscleUp!" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				67DEBC9968411763E257E33B6C62A516 /* Debug */,
-				3D40DCAC87FCAD94D512565AA2D00E9C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F100F05772D451DCB4C0AE13855BBC82 /* Build configuration list for PBXNativeTarget "Pods-MuscleUp!" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B7D1F9F4F4488CDA467664C40676AAD1 /* Debug */,
-				24A590641F95016E3F71E98F8201594B /* Release */,
+				C87E7103E326887205FD2621F87281F5 /* Debug */,
+				EEF44C4AE8CAAFDF8DCFA2BE575B3B4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
