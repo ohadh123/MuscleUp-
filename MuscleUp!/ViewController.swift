@@ -28,7 +28,6 @@ class ViewController: UIViewController {
         titleLabel.textAlignment = .center
         titleLabel.text = "MuscleUp!"
         titleLabel.font = titleLabel.font.withSize(50)
-        //titleLabel.adjustsFontSizeToFitWidth = true
         view.addSubview(titleLabel)
         
         let playButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
@@ -36,7 +35,7 @@ class ViewController: UIViewController {
         playButton.center.y = view.frame.height/1.65   //1.518
         playButton.setTitle("Play", for: .normal)
         playButton.backgroundColor = .blue
-        playButton.addTarget(self, action: #selector(playButtonMethod), for: .touchUpInside)
+        playButton.addTarget(self, action: #selector(playButtonMethod), for: .touchDown)
         playButton.titleLabel!.font =  UIFont(name: "Verdana", size: 30)
         view.addSubview(playButton)
         
@@ -45,7 +44,7 @@ class ViewController: UIViewController {
         shopButton.center.y = view.frame.height/1.455 //1.4
         shopButton.setTitle("Shop", for: .normal)
         shopButton.backgroundColor = .blue
-        shopButton.addTarget(self, action: #selector(shopButtonMethod), for: .touchUpInside)
+        shopButton.addTarget(self, action: #selector(shopButtonMethod), for: .touchDown)
         shopButton.titleLabel!.font =  UIFont(name: "Verdana", size: 25)
         view.addSubview(shopButton)
         
@@ -54,7 +53,7 @@ class ViewController: UIViewController {
         statsButton.center.y = view.frame.height/1.3    //1.3
         statsButton.setTitle("Statistics", for: .normal)
         statsButton.backgroundColor = .blue
-        statsButton.addTarget(self, action: #selector(statsButtonMethod), for: .touchUpInside)
+        statsButton.addTarget(self, action: #selector(statsButtonMethod), for: .touchDown)
         statsButton.titleLabel!.font =  UIFont(name: "Verdana", size: 20)
         view.addSubview(statsButton)
         
@@ -63,7 +62,7 @@ class ViewController: UIViewController {
         creditsButton.center.y = view.frame.height/1.1
         creditsButton.setTitle("Credits", for: .normal)
         creditsButton.backgroundColor = .blue
-        creditsButton.addTarget(self, action: #selector(creditsButtonMethod), for: .touchUpInside)
+        creditsButton.addTarget(self, action: #selector(creditsButtonMethod), for: .touchDown)
         view.addSubview(creditsButton)
 
         
@@ -72,26 +71,35 @@ class ViewController: UIViewController {
     
     func playButtonMethod(){
         print("Play pressed")
+        let playViewController = PlayViewController()
+        playViewController.modalTransitionStyle = .flipHorizontal
+        self.present(playViewController, animated: true, completion: nil)
     }
     
-    func statsButtonMethod(){
-        print("MyStats pressed")
-    }
     
     func shopButtonMethod(){
         print("Shop pressed")
+        let shopViewController = ShopViewController()
+        shopViewController.modalTransitionStyle = .coverVertical
+        self.present(shopViewController, animated: true, completion: nil)
+
     }
+    
+    func statsButtonMethod(){
+        print("Statistics pressed")
+        let statisticsViewController = StatisticsViewController()
+        statisticsViewController.modalTransitionStyle = .coverVertical
+        self.present(statisticsViewController, animated: true, completion: nil)
+    }
+
     
     func creditsButtonMethod(){
         print("Credits Pressed")
+        let creditsViewController = CreditsViewController()
+        creditsViewController.modalTransitionStyle = .crossDissolve
+        self.present(creditsViewController, animated: true, completion: nil)
     }
     
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
 
 }

@@ -11,6 +11,10 @@
 		DC35BD401EDA31A500236A74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC35BD3F1EDA31A500236A74 /* ViewController.swift */; };
 		DC35BD451EDA31A500236A74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC35BD441EDA31A500236A74 /* Assets.xcassets */; };
 		DC35BD481EDA31A500236A74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC35BD461EDA31A500236A74 /* LaunchScreen.storyboard */; };
+		DC35BD501EDA82AB00236A74 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC35BD4F1EDA82AB00236A74 /* PlayViewController.swift */; };
+		DC35BD521EDA8D8C00236A74 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC35BD511EDA8D8C00236A74 /* ShopViewController.swift */; };
+		DC35BD541EDA8D9600236A74 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC35BD531EDA8D9600236A74 /* StatisticsViewController.swift */; };
+		DC35BD561EDA8E7B00236A74 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC35BD551EDA8E7B00236A74 /* CreditsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		DC35BD441EDA31A500236A74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC35BD471EDA31A500236A74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC35BD491EDA31A500236A74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC35BD4F1EDA82AB00236A74 /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		DC35BD511EDA8D8C00236A74 /* ShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		DC35BD531EDA8D9600236A74 /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		DC35BD551EDA8E7B00236A74 /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,10 @@
 			children = (
 				DC35BD3D1EDA31A500236A74 /* AppDelegate.swift */,
 				DC35BD3F1EDA31A500236A74 /* ViewController.swift */,
+				DC35BD4F1EDA82AB00236A74 /* PlayViewController.swift */,
+				DC35BD511EDA8D8C00236A74 /* ShopViewController.swift */,
+				DC35BD531EDA8D9600236A74 /* StatisticsViewController.swift */,
+				DC35BD551EDA8E7B00236A74 /* CreditsViewController.swift */,
 				DC35BD441EDA31A500236A74 /* Assets.xcassets */,
 				DC35BD461EDA31A500236A74 /* LaunchScreen.storyboard */,
 				DC35BD491EDA31A500236A74 /* Info.plist */,
@@ -132,7 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC35BD521EDA8D8C00236A74 /* ShopViewController.swift in Sources */,
+				DC35BD561EDA8E7B00236A74 /* CreditsViewController.swift in Sources */,
+				DC35BD541EDA8D9600236A74 /* StatisticsViewController.swift in Sources */,
 				DC35BD401EDA31A500236A74 /* ViewController.swift in Sources */,
+				DC35BD501EDA82AB00236A74 /* PlayViewController.swift in Sources */,
 				DC35BD3E1EDA31A500236A74 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
