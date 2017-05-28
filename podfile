@@ -1,7 +1,12 @@
+
 platform :ios, '10.3'
 use_frameworks!
 
 target 'MuscleUp!' do
 pod "SAConfettiView"
 pod 'JSSAlertView'
+pod 'SwiftyButton'
+pod 'TKSwitcherCollection'
+pod "GTProgressBar"
+pod 'MaterialMotion'
 end

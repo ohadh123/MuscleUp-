@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyButton
 
 class StatisticsViewController: UIViewController {
 
@@ -19,11 +20,12 @@ class StatisticsViewController: UIViewController {
     func setupStatisticsScreen(){
         view.backgroundColor = .orange
         
-        let backButton = UIButton(frame: CGRect(x: 0, y: 0, width: 75, height: 40))
+        let backButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 75, height: 40))
         backButton.center.x = view.frame.width/8
         backButton.center.y = view.frame.height/10
         backButton.setTitle("Back", for: .normal)
-        backButton.backgroundColor = .blue
+        //backButton.backgroundColor = .blue
+        backButton.shadowHeight = 4
         backButton.addTarget(self, action: #selector(backButtonMethod), for: .touchDown)
         backButton.titleLabel!.font =  UIFont(name: "Verdana", size: 20)
         view.addSubview(backButton)

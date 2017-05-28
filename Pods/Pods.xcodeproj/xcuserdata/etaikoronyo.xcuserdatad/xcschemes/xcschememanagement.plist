@@ -4,7 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>GTProgressBar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>IndefiniteObservable.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>JSSAlertView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MaterialMotion.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -24,25 +39,60 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftyButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TKSwitcherCollection.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>79DF0409AF4179D0A9369E932EF88DF3</key>
+		<key>27939397CF0F3465E01F9C619DCB41D6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7F03E8734FFAEDB349860088CC5E45D2</key>
+		<key>69784DB4D922BE4B764EAAB2DBB8F471</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C2BDAA51BA114AAB6C3EC57FFC34B2B2</key>
+		<key>8472A81CF2A65293E62487231896B6B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8E951516FF7135F377C6192082D9D2FA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>944EFDE630751AA5C39E3F04B6497096</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>97F90A3D2E97602FF47C8080B8E7DD70</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B203A60B90BD066EDC27640B4669687F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>D368184BEED712B6A15E4767FE420BE5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DA26DB6A11A736F55B00DFC5BC60766B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
