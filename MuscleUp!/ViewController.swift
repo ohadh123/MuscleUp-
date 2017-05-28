@@ -37,6 +37,7 @@ class ViewController: UIViewController {
         playButton.setTitle("Play", for: .normal)
         playButton.backgroundColor = .blue
         playButton.addTarget(self, action: #selector(playButtonMethod), for: .touchUpInside)
+        playButton.titleLabel!.font =  UIFont(name: "Verdana", size: 30)
         view.addSubview(playButton)
         
         let shopButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
@@ -45,14 +46,16 @@ class ViewController: UIViewController {
         shopButton.setTitle("Shop", for: .normal)
         shopButton.backgroundColor = .blue
         shopButton.addTarget(self, action: #selector(shopButtonMethod), for: .touchUpInside)
+        shopButton.titleLabel!.font =  UIFont(name: "Verdana", size: 25)
         view.addSubview(shopButton)
         
         let statsButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
         statsButton.center.x = view.frame.width/2
         statsButton.center.y = view.frame.height/1.3    //1.3
-        statsButton.setTitle("Statistcs", for: .normal)
+        statsButton.setTitle("Statistics", for: .normal)
         statsButton.backgroundColor = .blue
         statsButton.addTarget(self, action: #selector(statsButtonMethod), for: .touchUpInside)
+        statsButton.titleLabel!.font =  UIFont(name: "Verdana", size: 20)
         view.addSubview(statsButton)
         
         let creditsButton = UIButton(frame: CGRect(x: 0, y: 0, width: 75, height: 30))
