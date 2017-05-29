@@ -66,16 +66,16 @@ class ViewController: UIViewController {
         
         let titleImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
         titleImageView.center.x = view.frame.width/2
-        titleImageView.center.y = view.frame.height/12   //6
+        titleImageView.center.y = view.frame.height/7.8   //6
         titleImageView.image = #imageLiteral(resourceName: "MuscleUp!")
         view.addSubview(titleImageView)
     }
     
     func createHomeScreenButtons(){
         //let playButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
-        let playButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
+        let playButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 175, height: 65))
         playButton.center.x = view.frame.width/2
-        playButton.center.y = view.frame.height/1.65   //1.518
+        playButton.center.y = view.frame.height/1.51   //1.47
         playButton.setTitle("Play", for: .normal)
         //playButton.backgroundColor = .blue
         playButton.addTarget(self, action: #selector(playButtonMethod), for: .touchUpInside)
@@ -89,9 +89,9 @@ class ViewController: UIViewController {
         playButton.shadowHeight = 4
         view.addSubview(playButton)
         
-        let shopButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
+        let shopButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
         shopButton.center.x = view.frame.width/2
-        shopButton.center.y = view.frame.height/1.455 //1.4
+        shopButton.center.y = view.frame.height/1.305 //1.4
         shopButton.setTitle("Shop", for: .normal)
         //shopButton.backgroundColor = .blue
         shopButton.addTarget(self, action: #selector(shopButtonMethod), for: .touchUpInside)
@@ -99,19 +99,19 @@ class ViewController: UIViewController {
         shopButton.shadowHeight = 4
         view.addSubview(shopButton)
         
-        let statsButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
+        let statsButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
         statsButton.center.x = view.frame.width/2
-        statsButton.center.y = view.frame.height/1.3    //1.3
+        statsButton.center.y = view.frame.height/1.17    //1.3
         statsButton.setTitle("Statistics", for: .normal)
         //statsButton.backgroundColor = .blue
         statsButton.addTarget(self, action: #selector(statsButtonMethod), for: .touchUpInside)
-        statsButton.titleLabel!.font =  UIFont(name: "Verdana", size: 20)
+        statsButton.titleLabel!.font =  UIFont(name: "Verdana", size: 23)
         statsButton.shadowHeight = 4
         view.addSubview(statsButton)
         
-        let creditsButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 75, height: 30))
+        let creditsButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 85, height: 40))
         creditsButton.center.x = view.frame.width/8
-        creditsButton.center.y = view.frame.height/1.1
+        creditsButton.center.y = view.frame.height/1.05
         creditsButton.setTitle("Credits", for: .normal)
         //creditsButton.backgroundColor = .blue
         creditsButton.addTarget(self, action: #selector(creditsButtonMethod), for: .touchUpInside)
@@ -120,21 +120,21 @@ class ViewController: UIViewController {
         
         let confettiButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 75, height: 30))
         confettiButton.center.x = view.frame.width/2
-        confettiButton.center.y = view.frame.height/1.1
+        confettiButton.center.y = view.frame.height/1.05
         confettiButton.setTitle("Confetti", for: .normal)
         //confettiButton.backgroundColor = .blue
-        confettiButton.addTarget(self, action: #selector(confettiButtonMethod), for: .touchDown)
+        confettiButton.addTarget(self, action: #selector(confettiButtonMethod), for: .touchUpInside)
         view.addSubview(confettiButton)
 
         let musicToggle = TKSimpleSwitch(frame: CGRect(x: 0, y: 0, width: 50, height: 30))
         musicToggle.center.x = view.frame.width/1.2
-        musicToggle.center.y = view.frame.height/1.1
+        musicToggle.center.y = view.frame.height/1.05
         musicToggle.addTarget(self, action: #selector(musicToggleMethod), for: .touchDown)
         
         let volumeImagePic = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         volumeImagePic.image = #imageLiteral(resourceName: "volumeImage")
         volumeImagePic.center.x = view.frame.width/1.06
-        volumeImagePic.center.y = view.frame.height/1.1
+        volumeImagePic.center.y = view.frame.height/1.05
         
         view.addSubview(musicToggle)
         view.addSubview(volumeImagePic)
@@ -158,7 +158,7 @@ class ViewController: UIViewController {
         
         //characterBar = GTProgressBar(frame: CGRect(x: 0, y: 0, width: 200, height: 10))
         characterBar.center.x = view.frame.width/2
-        characterBar.center.y = view.frame.height/5.5
+        characterBar.center.y = view.frame.height/4.5
         characterBar.progress = characterBarDoubleFromSave
         characterBar.barBorderColor = .blue
         characterBar.barBackgroundColor = .gray
@@ -170,7 +170,7 @@ class ViewController: UIViewController {
         
         let characterBarLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
         characterBarLabel.center.x = view.frame.width/2
-        characterBarLabel.center.y = view.frame.height/6.3
+        characterBarLabel.center.y = view.frame.height/5.05
         characterBarLabel.textAlignment = .center
         characterBarLabel.text = "Strength:"
         characterBarLabel.font = UIFont(name: "Verdana-Bold", size: 14)
@@ -187,7 +187,7 @@ class ViewController: UIViewController {
     func playButtonMethod(){
         print("Play pressed")
         let playViewController = PlayViewController()
-        playViewController.modalTransitionStyle = .flipHorizontal
+        playViewController.modalTransitionStyle = .crossDissolve
         self.present(playViewController, animated: true, completion: nil)
         
     }
@@ -218,7 +218,7 @@ class ViewController: UIViewController {
             ],
                                        completion: nil)**/
         let shopViewController = ShopViewController()
-        shopViewController.modalTransitionStyle = .coverVertical
+        shopViewController.modalTransitionStyle = .crossDissolve
         self.present(shopViewController, animated: true, completion: nil)
 
     }
@@ -226,7 +226,7 @@ class ViewController: UIViewController {
     func statsButtonMethod(){
         print("Statistics pressed")
         let statisticsViewController = StatisticsViewController()
-        statisticsViewController.modalTransitionStyle = .coverVertical
+        statisticsViewController.modalTransitionStyle = .crossDissolve
         self.present(statisticsViewController, animated: true, completion: nil)
     }
 
@@ -260,6 +260,11 @@ class ViewController: UIViewController {
             startConfetti()
             confettiIsActive = true
             
+        }
+        let delayInSeconds = 4.0
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {
+            self.stopConfetti()
+            self.confettiIsActive = false
         }
         
     }
