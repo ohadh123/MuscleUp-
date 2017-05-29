@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>LTMorphingLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MaterialMotion.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -54,25 +59,60 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>WYMaterialButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>pop.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>18C3A7AD8F05948D29BF1555C3B4BC0B</key>
+		<key>0DCF27354EFBB6436FAE9849193A8999</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1EA99A22FBCFF7C7254F827FDAB578AF</key>
+		<key>3822FDC485E7836F66486A76E4386A4F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>366B450E722276CED50E93169D2BED21</key>
+		<key>393F0579A322EFC43B215B973F422CB8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>415CD442B3291C7BF939F90AE4DBA06C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4959BC25936306CCA61908943B6B9D5B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4C69BF3EF4CE81852226B9442B0C2DF4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>58D1A688F824FF71D84F05A6AC4CADCC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>69784DB4D922BE4B764EAAB2DBB8F471</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>89F37AC21AAA86B3DBAE36DB0AB3D4F7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,17 +132,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E4AA221D2E2DB1FD492EFC5DF712C471</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E8BF6C2B0B2F3ABFEE2405A9744209B2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ED15B218B7A3E1E2C26CDCD705DB5B96</key>
+		<key>E7A74A0D84FD7DB61929D3DE5870830F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

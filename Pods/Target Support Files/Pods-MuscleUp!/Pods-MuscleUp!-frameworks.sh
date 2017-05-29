@@ -92,21 +92,27 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/GTProgressBar/GTProgressBar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/IndefiniteObservable/IndefiniteObservable.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JSSAlertView/JSSAlertView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/LTMorphingLabel/LTMorphingLabel.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MaterialMotion/MaterialMotion.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SAConfettiView/SAConfettiView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/StepProgressBar/StepProgressBar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyButton/SwiftyButton.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TKSwitcherCollection/TKSwitcherCollection.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/WYMaterialButton/WYMaterialButton.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/pop/pop.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/GTProgressBar/GTProgressBar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/IndefiniteObservable/IndefiniteObservable.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JSSAlertView/JSSAlertView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/LTMorphingLabel/LTMorphingLabel.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MaterialMotion/MaterialMotion.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SAConfettiView/SAConfettiView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/StepProgressBar/StepProgressBar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyButton/SwiftyButton.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TKSwitcherCollection/TKSwitcherCollection.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/WYMaterialButton/WYMaterialButton.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/pop/pop.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

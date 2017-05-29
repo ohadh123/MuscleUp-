@@ -10,4 +10,6 @@ pod 'TKSwitcherCollection'
 pod "GTProgressBar"
 pod 'MaterialMotion'
 pod 'StepProgressBar'
+pod 'WYMaterialButton'
+pod 'LTMorphingLabel'
 end
