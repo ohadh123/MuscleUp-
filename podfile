@@ -9,4 +9,5 @@ pod 'SwiftyButton'
 pod 'TKSwitcherCollection'
 pod "GTProgressBar"
 pod 'MaterialMotion'
+pod 'StepProgressBar'
 end

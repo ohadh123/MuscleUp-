@@ -13,6 +13,7 @@ import SwiftyButton
 import TKSwitcherCollection
 import GTProgressBar
 import MaterialMotion
+import StepProgressBar
 
 class ViewController: UIViewController {
 
@@ -22,14 +23,16 @@ class ViewController: UIViewController {
     var confettiIsActive: Bool = false
     var characterBarDouble: CGFloat = 0.0
     var characterBarDoubleFromSave: CGFloat = 0.0
+    var energyDouble: Int = 10
     var characterBar: GTProgressBar = GTProgressBar(frame: CGRect(x: 0, y: 0, width: 200, height: 15))
     var coinAmount: Int = 500
-    
+    var energyBar1: StepProgressBar = StepProgressBar(frame: CGRect(x: 0, y: 0, width: 80, height: 7))
+    var energyBar2: StepProgressBar = StepProgressBar(frame: CGRect(x: 0, y: 0, width: 80, height: 7))
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTitleScreen()
-        
         
         
     }
@@ -37,14 +40,33 @@ class ViewController: UIViewController {
     func setupTitleScreen(){
         view.backgroundColor = .gray
         
-        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
+        
+        createTitleLabel()
+        createHomeScreenButtons()
+        createSlidersandCoin()
+        addConfettiViews()
+        
+        
+        
+    }
+    
+    func createTitleLabel(){
+        /**let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
         titleLabel.center.x = view.frame.width/2
         titleLabel.center.y = view.frame.height/6
         titleLabel.textAlignment = .center
         titleLabel.text = "MuscleUp!"
         titleLabel.font = titleLabel.font.withSize(50)
-        view.addSubview(titleLabel)
+        view.addSubview(titleLabel)**/
         
+        let titleImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
+        titleImageView.center.x = view.frame.width/2
+        titleImageView.center.y = view.frame.height/5.5
+        titleImageView.image = #imageLiteral(resourceName: "MuscleUp!")
+        view.addSubview(titleImageView)
+    }
+    
+    func createHomeScreenButtons(){
         //let playButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
         let playButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
         playButton.center.x = view.frame.width/2
@@ -55,10 +77,10 @@ class ViewController: UIViewController {
         playButton.titleLabel!.font =  UIFont(name: "Verdana", size: 30)
         
         /**let playFirstColor = UIColor(colorLiteralRed: 0, green: 0, blue: 1, alpha: 1)
-        let playSecondColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0.6, alpha: 1)
-        playButton.colors = .init(button: playFirstColor, shadow: playSecondColor)
-        playButton.shadowHeight = 5
-        playButton.cornerRadius = 5**/
+         let playSecondColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0.6, alpha: 1)
+         playButton.colors = .init(button: playFirstColor, shadow: playSecondColor)
+         playButton.shadowHeight = 5
+         playButton.cornerRadius = 5**/
         playButton.shadowHeight = 4
         view.addSubview(playButton)
         
@@ -97,21 +119,8 @@ class ViewController: UIViewController {
         confettiButton.setTitle("Confetti", for: .normal)
         //confettiButton.backgroundColor = .blue
         confettiButton.addTarget(self, action: #selector(confettiButtonMethod), for: .touchDown)
-        
-        confettiView = SAConfettiView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height/3))
-        confettiView.intensity = 1
-        view.addSubview(confettiView)
-        
-        confettiView2 = SAConfettiView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height/3))
-        confettiView2.intensity = 1
-        view.addSubview(confettiView2)
-        
-        confettiView3 = SAConfettiView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height/3))
-        confettiView3.intensity = 1
-        view.addSubview(confettiView3)
-        
         view.addSubview(confettiButton)
-        
+
         let musicToggle = TKSimpleSwitch(frame: CGRect(x: 0, y: 0, width: 50, height: 30))
         musicToggle.center.x = view.frame.width/1.2
         musicToggle.center.y = view.frame.height/1.1
@@ -124,6 +133,23 @@ class ViewController: UIViewController {
         
         view.addSubview(musicToggle)
         view.addSubview(volumeImagePic)
+    }
+    
+    func addConfettiViews(){
+        confettiView = SAConfettiView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height/3))
+        confettiView.intensity = 1
+        view.addSubview(confettiView)
+        
+        confettiView2 = SAConfettiView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height/3))
+        confettiView2.intensity = 1
+        view.addSubview(confettiView2)
+        
+        confettiView3 = SAConfettiView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height/3))
+        confettiView3.intensity = 1
+        view.addSubview(confettiView3)
+    }
+    
+    func createSlidersandCoin(){
         
         //characterBar = GTProgressBar(frame: CGRect(x: 0, y: 0, width: 200, height: 10))
         characterBar.center.x = view.frame.width/2
@@ -135,28 +161,54 @@ class ViewController: UIViewController {
         characterBar.barFillInset = 0.4
         characterBar.displayLabel = false
         //characterBar.cornerRadius = 5
-        
         view.addSubview(characterBar)
         
+        let characterBarLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+        characterBarLabel.center.x = view.frame.width/2
+        characterBarLabel.center.y = view.frame.height/17
+        characterBarLabel.textAlignment = .center
+        characterBarLabel.text = "Progress:"
+        characterBarLabel.font = UIFont(name: "Verdana-Bold", size: 14)
+        //characterBarLabel.font = characterBarLabel.font.withSize(14)
+        view.addSubview(characterBarLabel)
+        
         let coinImagePic = UIImageView(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
-        coinImagePic.image = #imageLiteral(resourceName: "Bitcoin")
+        coinImagePic.image = #imageLiteral(resourceName: "empty-gold-coin")
         coinImagePic.center.x = view.frame.width/1.2
         coinImagePic.center.y = view.frame.height/12
+        view.addSubview(coinImagePic)
         
         let coinLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 25))
         coinLabel.center.x = view.frame.width/1.09
         coinLabel.center.y = view.frame.height/12
         coinLabel.textAlignment = .center
         coinLabel.text = String(coinAmount)
-        coinLabel.font = titleLabel.font.withSize(20)
+        coinLabel.font = UIFont(name: "Verdana-Bold", size: 20)
+        //coinLabel.font = coinLabel.font.withSize(20)
         view.addSubview(coinLabel)
         
+        //let energyBar = StepProgressBar(frame: CGRect(x: 0, y: 0, width: 80, height: 5))
+        energyBar1.center.x = view.frame.width/8
+        energyBar1.center.y = view.frame.height/13
+        energyBar1.stepsCount = 5
+        energyBar1.progress = energyDouble
+        energyBar1.cornerRadius = 10
+        energyBar1.stepsOffset = 3
+        energyBar1.backgroundColor = .gray
+        energyBar1.color = .purple
+        view.addSubview(energyBar1)
         
-        
-        view.addSubview(coinImagePic)
+        energyBar2.center.x = view.frame.width/8
+        energyBar2.center.y = view.frame.height/11
+        energyBar2.stepsCount = 5
+        energyBar2.progress = energyDouble
+        energyBar2.cornerRadius = 10
+        energyBar2.stepsOffset = 3
+        energyBar2.backgroundColor = .gray
+        energyBar2.color = .purple
+        view.addSubview(energyBar2)
         
 
-        
     }
     
     func playButtonMethod(){
@@ -166,7 +218,6 @@ class ViewController: UIViewController {
         self.present(playViewController, animated: true, completion: nil)
         
     }
-    
     
     func shopButtonMethod(){
         print("Shop pressed")
@@ -210,9 +261,7 @@ class ViewController: UIViewController {
             
         }
         else{
-            confettiView.startConfetti()
-            confettiView2.startConfetti()
-            confettiView3.startConfetti()
+            startConfetti()
             confettiIsActive = true
             
         }
@@ -225,9 +274,24 @@ class ViewController: UIViewController {
         confettiView3.stopConfetti()
     }
     
+    func startConfetti(){
+        confettiView.startConfetti()
+        confettiView2.startConfetti()
+        confettiView3.startConfetti()
+
+    }
+    
     func musicToggleMethod(){
         print("Music Toggled")
         characterBarDouble += 0.1
+        energyDouble -= 1
+        
+        if energyDouble<5{
+            energyBar1.progress = energyDouble
+        }
+        else {
+            energyBar2.progress = energyDouble - 5
+        }
         characterBar.animateTo(progress: characterBarDouble)
         
     }

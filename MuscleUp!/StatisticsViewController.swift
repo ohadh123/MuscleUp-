@@ -26,7 +26,7 @@ class StatisticsViewController: UIViewController {
         backButton.setTitle("Back", for: .normal)
         //backButton.backgroundColor = .blue
         backButton.shadowHeight = 4
-        backButton.addTarget(self, action: #selector(backButtonMethod), for: .touchDown)
+        backButton.addTarget(self, action: #selector(backButtonMethod), for: .touchUpInside)
         backButton.titleLabel!.font =  UIFont(name: "Verdana", size: 20)
         view.addSubview(backButton)
     }

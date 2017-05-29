@@ -39,6 +39,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>StepProgressBar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyButton.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,32 +57,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>27939397CF0F3465E01F9C619DCB41D6</key>
+		<key>18C3A7AD8F05948D29BF1555C3B4BC0B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1EA99A22FBCFF7C7254F827FDAB578AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>366B450E722276CED50E93169D2BED21</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>69784DB4D922BE4B764EAAB2DBB8F471</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8472A81CF2A65293E62487231896B6B9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8E951516FF7135F377C6192082D9D2FA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>944EFDE630751AA5C39E3F04B6497096</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>97F90A3D2E97602FF47C8080B8E7DD70</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -93,6 +88,21 @@
 			<true/>
 		</dict>
 		<key>DA26DB6A11A736F55B00DFC5BC60766B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E4AA221D2E2DB1FD492EFC5DF712C471</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E8BF6C2B0B2F3ABFEE2405A9744209B2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ED15B218B7A3E1E2C26CDCD705DB5B96</key>
 		<dict>
 			<key>primary</key>
 			<true/>

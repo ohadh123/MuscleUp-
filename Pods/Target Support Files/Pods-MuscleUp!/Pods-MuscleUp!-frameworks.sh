@@ -94,6 +94,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/JSSAlertView/JSSAlertView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MaterialMotion/MaterialMotion.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SAConfettiView/SAConfettiView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/StepProgressBar/StepProgressBar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyButton/SwiftyButton.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TKSwitcherCollection/TKSwitcherCollection.framework"
 fi
@@ -103,6 +104,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/JSSAlertView/JSSAlertView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MaterialMotion/MaterialMotion.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SAConfettiView/SAConfettiView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/StepProgressBar/StepProgressBar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyButton/SwiftyButton.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TKSwitcherCollection/TKSwitcherCollection.framework"
 fi
