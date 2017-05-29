@@ -19,6 +19,11 @@ import LTMorphingLabel
 
 class PlayViewController: UIViewController {
 
+    
+    var energyDouble: Int = 10
+    var energyBar1: StepProgressBar = StepProgressBar(frame: CGRect(x: 0, y: 0, width: 200, height: 7))
+    var energyBar2: StepProgressBar = StepProgressBar(frame: CGRect(x: 0, y: 0, width: 200, height: 7))
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,6 +45,9 @@ class PlayViewController: UIViewController {
         
         createFourButtons()
         createTitleLabel()
+        createEnergyBars()
+        
+        
     }
     
     func createFourButtons(){
@@ -80,6 +88,27 @@ class PlayViewController: UIViewController {
         view.addSubview(sitUpsButton)
         
     }
+    func createEnergyBars(){
+        energyBar1.center.x = view.frame.width/1.4
+        energyBar1.center.y = view.frame.height/12
+        energyBar1.stepsCount = 5
+        energyBar1.progress = energyDouble
+        energyBar1.cornerRadius = 10
+        energyBar1.stepsOffset = 3
+        energyBar1.backgroundColor = .orange
+        energyBar1.color = .purple
+        view.addSubview(energyBar1)
+        
+        energyBar2.center.x = view.frame.width/1.4
+        energyBar2.center.y = view.frame.height/10
+        energyBar2.stepsCount = 5
+        energyBar2.progress = energyDouble
+        energyBar2.cornerRadius = 10
+        energyBar2.stepsOffset = 3
+        energyBar2.backgroundColor = .orange
+        energyBar2.color = .purple
+        view.addSubview(energyBar2)
+    }
     
     func createTitleLabel(){
          let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
@@ -93,6 +122,14 @@ class PlayViewController: UIViewController {
     
     func pullUpButtonMethod(){
         print("Pullups pressed")
+        energyDouble -= 1
+        
+        if energyDouble<5{
+            energyBar1.progress = energyDouble
+        }
+        else {
+            energyBar2.progress = energyDouble - 5
+        }
     }
     
     func curlsButtonMethod(){

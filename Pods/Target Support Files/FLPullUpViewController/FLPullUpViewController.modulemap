@@ -1,0 +1,6 @@
+framework module FLPullUpViewController {
+  umbrella header "FLPullUpViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}

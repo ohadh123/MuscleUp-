@@ -12,4 +12,8 @@ pod 'MaterialMotion'
 pod 'StepProgressBar'
 pod 'WYMaterialButton'
 pod 'LTMorphingLabel'
+pod 'NVActivityIndicatorView'
+pod 'FLPullUpViewController'
+pod "PopupCollectionViewController"
+pod 'Bottomsheet'
 end

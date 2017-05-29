@@ -16,6 +16,9 @@
 		DC35BD521EDA8D8C00236A74 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC35BD511EDA8D8C00236A74 /* ShopViewController.swift */; };
 		DC35BD541EDA8D9600236A74 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC35BD531EDA8D9600236A74 /* StatisticsViewController.swift */; };
 		DC35BD561EDA8E7B00236A74 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC35BD551EDA8E7B00236A74 /* CreditsViewController.swift */; };
+		DC35BD581EDBBC2500236A74 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC35BD571EDBBC2500236A74 /* StartViewController.swift */; };
+		DC35BD5A1EDBD0A300236A74 /* ShopViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC35BD591EDBD0A300236A74 /* ShopViewControllerTwo.swift */; };
+		DC35BD5C1EDBD0B900236A74 /* ShopViewControllerThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC35BD5B1EDBD0B900236A74 /* ShopViewControllerThree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		DC35BD511EDA8D8C00236A74 /* ShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		DC35BD531EDA8D9600236A74 /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		DC35BD551EDA8E7B00236A74 /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
+		DC35BD571EDBBC2500236A74 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		DC35BD591EDBD0A300236A74 /* ShopViewControllerTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewControllerTwo.swift; sourceTree = "<group>"; };
+		DC35BD5B1EDBD0B900236A74 /* ShopViewControllerThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewControllerThree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +82,12 @@
 			isa = PBXGroup;
 			children = (
 				DC35BD3D1EDA31A500236A74 /* AppDelegate.swift */,
+				DC35BD571EDBBC2500236A74 /* StartViewController.swift */,
 				DC35BD3F1EDA31A500236A74 /* ViewController.swift */,
 				DC35BD4F1EDA82AB00236A74 /* PlayViewController.swift */,
 				DC35BD511EDA8D8C00236A74 /* ShopViewController.swift */,
+				DC35BD591EDBD0A300236A74 /* ShopViewControllerTwo.swift */,
+				DC35BD5B1EDBD0B900236A74 /* ShopViewControllerThree.swift */,
 				DC35BD531EDA8D9600236A74 /* StatisticsViewController.swift */,
 				DC35BD551EDA8E7B00236A74 /* CreditsViewController.swift */,
 				DC35BD441EDA31A500236A74 /* Assets.xcassets */,
@@ -132,6 +141,7 @@
 				TargetAttributes = {
 					DC35BD391EDA31A500236A74 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = TC6GC8B8SR;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -220,6 +230,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC35BD521EDA8D8C00236A74 /* ShopViewController.swift in Sources */,
+				DC35BD5C1EDBD0B900236A74 /* ShopViewControllerThree.swift in Sources */,
+				DC35BD5A1EDBD0A300236A74 /* ShopViewControllerTwo.swift in Sources */,
+				DC35BD581EDBBC2500236A74 /* StartViewController.swift in Sources */,
 				DC35BD561EDA8E7B00236A74 /* CreditsViewController.swift in Sources */,
 				DC35BD541EDA8D9600236A74 /* StatisticsViewController.swift in Sources */,
 				DC35BD401EDA31A500236A74 /* ViewController.swift in Sources */,
@@ -340,6 +353,7 @@
 			baseConfigurationReference = 0AC0075521E74FDA1BB03877 /* Pods-MuscleUp!.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TC6GC8B8SR;
 				INFOPLIST_FILE = "MuscleUp!/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ohadkoronyo.MuscleUp-";
@@ -353,6 +367,7 @@
 			baseConfigurationReference = 265FDCCAC3E86CE6727D45D6 /* Pods-MuscleUp!.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TC6GC8B8SR;
 				INFOPLIST_FILE = "MuscleUp!/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ohadkoronyo.MuscleUp-";
@@ -380,6 +395,7 @@
 				DC35BD4E1EDA31A500236A74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

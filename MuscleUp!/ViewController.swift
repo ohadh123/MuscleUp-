@@ -14,6 +14,9 @@ import TKSwitcherCollection
 import GTProgressBar
 import MaterialMotion
 import StepProgressBar
+import PopupCollectionViewController
+import Bottomsheet
+
 
 class ViewController: UIViewController {
 
@@ -21,11 +24,12 @@ class ViewController: UIViewController {
     var confettiView2 = SAConfettiView()
     var confettiView3 = SAConfettiView()
     var confettiIsActive: Bool = false
+    
     var characterBarDouble: CGFloat = 0.0
     var characterBarDoubleFromSave: CGFloat = 0.0
-    var energyDouble: Int = 10
     var characterBar: GTProgressBar = GTProgressBar(frame: CGRect(x: 0, y: 0, width: 200, height: 15))
-    var coinAmount: Int = 500
+    
+    var energyDouble: Int = 10
     var energyBar1: StepProgressBar = StepProgressBar(frame: CGRect(x: 0, y: 0, width: 80, height: 7))
     var energyBar2: StepProgressBar = StepProgressBar(frame: CGRect(x: 0, y: 0, width: 80, height: 7))
 
@@ -33,6 +37,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         setupTitleScreen()
+        
         
         
     }
@@ -43,7 +48,7 @@ class ViewController: UIViewController {
         
         createTitleLabel()
         createHomeScreenButtons()
-        createSlidersandCoin()
+        createSlider()
         addConfettiViews()
         
         
@@ -61,7 +66,7 @@ class ViewController: UIViewController {
         
         let titleImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
         titleImageView.center.x = view.frame.width/2
-        titleImageView.center.y = view.frame.height/5.5
+        titleImageView.center.y = view.frame.height/12   //6
         titleImageView.image = #imageLiteral(resourceName: "MuscleUp!")
         view.addSubview(titleImageView)
     }
@@ -149,11 +154,11 @@ class ViewController: UIViewController {
         view.addSubview(confettiView3)
     }
     
-    func createSlidersandCoin(){
+    func createSlider(){
         
         //characterBar = GTProgressBar(frame: CGRect(x: 0, y: 0, width: 200, height: 10))
         characterBar.center.x = view.frame.width/2
-        characterBar.center.y = view.frame.height/12
+        characterBar.center.y = view.frame.height/5.5
         characterBar.progress = characterBarDoubleFromSave
         characterBar.barBorderColor = .blue
         characterBar.barBackgroundColor = .gray
@@ -165,48 +170,16 @@ class ViewController: UIViewController {
         
         let characterBarLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
         characterBarLabel.center.x = view.frame.width/2
-        characterBarLabel.center.y = view.frame.height/17
+        characterBarLabel.center.y = view.frame.height/6.3
         characterBarLabel.textAlignment = .center
-        characterBarLabel.text = "Progress:"
+        characterBarLabel.text = "Strength:"
         characterBarLabel.font = UIFont(name: "Verdana-Bold", size: 14)
         //characterBarLabel.font = characterBarLabel.font.withSize(14)
         view.addSubview(characterBarLabel)
         
-        let coinImagePic = UIImageView(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
-        coinImagePic.image = #imageLiteral(resourceName: "empty-gold-coin")
-        coinImagePic.center.x = view.frame.width/1.2
-        coinImagePic.center.y = view.frame.height/12
-        view.addSubview(coinImagePic)
-        
-        let coinLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 25))
-        coinLabel.center.x = view.frame.width/1.09
-        coinLabel.center.y = view.frame.height/12
-        coinLabel.textAlignment = .center
-        coinLabel.text = String(coinAmount)
-        coinLabel.font = UIFont(name: "Verdana-Bold", size: 20)
-        //coinLabel.font = coinLabel.font.withSize(20)
-        view.addSubview(coinLabel)
         
         //let energyBar = StepProgressBar(frame: CGRect(x: 0, y: 0, width: 80, height: 5))
-        energyBar1.center.x = view.frame.width/8
-        energyBar1.center.y = view.frame.height/13
-        energyBar1.stepsCount = 5
-        energyBar1.progress = energyDouble
-        energyBar1.cornerRadius = 10
-        energyBar1.stepsOffset = 3
-        energyBar1.backgroundColor = .gray
-        energyBar1.color = .purple
-        view.addSubview(energyBar1)
         
-        energyBar2.center.x = view.frame.width/8
-        energyBar2.center.y = view.frame.height/11
-        energyBar2.stepsCount = 5
-        energyBar2.progress = energyDouble
-        energyBar2.cornerRadius = 10
-        energyBar2.stepsOffset = 3
-        energyBar2.backgroundColor = .gray
-        energyBar2.color = .purple
-        view.addSubview(energyBar2)
         
 
     }
@@ -221,6 +194,29 @@ class ViewController: UIViewController {
     
     func shopButtonMethod(){
         print("Shop pressed")
+        
+        /**let popupVC = PopupCollectionViewController(fromVC: self)
+        popupVC.presentViewControllers([ShopViewController(), ShopViewControllerTwo()], completion: nil)**/
+        
+        
+        
+        /**let popupVC = PopupCollectionViewController(fromVC: self)
+        let shopViewFirst = ShopViewController()
+        let shopViewSecond = ShopViewControllerTwo()
+        let shopViewThird = ShopViewControllerThree()
+        
+        
+        popupVC.presentViewControllers([shopViewFirst, shopViewSecond, shopViewThird],
+                                       options: [
+                                        .cellWidth(self.view.bounds.width/1.5),
+                                        .popupHeight(400),
+                                        .contentEdgeInsets(20),
+                                        .layout(.center),
+                                        .animation(.slideUp),
+                                        
+                                        
+            ],
+                                       completion: nil)**/
         let shopViewController = ShopViewController()
         shopViewController.modalTransitionStyle = .coverVertical
         self.present(shopViewController, animated: true, completion: nil)
@@ -284,14 +280,7 @@ class ViewController: UIViewController {
     func musicToggleMethod(){
         print("Music Toggled")
         characterBarDouble += 0.1
-        energyDouble -= 1
         
-        if energyDouble<5{
-            energyBar1.progress = energyDouble
-        }
-        else {
-            energyBar2.progress = energyDouble - 5
-        }
         characterBar.animateTo(progress: characterBarDouble)
         
     }
