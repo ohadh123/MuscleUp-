@@ -20,28 +20,100 @@ import Bottomsheet
 
 class ViewController: UIViewController {
 
+    var titleImageView: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
+    
+    var characterBarLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+    var characterBarDouble: CGFloat = 0.0
+    var characterBarDoubleFromSave: CGFloat = 0.0
+    var characterBar: GTProgressBar = GTProgressBar(frame: CGRect(x: 0, y: 0, width: 200, height: 15))
+    
+    var playButton:PressableButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 175, height: 65))
+    var shopButton:PressableButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
+    var statsButton:PressableButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
+    var creditsButton:PressableButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 85, height: 40))
+    var musicToggle:TKSimpleSwitch = TKSimpleSwitch(frame: CGRect(x: 0, y: 0, width: 50, height: 30))
+    var volumeImagePic:UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+
+    
+    
     var confettiView = SAConfettiView()
     var confettiView2 = SAConfettiView()
     var confettiView3 = SAConfettiView()
     var confettiIsActive: Bool = false
     
-    var characterBarDouble: CGFloat = 0.0
-    var characterBarDoubleFromSave: CGFloat = 0.0
-    var characterBar: GTProgressBar = GTProgressBar(frame: CGRect(x: 0, y: 0, width: 200, height: 15))
+    var firstTimeOpeningApp: Bool = true
     
-    var energyDouble: Int = 10
-    var energyBar1: StepProgressBar = StepProgressBar(frame: CGRect(x: 0, y: 0, width: 80, height: 7))
-    var energyBar2: StepProgressBar = StepProgressBar(frame: CGRect(x: 0, y: 0, width: 80, height: 7))
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if firstTimeOpeningApp {
+        super.viewWillAppear(animated)
+        titleImageView.center.y -= view.bounds.width
+        characterBarLabel.alpha = 0.0
+        characterBar.alpha = 0.0
+        
+        playButton.center.x -= view.bounds.width
+        shopButton.center.x += view.bounds.width
+        statsButton.center.x -= view.bounds.width
+        creditsButton.center.y += view.bounds.width
+        musicToggle.alpha = 0
+        volumeImagePic.alpha = 0
+        }
+        
+    }
 
+    override func viewDidAppear(_ animated: Bool) {
+        if firstTimeOpeningApp{
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
+            self.titleImageView.center.y += self.view.bounds.width
+        
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.5, delay: 0.5, options: UIViewAnimationOptions.curveLinear, animations: {
+            self.characterBarLabel.alpha = 1
+            self.characterBar.alpha = 1
+            
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.4, delay: 0.8, options: UIViewAnimationOptions.curveLinear, animations: {
+            self.playButton.center.x += self.view.bounds.width
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.4, delay: 1.0, options: UIViewAnimationOptions.curveLinear, animations: {
+            self.shopButton.center.x -= self.view.bounds.width
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.4, delay: 1.2, options: UIViewAnimationOptions.curveLinear, animations: {
+            self.statsButton.center.x += self.view.bounds.width
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.2, delay: 1.5, options: UIViewAnimationOptions.curveLinear, animations: {
+            self.creditsButton.center.y -= self.view.bounds.width
+            
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.6, delay: 1.85, options: UIViewAnimationOptions.curveLinear, animations: {
+            self.musicToggle.alpha = 1
+            self.volumeImagePic.alpha = 1
+
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+            }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTitleScreen()
         
-        
-        
     }
 
+    
     func setupTitleScreen(){
         view.backgroundColor = .gray
         
@@ -64,16 +136,18 @@ class ViewController: UIViewController {
         titleLabel.font = titleLabel.font.withSize(50)
         view.addSubview(titleLabel)**/
         
-        let titleImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
+        //let titleImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
         titleImageView.center.x = view.frame.width/2
         titleImageView.center.y = view.frame.height/7.8   //6
         titleImageView.image = #imageLiteral(resourceName: "MuscleUp!")
+        
+        
         view.addSubview(titleImageView)
     }
     
     func createHomeScreenButtons(){
         //let playButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
-        let playButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 175, height: 65))
+        //let playButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 175, height: 65))
         playButton.center.x = view.frame.width/2
         playButton.center.y = view.frame.height/1.51   //1.47
         playButton.setTitle("Play", for: .normal)
@@ -89,7 +163,7 @@ class ViewController: UIViewController {
         playButton.shadowHeight = 4
         view.addSubview(playButton)
         
-        let shopButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
+        //let shopButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
         shopButton.center.x = view.frame.width/2
         shopButton.center.y = view.frame.height/1.305 //1.4
         shopButton.setTitle("Shop", for: .normal)
@@ -99,7 +173,7 @@ class ViewController: UIViewController {
         shopButton.shadowHeight = 4
         view.addSubview(shopButton)
         
-        let statsButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
+        //let statsButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
         statsButton.center.x = view.frame.width/2
         statsButton.center.y = view.frame.height/1.17    //1.3
         statsButton.setTitle("Statistics", for: .normal)
@@ -109,7 +183,7 @@ class ViewController: UIViewController {
         statsButton.shadowHeight = 4
         view.addSubview(statsButton)
         
-        let creditsButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 85, height: 40))
+        //let creditsButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 85, height: 40))
         creditsButton.center.x = view.frame.width/8
         creditsButton.center.y = view.frame.height/1.05
         creditsButton.setTitle("Credits", for: .normal)
@@ -126,12 +200,12 @@ class ViewController: UIViewController {
         confettiButton.addTarget(self, action: #selector(confettiButtonMethod), for: .touchUpInside)
         view.addSubview(confettiButton)
 
-        let musicToggle = TKSimpleSwitch(frame: CGRect(x: 0, y: 0, width: 50, height: 30))
+        //let musicToggle = TKSimpleSwitch(frame: CGRect(x: 0, y: 0, width: 50, height: 30))
         musicToggle.center.x = view.frame.width/1.2
         musicToggle.center.y = view.frame.height/1.05
         musicToggle.addTarget(self, action: #selector(musicToggleMethod), for: .touchDown)
         
-        let volumeImagePic = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        //let volumeImagePic = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         volumeImagePic.image = #imageLiteral(resourceName: "volumeImage")
         volumeImagePic.center.x = view.frame.width/1.06
         volumeImagePic.center.y = view.frame.height/1.05
@@ -168,7 +242,7 @@ class ViewController: UIViewController {
         //characterBar.cornerRadius = 5
         view.addSubview(characterBar)
         
-        let characterBarLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+        //let characterBarLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
         characterBarLabel.center.x = view.frame.width/2
         characterBarLabel.center.y = view.frame.height/5.05
         characterBarLabel.textAlignment = .center
@@ -186,6 +260,7 @@ class ViewController: UIViewController {
     
     func playButtonMethod(){
         print("Play pressed")
+        firstTimeOpeningApp = false
         let playViewController = PlayViewController()
         playViewController.modalTransitionStyle = .crossDissolve
         self.present(playViewController, animated: true, completion: nil)
@@ -194,7 +269,7 @@ class ViewController: UIViewController {
     
     func shopButtonMethod(){
         print("Shop pressed")
-        
+        firstTimeOpeningApp = false
         /**let popupVC = PopupCollectionViewController(fromVC: self)
         popupVC.presentViewControllers([ShopViewController(), ShopViewControllerTwo()], completion: nil)**/
         
@@ -225,6 +300,7 @@ class ViewController: UIViewController {
     
     func statsButtonMethod(){
         print("Statistics pressed")
+        firstTimeOpeningApp = false
         let statisticsViewController = StatisticsViewController()
         statisticsViewController.modalTransitionStyle = .crossDissolve
         self.present(statisticsViewController, animated: true, completion: nil)
@@ -233,6 +309,7 @@ class ViewController: UIViewController {
     
     func creditsButtonMethod(){
         print("Credits Pressed")
+        firstTimeOpeningApp = false
         let creditsViewController = CreditsViewController()
         creditsViewController.modalTransitionStyle = .crossDissolve
         self.present(creditsViewController, animated: true, completion: nil)
@@ -251,20 +328,20 @@ class ViewController: UIViewController {
             //delay: 10000
         )
         
-        if confettiIsActive {
+        /**if confettiIsActive {
             stopConfetti()
             confettiIsActive = false
             
-        }
-        else{
-            startConfetti()
-            confettiIsActive = true
+        }**/
+        //else{
+        startConfetti()
+            //confettiIsActive = true
             
-        }
+        //}
         let delayInSeconds = 4.0
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {
             self.stopConfetti()
-            self.confettiIsActive = false
+            //self.confettiIsActive = false
         }
         
     }
@@ -287,6 +364,14 @@ class ViewController: UIViewController {
         characterBarDouble += 0.1
         
         characterBar.animateTo(progress: characterBarDouble)
+
+        //print(characterBarDouble)
+        let characterBarInt = (Int)(characterBarDouble * 10)
+        print(characterBarInt)
+        if characterBarInt % 2 == 0{
+            print("Getting here?")
+            confettiButtonMethod()
+        }
         
     }
     

@@ -90,11 +90,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Bottomsheet/Bottomsheet.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/ConcentricProgressRingView/ConcentricProgressRingView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/FLPullUpViewController/FLPullUpViewController.framework"
   install_framework "$BUILT_PRODUCTS_DIR/GTProgressBar/GTProgressBar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/IndefiniteObservable/IndefiniteObservable.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JSSAlertView/JSSAlertView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LTMorphingLabel/LTMorphingLabel.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/LionheartExtensions/LionheartExtensions.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MaterialMotion/MaterialMotion.framework"
   install_framework "$BUILT_PRODUCTS_DIR/NVActivityIndicatorView/NVActivityIndicatorView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PopupCollectionViewController/PopupCollectionViewController.framework"
@@ -107,11 +109,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Bottomsheet/Bottomsheet.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/ConcentricProgressRingView/ConcentricProgressRingView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/FLPullUpViewController/FLPullUpViewController.framework"
   install_framework "$BUILT_PRODUCTS_DIR/GTProgressBar/GTProgressBar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/IndefiniteObservable/IndefiniteObservable.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JSSAlertView/JSSAlertView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LTMorphingLabel/LTMorphingLabel.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/LionheartExtensions/LionheartExtensions.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MaterialMotion/MaterialMotion.framework"
   install_framework "$BUILT_PRODUCTS_DIR/NVActivityIndicatorView/NVActivityIndicatorView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PopupCollectionViewController/PopupCollectionViewController.framework"

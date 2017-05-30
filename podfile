@@ -16,4 +16,5 @@ pod 'NVActivityIndicatorView'
 pod 'FLPullUpViewController'
 pod "PopupCollectionViewController"
 pod 'Bottomsheet'
+pod 'ConcentricProgressRingView'
 end
