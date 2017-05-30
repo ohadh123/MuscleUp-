@@ -12,6 +12,37 @@ import ConcentricProgressRingView
 
 class StatisticsViewController: UIViewController {
 
+    var statsTitleLabel:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 350, height: 100))
+    
+    var upperBodyProgress: ConcentricProgressRingView? = nil
+    var upperBodyLevelLabel:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
+    var upperBodyLevel: Int = 1
+    var upperBodySetsRemaining: Int = 5
+    var upperBodySetsOutOf: Int = 15
+    var upperBodyPullUp: Int = 20
+    
+    var coreProgress: ConcentricProgressRingView? = nil
+    var coreLevelLabel:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
+    var coreLevel: Int = 0
+    var coreSetsRemaining: Int = 3
+    var coreSetsOutOf: Int = 10
+    var coreSitUp: Int = 15
+    
+    var armProgress: ConcentricProgressRingView? = nil
+    var armLevelLabel:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
+    var armLevel: Int = 3
+    var armSetsRemaining: Int = 0
+    var armSetsOutOf: Int = 30
+    var armCurls: Int = 30
+    
+    var legProgress: ConcentricProgressRingView? = nil
+    var legLevelLabel:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
+    var legLevel: Int = 2
+    var legSetsRemaining: Int = 8
+    var legSetsOutOf: Int = 15
+    var legSquats: Int = 25
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,11 +51,13 @@ class StatisticsViewController: UIViewController {
     
     func setupStatisticsScreen(){
         view.backgroundColor = .gray
+        createLabel(label: statsTitleLabel, centerX: view.frame.width/2, centerY: view.frame.height/6, textP: "Statistics", sizeP: 40)
         createBackButton()
         createConcentricCircles()
+        createCircleLevelLabels()
+        createCircleTitles()
+        createCircleInfoLabels()
         
-        
-       
     }
     
     func createBackButton(){
@@ -45,31 +78,76 @@ class StatisticsViewController: UIViewController {
     
     func createConcentricCircles(){
         
- 
-        let upperBodyProgress = createConcentricCircle(foregroundC1: .yellow, foregroundC2: .green, backgroundC: .darkGray, centerP: CGPoint(x: view.frame.width/5, y: view.frame.height/3), marginP: 2, radiusP: 60, width1: 14, width2: 18)
-        view.addSubview(upperBodyProgress)
+        upperBodyProgress = createConcentricCircle(foregroundC1: .yellow, foregroundC2: .green, backgroundC: .darkGray, centerP: CGPoint(x: view.frame.width/5, y: view.frame.height/3), marginP: 2, radiusP: 45, width1: 12, width2: 12)
+        if let unwrappedUpperBodyProgress = upperBodyProgress{
+            view.addSubview(unwrappedUpperBodyProgress)
+            updateConcentricCircle(ring: unwrappedUpperBodyProgress, firstArc: CGFloat(upperBodySetsRemaining)/CGFloat(upperBodySetsOutOf), secondArc: CGFloat(upperBodyLevel) * CGFloat(0.2))
+        }
         
-        updateConcentricCircle(ring: upperBodyProgress, firstArc: 0.2, secondArc: 0.5)
+        coreProgress = createConcentricCircle(foregroundC1: .yellow, foregroundC2: .green, backgroundC: .darkGray, centerP: CGPoint(x: view.frame.width/1.5, y: view.frame.height/3), marginP: 2, radiusP: 45, width1: 12, width2: 12)
+        if let unwrappedCoreProgress = coreProgress{
+            view.addSubview(unwrappedCoreProgress)
+            updateConcentricCircle(ring: unwrappedCoreProgress, firstArc: CGFloat(coreSetsRemaining)/CGFloat(coreSetsOutOf), secondArc: CGFloat(coreLevel) * CGFloat(0.2))
+
+        }
         
-        let coreProgress = createConcentricCircle(foregroundC1: .yellow, foregroundC2: .green, backgroundC: .darkGray, centerP: CGPoint(x: view.frame.width/1.5, y: view.frame.height/3), marginP: 2, radiusP: 60, width1: 14, width2: 18)
-        view.addSubview(coreProgress)
+        armProgress = createConcentricCircle(foregroundC1: .yellow, foregroundC2: .green, backgroundC: .darkGray, centerP: CGPoint(x: view.frame.width/5, y: view.frame.height/1.75), marginP: 2, radiusP: 45, width1: 12, width2: 12)
+        if let unwrappedArmProgress = armProgress {
+            view.addSubview(unwrappedArmProgress)
+            updateConcentricCircle(ring: unwrappedArmProgress, firstArc: CGFloat(armSetsRemaining)/CGFloat(armSetsOutOf), secondArc: CGFloat(armLevel) * CGFloat(0.2))
+        }
         
-        updateConcentricCircle(ring: coreProgress, firstArc: 0.4, secondArc: 0.7)
+        legProgress = createConcentricCircle(foregroundC1: .yellow, foregroundC2: .green, backgroundC: .darkGray, centerP: CGPoint(x: view.frame.width/1.5, y: view.frame.height/1.75), marginP: 2, radiusP: 45, width1: 12, width2: 12)
+        if let unwrappedLegProgress = legProgress{
+            view.addSubview(unwrappedLegProgress)
+            updateConcentricCircle(ring: unwrappedLegProgress, firstArc: CGFloat(legSetsRemaining)/CGFloat(legSetsOutOf), secondArc: CGFloat(legLevel) * CGFloat(0.2))
+        }
         
-        let armProgress = createConcentricCircle(foregroundC1: .yellow, foregroundC2: .green, backgroundC: .darkGray, centerP: CGPoint(x: view.frame.width/5, y: view.frame.height/1.75), marginP: 2, radiusP: 60, width1: 14, width2: 18)
-        view.addSubview(armProgress)
-        
-        updateConcentricCircle(ring: armProgress, firstArc: 0, secondArc: 0.8)
-        
-        let legProgress = createConcentricCircle(foregroundC1: .yellow, foregroundC2: .green, backgroundC: .darkGray, centerP: CGPoint(x: view.frame.width/1.5, y: view.frame.height/1.75), marginP: 2, radiusP: 60, width1: 14, width2: 18)
-        view.addSubview(legProgress)
-        
-        updateConcentricCircle(ring: legProgress, firstArc: 0.5, secondArc: 0.2)
-        
-        
-        
-        
+    }
     
+    func createCircleTitles(){
+        createLabel(label: UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100)), centerX: view.frame.width/5, centerY: view.frame.height/4.2, textP: "Upper Body", sizeP: 18)
+        createLabel(label: UILabel(frame: CGRect(x:0, y:0,width:200, height:100)), centerX: view.frame.width/1.5, centerY: view.frame.height/4.2, textP: "Core", sizeP: 18)
+        createLabel(label: UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100)), centerX: view.frame.width/5, centerY: view.frame.height/2.1, textP: "Arm", sizeP: 18)
+        createLabel(label: UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100)), centerX: view.frame.width/1.5, centerY: view.frame.height/2.1, textP: "Leg", sizeP: 18)
+    }
+    
+    func createCircleInfoLabels(){
+        
+        createLabel(label: UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100)), centerX: view.frame.width/2.675, centerY: view.frame.height/3.25, textP: "Level: " + String(upperBodyLevel), sizeP: 10)
+        createLabel(label: UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100)), centerX: view.frame.width/2.48, centerY: view.frame.height/3, textP: "Sets: " + String(upperBodySetsRemaining) + "/"+String(upperBodySetsOutOf), sizeP: 10)
+        createLabel(label: UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100)), centerX: view.frame.width/2.53, centerY: view.frame.height/2.8, textP: "PullUps: " + String(upperBodyPullUp), sizeP: 10)
+        
+        
+        createLabel(label: UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100)), centerX: view.frame.width/1.19, centerY: view.frame.height/3.25, textP: "Level: " + String(coreLevel), sizeP: 10)
+        createLabel(label: UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100)), centerX: view.frame.width/1.145, centerY: view.frame.height/3, textP: "Sets: " + String(coreSetsRemaining) + "/"+String(coreSetsOutOf), sizeP: 10)
+        createLabel(label: UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100)), centerX: view.frame.width/1.17, centerY: view.frame.height/2.8, textP: "SitUps: " + String(coreSitUp), sizeP: 10)
+        
+        createLabel(label: UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100)), centerX: view.frame.width/2.675, centerY: view.frame.height/1.83, textP: "Level: " + String(armLevel), sizeP: 10)
+        createLabel(label: UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100)), centerX: view.frame.width/2.48, centerY: view.frame.height/1.75, textP: "Sets: " + String(armSetsRemaining) + "/"+String(armSetsOutOf), sizeP: 10)
+        createLabel(label: UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100)), centerX: view.frame.width/2.65, centerY: view.frame.height/1.68, textP: "Curls: " + String(armCurls), sizeP: 10)
+        
+        createLabel(label: UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100)), centerX: view.frame.width/1.19, centerY: view.frame.height/1.83, textP: "Level: " + String(legLevel), sizeP: 10)
+        createLabel(label: UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100)), centerX: view.frame.width/1.145, centerY: view.frame.height/1.75, textP: "Sets: " + String(legSetsRemaining) + "/"+String(legSetsOutOf), sizeP: 10)
+        createLabel(label: UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100)), centerX: view.frame.width/1.17, centerY: view.frame.height/1.68, textP: "Squats: " + String(legSquats), sizeP: 10)
+    }
+    
+    func createCircleLevelLabels(){
+        createLabel(label: upperBodyLevelLabel, centerX: view.frame.width/5, centerY: view.frame.height/3, textP: String(upperBodyLevel), sizeP: 18)
+        createLabel(label: coreLevelLabel, centerX: view.frame.width/1.5, centerY: view.frame.height/3, textP: String(coreLevel), sizeP: 18)
+        createLabel(label: armLevelLabel, centerX: view.frame.width/5, centerY: view.frame.height/1.75, textP: String(armLevel), sizeP: 18)
+        createLabel(label: legLevelLabel, centerX: view.frame.width/1.5, centerY: view.frame.height/1.75, textP: String(legLevel), sizeP: 18)
+        
+    }
+    
+    func createLabel(label: UILabel, centerX: CGFloat, centerY: CGFloat, textP: String, sizeP: CGFloat){
+        label.center.x = centerX
+        label.center.y = centerY
+        label.textAlignment = .center
+        label.text = textP
+        label.font = UIFont(name: "Verdana-Bold", size: sizeP)
+        
+        view.addSubview(label)
     }
     
     func createConcentricCircle(foregroundC1:UIColor, foregroundC2:UIColor, backgroundC:UIColor, centerP:CGPoint, marginP:CGFloat, radiusP:CGFloat, width1:CGFloat,width2:CGFloat) -> ConcentricProgressRingView{
