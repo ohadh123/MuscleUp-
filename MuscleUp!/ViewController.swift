@@ -259,7 +259,7 @@ class ViewController: UIViewController {
     }
     
     func playButtonMethod(){
-        print("Play pressed")
+        //print("Play pressed")
         firstTimeOpeningApp = false
         let playViewController = PlayViewController()
         playViewController.modalTransitionStyle = .crossDissolve
@@ -268,7 +268,7 @@ class ViewController: UIViewController {
     }
     
     func shopButtonMethod(){
-        print("Shop pressed")
+        //print("Shop pressed")
         firstTimeOpeningApp = false
         /**let popupVC = PopupCollectionViewController(fromVC: self)
         popupVC.presentViewControllers([ShopViewController(), ShopViewControllerTwo()], completion: nil)**/
@@ -299,7 +299,7 @@ class ViewController: UIViewController {
     }
     
     func statsButtonMethod(){
-        print("Statistics pressed")
+        //print("Statistics pressed")
         firstTimeOpeningApp = false
         let statisticsViewController = StatisticsViewController()
         statisticsViewController.modalTransitionStyle = .crossDissolve
@@ -308,7 +308,7 @@ class ViewController: UIViewController {
 
     
     func creditsButtonMethod(){
-        print("Credits Pressed")
+        //print("Credits Pressed")
         firstTimeOpeningApp = false
         let creditsViewController = CreditsViewController()
         creditsViewController.modalTransitionStyle = .crossDissolve
@@ -316,7 +316,7 @@ class ViewController: UIViewController {
     }
     
     func confettiButtonMethod(){
-        print("Confetti pressed")
+        //print("Confetti pressed")
         
         JSSAlertView().show(
             self,

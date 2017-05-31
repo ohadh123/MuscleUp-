@@ -16,15 +16,15 @@ class StatisticsViewController: UIViewController {
     
     var upperBodyProgress: ConcentricProgressRingView? = nil
     var upperBodyLevelLabel:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
-    var upperBodyLevel: Int = 1
-    var upperBodySetsRemaining: Int = 5
+    var upperBodyLevel: Int = 3
+    var upperBodySetsRemaining: Int = 12
     var upperBodySetsOutOf: Int = 15
     var upperBodyPullUp: Int = 20
     
     var coreProgress: ConcentricProgressRingView? = nil
     var coreLevelLabel:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
-    var coreLevel: Int = 0
-    var coreSetsRemaining: Int = 3
+    var coreLevel: Int = 5
+    var coreSetsRemaining: Int = 10
     var coreSetsOutOf: Int = 10
     var coreSitUp: Int = 15
     
@@ -43,20 +43,21 @@ class StatisticsViewController: UIViewController {
     var legSquats: Int = 25
 
     
-    override func viewDidLoad() {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewDidLoad()
-
         setupStatisticsScreen()
+        
     }
     
     func setupStatisticsScreen(){
         view.backgroundColor = .gray
+        
         createLabel(label: statsTitleLabel, centerX: view.frame.width/2, centerY: view.frame.height/6, textP: "Statistics", sizeP: 40)
         createBackButton()
-        createConcentricCircles()
         createCircleLevelLabels()
         createCircleTitles()
         createCircleInfoLabels()
+        createConcentricCircles()
         
     }
     
@@ -109,7 +110,7 @@ class StatisticsViewController: UIViewController {
         createLabel(label: UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100)), centerX: view.frame.width/5, centerY: view.frame.height/4.2, textP: "Upper Body", sizeP: 18)
         createLabel(label: UILabel(frame: CGRect(x:0, y:0,width:200, height:100)), centerX: view.frame.width/1.5, centerY: view.frame.height/4.2, textP: "Core", sizeP: 18)
         createLabel(label: UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100)), centerX: view.frame.width/5, centerY: view.frame.height/2.1, textP: "Arm", sizeP: 18)
-        createLabel(label: UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100)), centerX: view.frame.width/1.5, centerY: view.frame.height/2.1, textP: "Leg", sizeP: 18)
+        createLabel(label: UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100)), centerX: view.frame.width/1.5, centerY: view.frame.height/2.1, textP: "Lower Body", sizeP: 18)
     }
     
     func createCircleInfoLabels(){
@@ -165,8 +166,21 @@ class StatisticsViewController: UIViewController {
     }
     
     func updateConcentricCircle(ring: ConcentricProgressRingView, firstArc: CGFloat, secondArc: CGFloat){
-        ring.arcs[0].setProgress(firstArc, duration: 3)
-        ring.arcs[1].setProgress(secondArc, duration: 3)
+        ring.arcs[0].setProgress(firstArc, duration: 2)
+        ring.arcs[1].setProgress(secondArc, duration: 2)
+        
+        let delayInSeconds = 1.6
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {
+        if firstArc == 1 && secondArc == 1{
+            let completedImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 150, height: 75))
+            completedImage.image = UIImage(named: "CompletedStamp")
+            completedImage.center.x = ring.center.x
+            completedImage.center.y = ring.center.y
+            
+            self.view.addSubview(completedImage)
+            
+        }
+        }
     }
 
 }
