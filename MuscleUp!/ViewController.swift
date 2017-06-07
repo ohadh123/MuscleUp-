@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     var characterBarLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
     var characterBarDouble: CGFloat = 0.0
     var characterBarDoubleFromSave: CGFloat = 0.0
-    var characterBar: GTProgressBar = GTProgressBar(frame: CGRect(x: 0, y: 0, width: 200, height: 15))
+    var characterBar: GTProgressBar = GTProgressBar(frame: CGRect(x: 0, y: 0, width: 200, height: 13))
     
     var playButton:PressableButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 175, height: 65))
     var shopButton:PressableButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
@@ -34,7 +34,14 @@ class ViewController: UIViewController {
     var musicToggle:TKSimpleSwitch = TKSimpleSwitch(frame: CGRect(x: 0, y: 0, width: 50, height: 30))
     var volumeImagePic:UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
 
-    
+    var leftArmImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+    var rightArmImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+    var bodyImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+    var bodyImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+    var bodyImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+    var bodyImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+    var bodyImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+
     
     var confettiView = SAConfettiView()
     var confettiView2 = SAConfettiView()
@@ -63,6 +70,8 @@ class ViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        
+        
         if firstTimeOpeningApp{
         UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
             self.titleImageView.center.y += self.view.bounds.width
@@ -105,6 +114,10 @@ class ViewController: UIViewController {
             self.view.layoutIfNeeded()
         }, completion: nil)
             }
+        
+        setupCharacterImage()
+        animateTitleCharacterSequence1()
+    
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,7 +125,283 @@ class ViewController: UIViewController {
         setupTitleScreen()
         
     }
+    
+    func animateTitleCharacterSequence1F(){
+        leftArmImage.animationImages = [UIImage]()
+        for i in 1...9
+        {
+            let image = UIImage(named: "Level 3 - Left " + String(i))
+            if let anImage = image{
+                leftArmImage.animationImages?.append(anImage)
+            }
+        }
+        rightArmImage.animationImages = [UIImage]()
+        for i in 1...9
+        {
+            let image = UIImage(named: "Level 3 - Right " + String(i))
+            if let anImage = image{
+                rightArmImage.animationImages?.append(anImage)
+            }
+        }
+        leftArmImage.animationDuration = 1
+        leftArmImage.animationRepeatCount = 1
+        leftArmImage.startAnimating()
+        
+        view.addSubview(leftArmImage)
+        
+        
+        rightArmImage.animationDuration = 1
+        rightArmImage.animationRepeatCount = 1
+        rightArmImage.startAnimating()
+        
+        view.addSubview(rightArmImage)
+    }
+    
+    func animateTitleCharacterSequence1(){
+        
+        
+        /**let delayInSeconds = 0.965
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {
+            self.leftArmImage.image = self.leftArmImage.animationImages?.last
+            self.rightArmImage.image = self.rightArmImage.animationImages?.last
+            //self.view.addSubview(self.leftArmImage)
+            //self.view.addSubview(self.rightArmImage)
+        }**/
+        
+        let x = 100
+        
+        leftArmImage.animationImages = [UIImage]()
+        
+        for _ in 1...10
+        {
+            let image = UIImage(named: "Level 3 - Left 1")
+            if let anImage = image{
+                leftArmImage.animationImages?.append(anImage)
+            }
+        }
+        
+        for i in 1...9
+        {
+            let image = UIImage(named: "Level 3 - Left " + String(i))
+            if let anImage = image{
+                leftArmImage.animationImages?.append(anImage)
+            }
+        }
+        
+        for _ in 1...(x)
+        {
+            let image = UIImage(named: "Level 3 - Left 9")
+            if let anImage = image{
+                leftArmImage.animationImages?.append(anImage)
+            }
+        }
+        
+        for i in 1...9
+        {
+            let image = UIImage(named: "Level 3 - Left " + String(10-i))
+            if let anImage = image{
+                leftArmImage.animationImages?.append(anImage)
+            }
+        }
+        
+        for _ in 1...(x)
+        {
+            let image = UIImage(named: "Level 3 - Left 1")
+            if let anImage = image{
+                leftArmImage.animationImages?.append(anImage)
+            }
+        }
+        
+        for _ in 1...(x+9)
+        {
+            let image = UIImage(named: "Level 3 - Left 1")
+            if let anImage = image{
+                leftArmImage.animationImages?.append(anImage)
+            }
+        }
+        
+        for i in 1...9
+        {
+            let image = UIImage(named: "Level 3 - Left " + String(i))
+            if let anImage = image{
+                leftArmImage.animationImages?.append(anImage)
+            }
+        }
+        
+        for _ in 1...(x)
+        {
+            let image = UIImage(named: "Level 3 - Left 9")
+            if let anImage = image{
+                leftArmImage.animationImages?.append(anImage)
+            }
+        }
+        
+        for _ in 1...(x+9)
+        {
+            let image = UIImage(named: "Level 3 - Left 9")
+            if let anImage = image{
+                leftArmImage.animationImages?.append(anImage)
+            }
+        }
+        for i in 1...9
+        {
+            let image = UIImage(named: "Level 3 - Left " + String(10-i))
+            if let anImage = image{
+                leftArmImage.animationImages?.append(anImage)
+            }
+        }
+        
+        for _ in 1...(x)
+        {
+            let image = UIImage(named: "Level 3 - Left 1")
+            if let anImage = image{
+                leftArmImage.animationImages?.append(anImage)
+            }
+        }
+        
+        rightArmImage.animationImages = [UIImage]()
+        
+        for _ in 1...10
+        {
+            let image = UIImage(named: "Level 3 - Right 1")
+            if let anImage = image{
+                rightArmImage.animationImages?.append(anImage)
+            }
+        }
+        
+        for i in 1...9
+        {
+            let image = UIImage(named: "Level 3 - Right " + String(i))
+            if let anImage = image{
+                rightArmImage.animationImages?.append(anImage)
+            }
+        }
+        
+        for _ in 1...(x)
+        {
+            let image = UIImage(named: "Level 3 - Right 9")
+            if let anImage = image{
+                rightArmImage.animationImages?.append(anImage)
+            }
+        }
+        
+        for i in 1...9
+        {
+            let image = UIImage(named: "Level 3 - Right " + String(10-i))
+            if let anImage = image{
+                rightArmImage.animationImages?.append(anImage)
+            }
+        }
+        
+        for _ in 1...(x)
+        {
+            let image = UIImage(named: "Level 3 - Right 1")
+            if let anImage = image{
+                rightArmImage.animationImages?.append(anImage)
+            }
+        }
+        
+        for i in 1...9
+        {
+            let image = UIImage(named: "Level 3 - Right " + String(i))
+            if let anImage = image{
+                rightArmImage.animationImages?.append(anImage)
+            }
+        }
+        
+        for _ in 1...(x)
+        {
+            let image = UIImage(named: "Level 3 - Right 9")
+            if let anImage = image{
+                rightArmImage.animationImages?.append(anImage)
+            }
+        }
+        
+        for i in 1...9
+        {
+            let image = UIImage(named: "Level 3 - Right " + String(10-i))
+            if let anImage = image{
+                rightArmImage.animationImages?.append(anImage)
+            }
+        }
+        for _ in 1...(x)
+        {
+            let image = UIImage(named: "Level 3 - Right 1")
+            if let anImage = image{
+                rightArmImage.animationImages?.append(anImage)
+            }
+        }
+        for i in 1...9
+        {
+            let image = UIImage(named: "Level 3 - Right " + String(i))
+            if let anImage = image{
+                rightArmImage.animationImages?.append(anImage)
+            }
+        }
+        
+        for _ in 1...(x)
+        {
+            let image = UIImage(named: "Level 3 - Right 9")
+            if let anImage = image{
+                rightArmImage.animationImages?.append(anImage)
+            }
+        }
+        for i in 1...9
+        {
+            let image = UIImage(named: "Level 3 - Right " + String(10-i))
+            if let anImage = image{
+                rightArmImage.animationImages?.append(anImage)
+            }
+        }
+        
+        for _ in 1...(x)
+        {
+            let image = UIImage(named: "Level 3 - Right 1")
+            if let anImage = image{
+                rightArmImage.animationImages?.append(anImage)
+            }
+        }
 
+        
+        
+        leftArmImage.animationDuration = 16
+        //leftArmImage.animationRepeatCount = 3
+        leftArmImage.startAnimating()
+        
+        view.addSubview(leftArmImage)
+        
+        
+        rightArmImage.animationDuration = 16
+        //rightArmImage.animationRepeatCount = 3
+        rightArmImage.startAnimating()
+        
+        view.addSubview(rightArmImage)
+        
+        
+    }
+
+    func setupCharacterImage(){
+        leftArmImage.frame.size.width = view.frame.width/0.92
+        leftArmImage.frame.size.height = view.frame.height/1.635555
+        leftArmImage.image = UIImage(named: "Level 3 - Left 1")
+        leftArmImage.center.x = view.frame.width/1.99
+        leftArmImage.center.y = view.frame.height/2.35
+        view.addSubview(leftArmImage)
+        
+        rightArmImage.frame.size.width = view.frame.width/0.92
+        rightArmImage.frame.size.height = view.frame.height/1.635555
+        rightArmImage.image = UIImage(named: "Level 3 - Right 1")
+        rightArmImage.center.x = view.frame.width/2.01
+        rightArmImage.center.y = view.frame.height/2.35
+        view.addSubview(rightArmImage)
+        
+        bodyImage.frame.size.width = view.frame.width/0.92
+        bodyImage.frame.size.height = view.frame.height/1.635555
+        bodyImage.image = UIImage(named: "Level 3 - Body")
+        bodyImage.center.x = view.frame.width/2
+        bodyImage.center.y = view.frame.height/2.35
+        view.addSubview(bodyImage)
+    }
     
     func setupTitleScreen(){
         view.backgroundColor = .gray
