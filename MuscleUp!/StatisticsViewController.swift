@@ -16,35 +16,72 @@ class StatisticsViewController: UIViewController {
     
     var upperBodyProgress: ConcentricProgressRingView? = nil
     var upperBodyLevelLabel:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
-    var upperBodyLevel: Int = 3
+    var upperBodyLevel: Int = 0
     var upperBodySetsRemaining: Int = 12
     var upperBodySetsOutOf: Int = 15
     var upperBodyPullUp: Int = 20
     
     var coreProgress: ConcentricProgressRingView? = nil
     var coreLevelLabel:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
-    var coreLevel: Int = 5
+    var coreLevel: Int = 0
     var coreSetsRemaining: Int = 10
     var coreSetsOutOf: Int = 10
     var coreSitUp: Int = 15
     
     var armProgress: ConcentricProgressRingView? = nil
     var armLevelLabel:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
-    var armLevel: Int = 3
+    var armLevel: Int = 0
     var armSetsRemaining: Int = 0
     var armSetsOutOf: Int = 30
     var armCurls: Int = 30
     
     var legProgress: ConcentricProgressRingView? = nil
     var legLevelLabel:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
-    var legLevel: Int = 2
+    var legLevel: Int = 0
     var legSetsRemaining: Int = 8
     var legSetsOutOf: Int = 15
     var legSquats: Int = 25
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initializeData()
+    }
+    
+    func initializeData(){
+        let viewController = ViewController()
+        upperBodyLevel = viewController.upperBodyLevel
+        coreLevel = viewController.coreLevel
+        armLevel = viewController.armLevel
+        legLevel = viewController.legLevel
+        
+        if let unwrappedUpperBodyProgress = upperBodyProgress{
+            view.addSubview(unwrappedUpperBodyProgress)
+            updateConcentricCircle(ring: unwrappedUpperBodyProgress, firstArc: CGFloat(upperBodySetsRemaining)/CGFloat(upperBodySetsOutOf), secondArc: CGFloat(upperBodyLevel) * CGFloat(0.2))
+        }
+        
+        if let unwrappedCoreProgress = coreProgress{
+            view.addSubview(unwrappedCoreProgress)
+            updateConcentricCircle(ring: unwrappedCoreProgress, firstArc: CGFloat(coreSetsRemaining)/CGFloat(coreSetsOutOf), secondArc: CGFloat(coreLevel) * CGFloat(0.2))
+            
+        }
+        
+        if let unwrappedArmProgress = armProgress {
+            view.addSubview(unwrappedArmProgress)
+            updateConcentricCircle(ring: unwrappedArmProgress, firstArc: CGFloat(armSetsRemaining)/CGFloat(armSetsOutOf), secondArc: CGFloat(armLevel) * CGFloat(0.2))
+        }
+        
+        if let unwrappedLegProgress = legProgress{
+            view.addSubview(unwrappedLegProgress)
+            updateConcentricCircle(ring: unwrappedLegProgress, firstArc: CGFloat(legSetsRemaining)/CGFloat(legSetsOutOf), secondArc: CGFloat(legLevel) * CGFloat(0.2))
+        }
+
+        
+        print("Stats initialization complete")
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewDidLoad()
+        super.viewWillAppear(animated)
         setupStatisticsScreen()
         
     }

@@ -36,12 +36,16 @@ class ViewController: UIViewController {
 
     var leftArmImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
     var rightArmImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
-    var bodyImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
-    var bodyImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
-    var bodyImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
-    var bodyImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
-    var bodyImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
-
+    var upperBodyImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+    var coreImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+    var legsImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+    var shortsImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+    var headImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+    
+    var upperBodyLevel: Int = 0
+    var coreLevel: Int = 0
+    var armLevel: Int = 0
+    var legLevel: Int = 0
     
     var confettiView = SAConfettiView()
     var confettiView2 = SAConfettiView()
@@ -70,7 +74,6 @@ class ViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        
         
         if firstTimeOpeningApp{
         UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
@@ -122,39 +125,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        retrieveData()
         setupTitleScreen()
         
     }
     
-    func animateTitleCharacterSequence1F(){
-        leftArmImage.animationImages = [UIImage]()
-        for i in 1...9
-        {
-            let image = UIImage(named: "Level 3 - Left " + String(i))
-            if let anImage = image{
-                leftArmImage.animationImages?.append(anImage)
-            }
-        }
-        rightArmImage.animationImages = [UIImage]()
-        for i in 1...9
-        {
-            let image = UIImage(named: "Level 3 - Right " + String(i))
-            if let anImage = image{
-                rightArmImage.animationImages?.append(anImage)
-            }
-        }
-        leftArmImage.animationDuration = 1
-        leftArmImage.animationRepeatCount = 1
-        leftArmImage.startAnimating()
-        
-        view.addSubview(leftArmImage)
-        
-        
-        rightArmImage.animationDuration = 1
-        rightArmImage.animationRepeatCount = 1
-        rightArmImage.startAnimating()
-        
-        view.addSubview(rightArmImage)
+    func retrieveData(){
+        upperBodyLevel = 3
+        coreLevel = 5
+        armLevel = 3
+        legLevel = 2
+        print("Main Page Retrieve Data Complete")
     }
     
     func animateTitleCharacterSequence1(){
@@ -381,26 +362,36 @@ class ViewController: UIViewController {
     }
 
     func setupCharacterImage(){
-        leftArmImage.frame.size.width = view.frame.width/0.92
-        leftArmImage.frame.size.height = view.frame.height/1.635555
-        leftArmImage.image = UIImage(named: "Level 3 - Left 1")
-        leftArmImage.center.x = view.frame.width/1.99
-        leftArmImage.center.y = view.frame.height/2.35
-        view.addSubview(leftArmImage)
+        initBodyPart(imageView: leftArmImage, widthAdjustScreen: 0.92, lengthAdjustScreen: 1.635555, nameImage: "Level " + String(armLevel) + " - Left 1", centerXAdjust: 1.99, centerYAdjust: 2.35)
         
-        rightArmImage.frame.size.width = view.frame.width/0.92
-        rightArmImage.frame.size.height = view.frame.height/1.635555
-        rightArmImage.image = UIImage(named: "Level 3 - Right 1")
-        rightArmImage.center.x = view.frame.width/2.01
-        rightArmImage.center.y = view.frame.height/2.35
-        view.addSubview(rightArmImage)
+        initBodyPart(imageView: rightArmImage, widthAdjustScreen: 0.92, lengthAdjustScreen: 1.635555, nameImage: "Level " + String(armLevel) + " - Right 1", centerXAdjust: 2.01, centerYAdjust: 2.35)
         
-        bodyImage.frame.size.width = view.frame.width/0.92
-        bodyImage.frame.size.height = view.frame.height/1.635555
-        bodyImage.image = UIImage(named: "Level 3 - Body")
-        bodyImage.center.x = view.frame.width/2
-        bodyImage.center.y = view.frame.height/2.35
-        view.addSubview(bodyImage)
+        initBodyPart(imageView: upperBodyImage, widthAdjustScreen: 0.92, lengthAdjustScreen: 1.635555, nameImage: "Level " + String(upperBodyLevel) + " - Upper Body", centerXAdjust: 2, centerYAdjust: 2.35)
+        
+        var coreDetermineString = ""
+        if(coreLevel > 3 && armLevel > 3 && upperBodyLevel > 2){
+            coreDetermineString = "Best "
+        }else if(coreLevel > 3){
+            coreDetermineString = "Worst "
+        }else{
+            coreDetermineString = ""
+        }
+        
+        initBodyPart(imageView: coreImage, widthAdjustScreen: 0.92, lengthAdjustScreen: 1.635555, nameImage: "Level " + String(coreLevel) + " - " + coreDetermineString + "Core", centerXAdjust: 2, centerYAdjust: 2.36)
+        
+        initBodyPart(imageView: legsImage, widthAdjustScreen: 0.92, lengthAdjustScreen: 1.635555, nameImage: "Level " + String(legLevel) + " - Legs", centerXAdjust: 2, centerYAdjust: 2.365)
+        
+        initBodyPart(imageView: shortsImage, widthAdjustScreen: 0.92, lengthAdjustScreen: 1.635555, nameImage: "Level " + String(legLevel) + " - Shorts", centerXAdjust: 2, centerYAdjust: 2.365)
+        
+        initBodyPart(imageView: headImage, widthAdjustScreen: 0.92, lengthAdjustScreen: 1.635555, nameImage: "Head Smirking", centerXAdjust: 2, centerYAdjust: 2.34)
+    }
+    func initBodyPart(imageView: UIImageView, widthAdjustScreen: CGFloat, lengthAdjustScreen: CGFloat, nameImage: String, centerXAdjust: CGFloat, centerYAdjust: CGFloat){
+        imageView.frame.size.width = view.frame.width/widthAdjustScreen
+        imageView.frame.size.height = view.frame.height/lengthAdjustScreen
+        imageView.image = UIImage(named: nameImage)
+        imageView.center.x = view.frame.width/centerXAdjust
+        imageView.center.y = view.frame.height/centerYAdjust
+        view.addSubview(imageView)
     }
     
     func setupTitleScreen(){
