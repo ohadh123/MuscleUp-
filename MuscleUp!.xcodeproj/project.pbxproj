@@ -19,6 +19,12 @@
 		DC35BD581EDBBC2500236A74 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC35BD571EDBBC2500236A74 /* StartViewController.swift */; };
 		DC35BD5A1EDBD0A300236A74 /* ShopViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC35BD591EDBD0A300236A74 /* ShopViewControllerTwo.swift */; };
 		DC35BD5C1EDBD0B900236A74 /* ShopViewControllerThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC35BD5B1EDBD0B900236A74 /* ShopViewControllerThree.swift */; };
+		DC670E2A1EE93E5F00E8DADA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC670E291EE93E5F00E8DADA /* CoreData.framework */; };
+		DC670E2D1EE93FE200E8DADA /* CoreModelFile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC670E2B1EE93FE200E8DADA /* CoreModelFile.xcdatamodeld */; };
+		DC670E501EE9E6D700E8DADA /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC670E4F1EE9E6D700E8DADA /* DatabaseController.swift */; };
+		DC670E531EE9EC0700E8DADA /* CharacterStats+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC670E511EE9EC0700E8DADA /* CharacterStats+CoreDataClass.swift */; };
+		DC670E541EE9EC0700E8DADA /* CharacterStats+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC670E521EE9EC0700E8DADA /* CharacterStats+CoreDataProperties.swift */; };
+		DC670E571EEA0F5C00E8DADA /* UIApplication+isFirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC670E561EEA0F5C00E8DADA /* UIApplication+isFirstLaunch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +44,12 @@
 		DC35BD571EDBBC2500236A74 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		DC35BD591EDBD0A300236A74 /* ShopViewControllerTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewControllerTwo.swift; sourceTree = "<group>"; };
 		DC35BD5B1EDBD0B900236A74 /* ShopViewControllerThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewControllerThree.swift; sourceTree = "<group>"; };
+		DC670E291EE93E5F00E8DADA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DC670E2C1EE93FE200E8DADA /* CoreModelFile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreModelFile.xcdatamodel; sourceTree = "<group>"; };
+		DC670E4F1EE9E6D700E8DADA /* DatabaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
+		DC670E511EE9EC0700E8DADA /* CharacterStats+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CharacterStats+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DC670E521EE9EC0700E8DADA /* CharacterStats+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CharacterStats+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DC670E561EEA0F5C00E8DADA /* UIApplication+isFirstLaunch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+isFirstLaunch.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC670E2A1EE93E5F00E8DADA /* CoreData.framework in Frameworks */,
 				903700D66C50D47C5FE4346B /* Pods_MuscleUp_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,6 +68,7 @@
 		B3CEFF56ADCCC3DA30994CAC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC670E291EE93E5F00E8DADA /* CoreData.framework */,
 				B2A08B101ED11D33C5DCB447 /* Pods_MuscleUp_.framework */,
 			);
 			name = Frameworks;
@@ -81,20 +95,41 @@
 		DC35BD3C1EDA31A500236A74 /* MuscleUp! */ = {
 			isa = PBXGroup;
 			children = (
+				DC670E551EE9EC1100E8DADA /* Models */,
+				DC670E581EEA0FC700E8DADA /* Views */,
 				DC35BD3D1EDA31A500236A74 /* AppDelegate.swift */,
-				DC35BD571EDBBC2500236A74 /* StartViewController.swift */,
+				DC670E4F1EE9E6D700E8DADA /* DatabaseController.swift */,
+				DC670E561EEA0F5C00E8DADA /* UIApplication+isFirstLaunch.swift */,
+				DC35BD441EDA31A500236A74 /* Assets.xcassets */,
+				DC670E2B1EE93FE200E8DADA /* CoreModelFile.xcdatamodeld */,
+				DC35BD461EDA31A500236A74 /* LaunchScreen.storyboard */,
+				DC35BD491EDA31A500236A74 /* Info.plist */,
+			);
+			path = "MuscleUp!";
+			sourceTree = "<group>";
+		};
+		DC670E551EE9EC1100E8DADA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DC670E511EE9EC0700E8DADA /* CharacterStats+CoreDataClass.swift */,
+				DC670E521EE9EC0700E8DADA /* CharacterStats+CoreDataProperties.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		DC670E581EEA0FC700E8DADA /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				DC35BD3F1EDA31A500236A74 /* ViewController.swift */,
+				DC35BD571EDBBC2500236A74 /* StartViewController.swift */,
 				DC35BD4F1EDA82AB00236A74 /* PlayViewController.swift */,
 				DC35BD511EDA8D8C00236A74 /* ShopViewController.swift */,
 				DC35BD591EDBD0A300236A74 /* ShopViewControllerTwo.swift */,
 				DC35BD5B1EDBD0B900236A74 /* ShopViewControllerThree.swift */,
 				DC35BD531EDA8D9600236A74 /* StatisticsViewController.swift */,
 				DC35BD551EDA8E7B00236A74 /* CreditsViewController.swift */,
-				DC35BD441EDA31A500236A74 /* Assets.xcassets */,
-				DC35BD461EDA31A500236A74 /* LaunchScreen.storyboard */,
-				DC35BD491EDA31A500236A74 /* Info.plist */,
 			);
-			path = "MuscleUp!";
+			name = Views;
 			sourceTree = "<group>";
 		};
 		E7587A6DCAFA162D2BB8BD83 /* Pods */ = {
@@ -229,13 +264,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC670E2D1EE93FE200E8DADA /* CoreModelFile.xcdatamodeld in Sources */,
 				DC35BD521EDA8D8C00236A74 /* ShopViewController.swift in Sources */,
 				DC35BD5C1EDBD0B900236A74 /* ShopViewControllerThree.swift in Sources */,
 				DC35BD5A1EDBD0A300236A74 /* ShopViewControllerTwo.swift in Sources */,
+				DC670E501EE9E6D700E8DADA /* DatabaseController.swift in Sources */,
+				DC670E541EE9EC0700E8DADA /* CharacterStats+CoreDataProperties.swift in Sources */,
 				DC35BD581EDBBC2500236A74 /* StartViewController.swift in Sources */,
 				DC35BD561EDA8E7B00236A74 /* CreditsViewController.swift in Sources */,
 				DC35BD541EDA8D9600236A74 /* StatisticsViewController.swift in Sources */,
+				DC670E571EEA0F5C00E8DADA /* UIApplication+isFirstLaunch.swift in Sources */,
 				DC35BD401EDA31A500236A74 /* ViewController.swift in Sources */,
+				DC670E531EE9EC0700E8DADA /* CharacterStats+CoreDataClass.swift in Sources */,
 				DC35BD501EDA82AB00236A74 /* PlayViewController.swift in Sources */,
 				DC35BD3E1EDA31A500236A74 /* AppDelegate.swift in Sources */,
 			);
@@ -398,6 +438,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DC670E2B1EE93FE200E8DADA /* CoreModelFile.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DC670E2C1EE93FE200E8DADA /* CoreModelFile.xcdatamodel */,
+			);
+			currentVersion = DC670E2C1EE93FE200E8DADA /* CoreModelFile.xcdatamodel */;
+			name = CoreModelFile.xcdatamodeld;
+			path = ../CoreModelFile.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DC35BD321EDA31A400236A74 /* Project object */;
 }

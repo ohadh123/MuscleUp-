@@ -6,6 +6,7 @@
 //  Copyright © 2017 Ohad Koronyo. All rights reserved.
 //
 
+import CoreData
 import UIKit
 import SAConfettiView
 import JSSAlertView
@@ -60,6 +61,7 @@ class ViewController: UIViewController {
     var firstTimeOpeningApp: Bool = true
     
     
+    // MARK: viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         if firstTimeOpeningApp {
         super.viewWillAppear(animated)
@@ -77,6 +79,7 @@ class ViewController: UIViewController {
         
     }
 
+    // MARK: viewDidAppear
     override func viewDidAppear(_ animated: Bool) {
         
         if firstTimeOpeningApp{
@@ -126,37 +129,115 @@ class ViewController: UIViewController {
         animateTitleCharacterSequence1()
     
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        coreDataRetrieval()
         setupLevelSliders()
-        setData(u: 1, c: 1, a: 3, l: 1)
         setupTitleScreen()
         
     }
     
+    // MARK: Core Data Methods
     
+    func coreDataRetrieval(){
+        //Dangerous code: Do not use otherwise else character's stats will be wiped
+        
+        if AppDelegate.isFirstTimeLaunching{
+            let characterStats: CharacterStats = NSEntityDescription.insertNewObject(forEntityName: "CharacterStats", into: DatabaseController.getContext()) as! CharacterStats
+            characterStats.upperBodyLevelFromSave = 1
+            characterStats.coreLevelFromSave = 1
+            characterStats.armLevelFromSave = 1
+            characterStats.legsLevelFromSave = 1
+        
+            DatabaseController.saveContext()
+        }
+
+        let fetchRequest:NSFetchRequest<CharacterStats> = CharacterStats.fetchRequest()
+        
+        do{
+            let searchResults = try DatabaseController.getContext().fetch(fetchRequest)
+            
+            var searchResultsCount = searchResults.count
+            
+            for result in searchResults as [CharacterStats]{
+                //result.setValue(3, forKey: "upperBodyLevelFromSave")
+                
+                var justDeleted: Bool = false
+                //Deletes extra characterStats objects as safety measure
+                if (searchResultsCount > 1){
+                    DatabaseController.getContext().delete(result)
+                    searchResultsCount = searchResultsCount - 1
+                    justDeleted = true
+
+                }
+                
+                if !justDeleted {
+                    print("\(result.upperBodyLevelFromSave) \(result.coreLevelFromSave) \(result.armLevelFromSave) \(result.legsLevelFromSave)")
+                
+                    setData(u: Int(result.upperBodyLevelFromSave), c: Int(result.coreLevelFromSave), a: Int(result.armLevelFromSave), l: Int(result.legsLevelFromSave)
+                    )
+                }
+            }
+            
+            print("Number of results: \((try DatabaseController.getContext().fetch(fetchRequest)).count)")
+            
+            
+        } catch{
+            fatalError("Error retrieving data: \(error)")
+        }
+        
+        DatabaseController.saveContext()
+    }
     
+    static func coreDataSaving(){
+        let fetchRequest:NSFetchRequest<CharacterStats> = CharacterStats.fetchRequest()
+        
+        do{
+            let searchResults = try DatabaseController.getContext().fetch(fetchRequest)
+            
+            for result in searchResults as [CharacterStats]{
+                result.setValue(ViewController.upperBodyLevel, forKey: "upperBodyLevelFromSave")
+                result.setValue(ViewController.coreLevel, forKey: "coreLevelFromSave")
+                result.setValue(ViewController.armLevel, forKey: "armLevelFromSave")
+                result.setValue(ViewController.legLevel, forKey: "legsLevelFromSave")
+                
+                print("\(result.upperBodyLevelFromSave) \(result.coreLevelFromSave) \(result.armLevelFromSave) \(result.legsLevelFromSave)")
+                
+            }
+            
+        } catch{
+            fatalError("Error retrieving data: \(error)")
+        }
+        
+        DatabaseController.saveContext()
+    }
+    
+    // MARK: Set and Retrieve Data for Four Levels
     func setData(u: Int, c: Int, a: Int, l: Int){
         ViewController.upperBodyLevel = u
         ViewController.coreLevel = c
         ViewController.armLevel = a
         ViewController.legLevel = l
+        
+        
         //print("Main Page Retrieve Data Complete")
     }
     
-    func retrieveData() -> [Int]{
+    static func retrieveData() -> [Int]{
         return [ViewController.upperBodyLevel,ViewController.coreLevel,ViewController.armLevel,ViewController.legLevel]
     }
     
+    //MARK: Level sliders initialization
     func setupLevelSliders(){
-        print(armStepper.value)
+        
         armStepper.center.x = view.frame.width/7
         armStepper.center.y = view.frame.height/1.75
         armStepper.stepValue = 1
         armStepper.minimumValue = 1
         armStepper.maximumValue = 5
-        print(armStepper.value)
+        armStepper.value = Double(ViewController.armLevel)
         armStepper.addTarget(self, action: #selector(stepperMethod), for: .valueChanged)
         
         upperBodyStepper.center.x = view.frame.width/1.15
@@ -164,6 +245,7 @@ class ViewController: UIViewController {
         upperBodyStepper.stepValue = 1
         upperBodyStepper.minimumValue = 1
         upperBodyStepper.maximumValue = 5
+        upperBodyStepper.value = Double(ViewController.upperBodyLevel)
         upperBodyStepper.addTarget(self, action: #selector(stepperMethod), for: .valueChanged)
         
         coreStepper.center.x = view.frame.width/7
@@ -171,6 +253,7 @@ class ViewController: UIViewController {
         coreStepper.stepValue = 1
         coreStepper.minimumValue = 1
         coreStepper.maximumValue = 5
+        coreStepper.value = Double(ViewController.coreLevel)
         coreStepper.addTarget(self, action: #selector(stepperMethod), for: .valueChanged)
         
         legsStepper.center.x = view.frame.width/1.15
@@ -178,6 +261,7 @@ class ViewController: UIViewController {
         legsStepper.stepValue = 1
         legsStepper.minimumValue = 1
         legsStepper.maximumValue = 5
+        legsStepper.value = Double(ViewController.legLevel)
         legsStepper.addTarget(self, action: #selector(stepperMethod), for: .valueChanged)
         
         view.addSubview(armStepper)
@@ -187,9 +271,10 @@ class ViewController: UIViewController {
     }
     
     func stepperMethod(){
-        print(upperBodyStepper.value)
+        //print(upperBodyStepper.value)
         
         setData(u: (Int) (upperBodyStepper.value), c: (Int) (coreStepper.value), a: ViewController.armLevel, l: (Int) (legsStepper.value))
+        ViewController.coreDataSaving()
         
         upperBodyImage.image = UIImage(named: "Level " + String(ViewController.upperBodyLevel) + " - Upper Body")
         
@@ -206,7 +291,7 @@ class ViewController: UIViewController {
         legsImage.image = UIImage(named: "Level " + String(ViewController.legLevel) + " - Legs")
         shortsImage.image = UIImage(named: "Level " + String(ViewController.legLevel) + " - Shorts")
         
-        print(retrieveData())
+        print(ViewController.retrieveData())
         
         
     }
