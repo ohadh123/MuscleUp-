@@ -47,10 +47,10 @@ class ViewController: UIViewController {
     var coreStepper:UIStepper = UIStepper(frame: CGRect(x: 0, y: 0, width: 50, height: 75))
     var legsStepper:UIStepper = UIStepper(frame: CGRect(x: 0, y: 0, width: 50, height: 75))
     
-    var upperBodyLevel: Int = 0
-    var coreLevel: Int = 0
-    var armLevel: Int = 0
-    var legLevel: Int = 0
+    static var upperBodyLevel: Int = 0
+    static var coreLevel: Int = 0
+    static var armLevel: Int = 0
+    static var legLevel: Int = 0
     
     var confettiView = SAConfettiView()
     var confettiView2 = SAConfettiView()
@@ -130,7 +130,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         setupLevelSliders()
-        setData(u: 3, c: 5, a: 3, l: 2)
+        setData(u: 1, c: 1, a: 3, l: 1)
         setupTitleScreen()
         
     }
@@ -138,15 +138,15 @@ class ViewController: UIViewController {
     
     
     func setData(u: Int, c: Int, a: Int, l: Int){
-        upperBodyLevel = u
-        coreLevel = c
-        armLevel = a
-        legLevel = l
+        ViewController.upperBodyLevel = u
+        ViewController.coreLevel = c
+        ViewController.armLevel = a
+        ViewController.legLevel = l
         //print("Main Page Retrieve Data Complete")
     }
     
     func retrieveData() -> [Int]{
-        return [upperBodyLevel,coreLevel,armLevel,legLevel]
+        return [ViewController.upperBodyLevel,ViewController.coreLevel,ViewController.armLevel,ViewController.legLevel]
     }
     
     func setupLevelSliders(){
@@ -157,28 +157,28 @@ class ViewController: UIViewController {
         armStepper.minimumValue = 1
         armStepper.maximumValue = 5
         print(armStepper.value)
-        armStepper.addTarget(self, action: #selector(stepperMethod), for: .touchDown)
+        armStepper.addTarget(self, action: #selector(stepperMethod), for: .valueChanged)
         
         upperBodyStepper.center.x = view.frame.width/1.15
         upperBodyStepper.center.y = view.frame.height/1.75
         upperBodyStepper.stepValue = 1
         upperBodyStepper.minimumValue = 1
         upperBodyStepper.maximumValue = 5
-        upperBodyStepper.addTarget(self, action: #selector(stepperMethod), for: .touchDown)
+        upperBodyStepper.addTarget(self, action: #selector(stepperMethod), for: .valueChanged)
         
         coreStepper.center.x = view.frame.width/7
         coreStepper.center.y = view.frame.height/1.25
         coreStepper.stepValue = 1
         coreStepper.minimumValue = 1
         coreStepper.maximumValue = 5
-        coreStepper.addTarget(self, action: #selector(stepperMethod), for: .touchDown)
+        coreStepper.addTarget(self, action: #selector(stepperMethod), for: .valueChanged)
         
         legsStepper.center.x = view.frame.width/1.15
         legsStepper.center.y = view.frame.height/1.25
         legsStepper.stepValue = 1
         legsStepper.minimumValue = 1
         legsStepper.maximumValue = 5
-        legsStepper.addTarget(self, action: #selector(stepperMethod), for: .touchDown)
+        legsStepper.addTarget(self, action: #selector(stepperMethod), for: .valueChanged)
         
         view.addSubview(armStepper)
         view.addSubview(upperBodyStepper)
@@ -189,22 +189,22 @@ class ViewController: UIViewController {
     func stepperMethod(){
         print(upperBodyStepper.value)
         
-        setData(u: (Int) (upperBodyStepper.value), c: (Int) (coreStepper.value), a: armLevel, l: (Int) (legsStepper.value))
+        setData(u: (Int) (upperBodyStepper.value), c: (Int) (coreStepper.value), a: ViewController.armLevel, l: (Int) (legsStepper.value))
         
-        upperBodyImage.image = UIImage(named: "Level " + String(upperBodyLevel) + " - Upper Body")
+        upperBodyImage.image = UIImage(named: "Level " + String(ViewController.upperBodyLevel) + " - Upper Body")
         
         var coreDetermineString = ""
-        if(coreLevel > 3 && armLevel > 3 && upperBodyLevel > 2){
+        if(ViewController.coreLevel > 3 && ViewController.armLevel > 3 && ViewController.upperBodyLevel > 2){
             coreDetermineString = "Best "
-        }else if(coreLevel > 3){
+        }else if(ViewController.coreLevel > 3){
             coreDetermineString = "Worst "
         }else{
             coreDetermineString = ""
         }
-        coreImage.image = UIImage(named: "Level " + String(coreLevel) + " - " + coreDetermineString + "Core")
+        coreImage.image = UIImage(named: "Level " + String(ViewController.coreLevel) + " - " + coreDetermineString + "Core")
         
-        legsImage.image = UIImage(named: "Level " + String(legLevel) + " - Legs")
-        shortsImage.image = UIImage(named: "Level " + String(legLevel) + " - Shorts")
+        legsImage.image = UIImage(named: "Level " + String(ViewController.legLevel) + " - Legs")
+        shortsImage.image = UIImage(named: "Level " + String(ViewController.legLevel) + " - Shorts")
         
         print(retrieveData())
         
@@ -435,26 +435,26 @@ class ViewController: UIViewController {
     }
 
     func setupCharacterImage(){
-        initBodyPart(imageView: leftArmImage, widthAdjustScreen: 0.92, lengthAdjustScreen: 1.635555, nameImage: "Level " + String(armLevel) + " - Left 1", centerXAdjust: 1.99, centerYAdjust: 2.35)
+        initBodyPart(imageView: leftArmImage, widthAdjustScreen: 0.92, lengthAdjustScreen: 1.635555, nameImage: "Level " + String(ViewController.armLevel) + " - Left 1", centerXAdjust: 1.99, centerYAdjust: 2.35)
         
-        initBodyPart(imageView: rightArmImage, widthAdjustScreen: 0.92, lengthAdjustScreen: 1.635555, nameImage: "Level " + String(armLevel) + " - Right 1", centerXAdjust: 2.01, centerYAdjust: 2.35)
+        initBodyPart(imageView: rightArmImage, widthAdjustScreen: 0.92, lengthAdjustScreen: 1.635555, nameImage: "Level " + String(ViewController.armLevel) + " - Right 1", centerXAdjust: 2.01, centerYAdjust: 2.35)
         
-        initBodyPart(imageView: upperBodyImage, widthAdjustScreen: 0.92, lengthAdjustScreen: 1.635555, nameImage: "Level " + String(upperBodyLevel) + " - Upper Body", centerXAdjust: 2, centerYAdjust: 2.35)
+        initBodyPart(imageView: upperBodyImage, widthAdjustScreen: 0.92, lengthAdjustScreen: 1.635555, nameImage: "Level " + String(ViewController.upperBodyLevel) + " - Upper Body", centerXAdjust: 2, centerYAdjust: 2.35)
         
         var coreDetermineString = ""
-        if(coreLevel > 3 && armLevel > 3 && upperBodyLevel > 2){
+        if(ViewController.coreLevel > 3 && ViewController.armLevel > 3 && ViewController.upperBodyLevel > 2){
             coreDetermineString = "Best "
-        }else if(coreLevel > 3){
+        }else if(ViewController.coreLevel > 3){
             coreDetermineString = "Worst "
         }else{
             coreDetermineString = ""
         }
         
-        initBodyPart(imageView: coreImage, widthAdjustScreen: 0.92, lengthAdjustScreen: 1.635555, nameImage: "Level " + String(coreLevel) + " - " + coreDetermineString + "Core", centerXAdjust: 2, centerYAdjust: 2.36)
+        initBodyPart(imageView: coreImage, widthAdjustScreen: 0.92, lengthAdjustScreen: 1.635555, nameImage: "Level " + String(ViewController.coreLevel) + " - " + coreDetermineString + "Core", centerXAdjust: 2, centerYAdjust: 2.36)
         
-        initBodyPart(imageView: legsImage, widthAdjustScreen: 0.92, lengthAdjustScreen: 1.635555, nameImage: "Level " + String(legLevel) + " - Legs", centerXAdjust: 2, centerYAdjust: 2.365)
+        initBodyPart(imageView: legsImage, widthAdjustScreen: 0.92, lengthAdjustScreen: 1.635555, nameImage: "Level " + String(ViewController.legLevel) + " - Legs", centerXAdjust: 2, centerYAdjust: 2.365)
         
-        initBodyPart(imageView: shortsImage, widthAdjustScreen: 0.92, lengthAdjustScreen: 1.635555, nameImage: "Level " + String(legLevel) + " - Shorts", centerXAdjust: 2, centerYAdjust: 2.365)
+        initBodyPart(imageView: shortsImage, widthAdjustScreen: 0.92, lengthAdjustScreen: 1.635555, nameImage: "Level " + String(ViewController.legLevel) + " - Shorts", centerXAdjust: 2, centerYAdjust: 2.365)
         
         initBodyPart(imageView: headImage, widthAdjustScreen: 0.92, lengthAdjustScreen: 1.635555, nameImage: "Head Smirking", centerXAdjust: 2, centerYAdjust: 2.34)
     }

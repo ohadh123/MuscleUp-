@@ -47,13 +47,10 @@ class StatisticsViewController: UIViewController {
     }
     
     func initializeData(){
-        let viewController = ViewController()
-        let arrayOfLevels = viewController.retrieveData()
-        print(arrayOfLevels)
-        upperBodyLevel = arrayOfLevels[0]
-        coreLevel = arrayOfLevels[1]
-        armLevel = arrayOfLevels[2]
-        legLevel = arrayOfLevels[3]
+        upperBodyLevel = ViewController.upperBodyLevel
+        coreLevel = ViewController.coreLevel
+        armLevel = ViewController.armLevel
+        legLevel = ViewController.legLevel
     }
     
     
