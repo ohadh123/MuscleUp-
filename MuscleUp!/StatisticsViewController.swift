@@ -6,6 +6,7 @@
 //  Copyright © 2017 Ohad Koronyo. All rights reserved.
 //
 
+import CoreData
 import UIKit
 import SwiftyButton
 import ConcentricProgressRingView
