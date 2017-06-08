@@ -2,7 +2,7 @@
 //  StartViewController.swift
 //  MuscleUp!
 //
-//  Created by Etai Koronyo on 5/28/17.
+//  Created by Ohad Koronyo on 5/28/17.
 //  Copyright © 2017 Ohad Koronyo. All rights reserved.
 //
 

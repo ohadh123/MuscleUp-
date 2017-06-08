@@ -2,7 +2,7 @@
 //  StatisticsViewController.swift
 //  MuscleUp!
 //
-//  Created by Etai Koronyo on 5/27/17.
+//  Created by Ohad Koronyo on 5/27/17.
 //  Copyright © 2017 Ohad Koronyo. All rights reserved.
 //
 
@@ -44,44 +44,22 @@ class StatisticsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        initializeData()
     }
     
     func initializeData(){
         let viewController = ViewController()
-        upperBodyLevel = viewController.upperBodyLevel
-        coreLevel = viewController.coreLevel
-        armLevel = viewController.armLevel
-        legLevel = viewController.legLevel
-        
-        if let unwrappedUpperBodyProgress = upperBodyProgress{
-            view.addSubview(unwrappedUpperBodyProgress)
-            updateConcentricCircle(ring: unwrappedUpperBodyProgress, firstArc: CGFloat(upperBodySetsRemaining)/CGFloat(upperBodySetsOutOf), secondArc: CGFloat(upperBodyLevel) * CGFloat(0.2))
-        }
-        
-        if let unwrappedCoreProgress = coreProgress{
-            view.addSubview(unwrappedCoreProgress)
-            updateConcentricCircle(ring: unwrappedCoreProgress, firstArc: CGFloat(coreSetsRemaining)/CGFloat(coreSetsOutOf), secondArc: CGFloat(coreLevel) * CGFloat(0.2))
-            
-        }
-        
-        if let unwrappedArmProgress = armProgress {
-            view.addSubview(unwrappedArmProgress)
-            updateConcentricCircle(ring: unwrappedArmProgress, firstArc: CGFloat(armSetsRemaining)/CGFloat(armSetsOutOf), secondArc: CGFloat(armLevel) * CGFloat(0.2))
-        }
-        
-        if let unwrappedLegProgress = legProgress{
-            view.addSubview(unwrappedLegProgress)
-            updateConcentricCircle(ring: unwrappedLegProgress, firstArc: CGFloat(legSetsRemaining)/CGFloat(legSetsOutOf), secondArc: CGFloat(legLevel) * CGFloat(0.2))
-        }
-
-        
-        print("Stats initialization complete")
+        let arrayOfLevels = viewController.retrieveData()
+        print(arrayOfLevels)
+        upperBodyLevel = arrayOfLevels[0]
+        coreLevel = arrayOfLevels[1]
+        armLevel = arrayOfLevels[2]
+        legLevel = arrayOfLevels[3]
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        initializeData()
         setupStatisticsScreen()
         
     }
@@ -96,22 +74,6 @@ class StatisticsViewController: UIViewController {
         createCircleInfoLabels()
         createConcentricCircles()
         
-    }
-    
-    func createBackButton(){
-        let backButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 75, height: 40))
-        backButton.center.x = view.frame.width/8
-        backButton.center.y = view.frame.height/10
-        backButton.setTitle("Back", for: .normal)
-        //backButton.backgroundColor = .blue
-        backButton.shadowHeight = 4
-        backButton.addTarget(self, action: #selector(backButtonMethod), for: .touchUpInside)
-        backButton.titleLabel!.font =  UIFont(name: "Verdana", size: 20)
-        view.addSubview(backButton)
-    }
-    func backButtonMethod(){
-        print("Back pressed")
-        self.dismiss(animated: true, completion: nil)
     }
     
     func createConcentricCircles(){
@@ -218,6 +180,22 @@ class StatisticsViewController: UIViewController {
             
         }
         }
+    }
+    
+    func createBackButton(){
+        let backButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 75, height: 40))
+        backButton.center.x = view.frame.width/8
+        backButton.center.y = view.frame.height/10
+        backButton.setTitle("Back", for: .normal)
+        //backButton.backgroundColor = .blue
+        backButton.shadowHeight = 4
+        backButton.addTarget(self, action: #selector(backButtonMethod), for: .touchUpInside)
+        backButton.titleLabel!.font =  UIFont(name: "Verdana", size: 20)
+        view.addSubview(backButton)
+    }
+    func backButtonMethod(){
+        print("Back pressed")
+        self.dismiss(animated: true, completion: nil)
     }
 
 }

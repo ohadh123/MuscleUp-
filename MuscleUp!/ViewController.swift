@@ -42,6 +42,11 @@ class ViewController: UIViewController {
     var shortsImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
     var headImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
     
+    var armStepper:UIStepper = UIStepper(frame: CGRect(x: 0, y: 0, width: 50, height: 75))
+    var upperBodyStepper:UIStepper = UIStepper(frame: CGRect(x: 0, y: 0, width: 50, height: 75))
+    var coreStepper:UIStepper = UIStepper(frame: CGRect(x: 0, y: 0, width: 50, height: 75))
+    var legsStepper:UIStepper = UIStepper(frame: CGRect(x: 0, y: 0, width: 50, height: 75))
+    
     var upperBodyLevel: Int = 0
     var coreLevel: Int = 0
     var armLevel: Int = 0
@@ -53,7 +58,6 @@ class ViewController: UIViewController {
     var confettiIsActive: Bool = false
     
     var firstTimeOpeningApp: Bool = true
-    
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -125,17 +129,86 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        retrieveData()
+        setupLevelSliders()
+        setData(u: 3, c: 5, a: 3, l: 2)
         setupTitleScreen()
         
     }
     
-    func retrieveData(){
-        upperBodyLevel = 3
-        coreLevel = 5
-        armLevel = 3
-        legLevel = 2
-        print("Main Page Retrieve Data Complete")
+    
+    
+    func setData(u: Int, c: Int, a: Int, l: Int){
+        upperBodyLevel = u
+        coreLevel = c
+        armLevel = a
+        legLevel = l
+        //print("Main Page Retrieve Data Complete")
+    }
+    
+    func retrieveData() -> [Int]{
+        return [upperBodyLevel,coreLevel,armLevel,legLevel]
+    }
+    
+    func setupLevelSliders(){
+        print(armStepper.value)
+        armStepper.center.x = view.frame.width/7
+        armStepper.center.y = view.frame.height/1.75
+        armStepper.stepValue = 1
+        armStepper.minimumValue = 1
+        armStepper.maximumValue = 5
+        print(armStepper.value)
+        armStepper.addTarget(self, action: #selector(stepperMethod), for: .touchDown)
+        
+        upperBodyStepper.center.x = view.frame.width/1.15
+        upperBodyStepper.center.y = view.frame.height/1.75
+        upperBodyStepper.stepValue = 1
+        upperBodyStepper.minimumValue = 1
+        upperBodyStepper.maximumValue = 5
+        upperBodyStepper.addTarget(self, action: #selector(stepperMethod), for: .touchDown)
+        
+        coreStepper.center.x = view.frame.width/7
+        coreStepper.center.y = view.frame.height/1.25
+        coreStepper.stepValue = 1
+        coreStepper.minimumValue = 1
+        coreStepper.maximumValue = 5
+        coreStepper.addTarget(self, action: #selector(stepperMethod), for: .touchDown)
+        
+        legsStepper.center.x = view.frame.width/1.15
+        legsStepper.center.y = view.frame.height/1.25
+        legsStepper.stepValue = 1
+        legsStepper.minimumValue = 1
+        legsStepper.maximumValue = 5
+        legsStepper.addTarget(self, action: #selector(stepperMethod), for: .touchDown)
+        
+        view.addSubview(armStepper)
+        view.addSubview(upperBodyStepper)
+        view.addSubview(coreStepper)
+        view.addSubview(legsStepper)
+    }
+    
+    func stepperMethod(){
+        print(upperBodyStepper.value)
+        
+        setData(u: (Int) (upperBodyStepper.value), c: (Int) (coreStepper.value), a: armLevel, l: (Int) (legsStepper.value))
+        
+        upperBodyImage.image = UIImage(named: "Level " + String(upperBodyLevel) + " - Upper Body")
+        
+        var coreDetermineString = ""
+        if(coreLevel > 3 && armLevel > 3 && upperBodyLevel > 2){
+            coreDetermineString = "Best "
+        }else if(coreLevel > 3){
+            coreDetermineString = "Worst "
+        }else{
+            coreDetermineString = ""
+        }
+        coreImage.image = UIImage(named: "Level " + String(coreLevel) + " - " + coreDetermineString + "Core")
+        
+        legsImage.image = UIImage(named: "Level " + String(legLevel) + " - Legs")
+        shortsImage.image = UIImage(named: "Level " + String(legLevel) + " - Shorts")
+        
+        print(retrieveData())
+        
+        
     }
     
     func animateTitleCharacterSequence1(){

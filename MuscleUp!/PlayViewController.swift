@@ -2,7 +2,7 @@
 //  PlayViewController.swift
 //  MuscleUp!
 //
-//  Created by Etai Koronyo on 5/27/17.
+//  Created by Ohad Koronyo on 5/27/17.
 //  Copyright © 2017 Ohad Koronyo. All rights reserved.
 //
 
