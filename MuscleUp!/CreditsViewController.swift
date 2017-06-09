@@ -19,7 +19,7 @@ class CreditsViewController: UIViewController {
     }
     
     func setupCreditsScreen(){
-        view.backgroundColor = .orange
+        view.backgroundColor = .gray
         
         let backButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 75, height: 40))
         backButton.center.x = view.frame.width/8
