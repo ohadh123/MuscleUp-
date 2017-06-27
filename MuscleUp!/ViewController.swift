@@ -125,7 +125,7 @@ class ViewController: UIViewController {
             }
         
         setupCharacterImage()
-        animateTitleCharacterSequence1()
+        animateTitleCharacterSequence()
     
     }
     
@@ -243,7 +243,7 @@ class ViewController: UIViewController {
         armStepper.minimumValue = 1
         armStepper.maximumValue = 5
         armStepper.value = Double(ViewController.armLevel)
-        armStepper.addTarget(self, action: #selector(stepperMethod), for: .valueChanged)
+        armStepper.addTarget(self, action: #selector(armStepperMethod), for: .valueChanged)
         
         upperBodyStepper.center.x = view.frame.width/1.15
         upperBodyStepper.center.y = view.frame.height/1.75
@@ -278,7 +278,7 @@ class ViewController: UIViewController {
     func stepperMethod(){
         //print(upperBodyStepper.value)
         
-        setData(u: (Int) (upperBodyStepper.value), c: (Int) (coreStepper.value), a: ViewController.armLevel, l: (Int) (legsStepper.value))
+        setData(u: (Int) (upperBodyStepper.value), c: (Int) (coreStepper.value), a: (Int) (armStepper.value), l: (Int) (legsStepper.value))
         ViewController.coreDataSaving()
         updateStrengthBar()
         
@@ -299,7 +299,22 @@ class ViewController: UIViewController {
         
         print(ViewController.retrieveData())
         
+    }
+    
+    func armStepperMethod(){
+        setData(u: (Int) (upperBodyStepper.value), c: (Int) (coreStepper.value), a: (Int) (armStepper.value), l: (Int) (legsStepper.value))
+        ViewController.coreDataSaving()
+        updateStrengthBar()
         
+        updateBodyPart(imageView: leftArmImage, widthAdjustScreen: 0.92, lengthAdjustScreen: 1.635555, nameImage: "Level " + String(ViewController.armLevel) + " - Left 1", centerXAdjust: 1.99, centerYAdjust: 2.35)
+        
+        updateBodyPart(imageView: rightArmImage, widthAdjustScreen: 0.92, lengthAdjustScreen: 1.635555, nameImage: "Level " + String(ViewController.armLevel) + " - Right 1", centerXAdjust: 2.01, centerYAdjust: 2.35)
+        
+        stopAnimateTitleCharacterSequence()
+        animateTitleCharacterSequence()
+        
+        print(ViewController.retrieveData())
+
     }
     
     //MARK: Call to update strength bar
@@ -349,6 +364,15 @@ class ViewController: UIViewController {
     //MARK: Call to create body part
     
     func initBodyPart(imageView: UIImageView, widthAdjustScreen: CGFloat, lengthAdjustScreen: CGFloat, nameImage: String, centerXAdjust: CGFloat, centerYAdjust: CGFloat){
+        imageView.frame.size.width = view.frame.width/widthAdjustScreen
+        imageView.frame.size.height = view.frame.height/lengthAdjustScreen
+        imageView.image = UIImage(named: nameImage)
+        imageView.center.x = view.frame.width/centerXAdjust
+        imageView.center.y = view.frame.height/centerYAdjust
+        view.addSubview(imageView)
+    }
+    
+    func updateBodyPart(imageView: UIImageView, widthAdjustScreen: CGFloat, lengthAdjustScreen: CGFloat, nameImage: String, centerXAdjust: CGFloat, centerYAdjust: CGFloat){
         imageView.frame.size.width = view.frame.width/widthAdjustScreen
         imageView.frame.size.height = view.frame.height/lengthAdjustScreen
         imageView.image = UIImage(named: nameImage)
@@ -610,8 +634,15 @@ class ViewController: UIViewController {
     }
     
     //MARK: Animate title character
+    func stopAnimateTitleCharacterSequence(){
+//        leftArmImage.stopAnimating()
+//        rightArmImage.stopAnimating()
+        leftArmImage.layer.removeAllAnimations()
+        rightArmImage.layer.removeAllAnimations()
+    }
     
-    func animateTitleCharacterSequence1(){
+    
+    func animateTitleCharacterSequence(){
         
         
         /**let delayInSeconds = 0.965
@@ -628,7 +659,7 @@ class ViewController: UIViewController {
         
         for _ in 1...10
         {
-            let image = UIImage(named: "Level 3 - Left 1")
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Left 1")
             if let anImage = image{
                 leftArmImage.animationImages?.append(anImage)
             }
@@ -636,7 +667,7 @@ class ViewController: UIViewController {
         
         for i in 1...9
         {
-            let image = UIImage(named: "Level 3 - Left " + String(i))
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Left " + String(i))
             if let anImage = image{
                 leftArmImage.animationImages?.append(anImage)
             }
@@ -644,7 +675,7 @@ class ViewController: UIViewController {
         
         for _ in 1...(x)
         {
-            let image = UIImage(named: "Level 3 - Left 9")
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Left 9")
             if let anImage = image{
                 leftArmImage.animationImages?.append(anImage)
             }
@@ -652,7 +683,7 @@ class ViewController: UIViewController {
         
         for i in 1...9
         {
-            let image = UIImage(named: "Level 3 - Left " + String(10-i))
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Left " + String(10-i))
             if let anImage = image{
                 leftArmImage.animationImages?.append(anImage)
             }
@@ -660,7 +691,7 @@ class ViewController: UIViewController {
         
         for _ in 1...(x)
         {
-            let image = UIImage(named: "Level 3 - Left 1")
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Left 1")
             if let anImage = image{
                 leftArmImage.animationImages?.append(anImage)
             }
@@ -668,7 +699,7 @@ class ViewController: UIViewController {
         
         for _ in 1...(x+9)
         {
-            let image = UIImage(named: "Level 3 - Left 1")
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Left 1")
             if let anImage = image{
                 leftArmImage.animationImages?.append(anImage)
             }
@@ -676,7 +707,7 @@ class ViewController: UIViewController {
         
         for i in 1...9
         {
-            let image = UIImage(named: "Level 3 - Left " + String(i))
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Left " + String(i))
             if let anImage = image{
                 leftArmImage.animationImages?.append(anImage)
             }
@@ -684,7 +715,7 @@ class ViewController: UIViewController {
         
         for _ in 1...(x)
         {
-            let image = UIImage(named: "Level 3 - Left 9")
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Left 9")
             if let anImage = image{
                 leftArmImage.animationImages?.append(anImage)
             }
@@ -692,14 +723,14 @@ class ViewController: UIViewController {
         
         for _ in 1...(x+9)
         {
-            let image = UIImage(named: "Level 3 - Left 9")
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Left 9")
             if let anImage = image{
                 leftArmImage.animationImages?.append(anImage)
             }
         }
         for i in 1...9
         {
-            let image = UIImage(named: "Level 3 - Left " + String(10-i))
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Left " + String(10-i))
             if let anImage = image{
                 leftArmImage.animationImages?.append(anImage)
             }
@@ -707,7 +738,7 @@ class ViewController: UIViewController {
         
         for _ in 1...(x)
         {
-            let image = UIImage(named: "Level 3 - Left 1")
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Left 1")
             if let anImage = image{
                 leftArmImage.animationImages?.append(anImage)
             }
@@ -717,7 +748,7 @@ class ViewController: UIViewController {
         
         for _ in 1...10
         {
-            let image = UIImage(named: "Level 3 - Right 1")
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Right 1")
             if let anImage = image{
                 rightArmImage.animationImages?.append(anImage)
             }
@@ -725,7 +756,7 @@ class ViewController: UIViewController {
         
         for i in 1...9
         {
-            let image = UIImage(named: "Level 3 - Right " + String(i))
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Right " + String(i))
             if let anImage = image{
                 rightArmImage.animationImages?.append(anImage)
             }
@@ -733,7 +764,7 @@ class ViewController: UIViewController {
         
         for _ in 1...(x)
         {
-            let image = UIImage(named: "Level 3 - Right 9")
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Right 9")
             if let anImage = image{
                 rightArmImage.animationImages?.append(anImage)
             }
@@ -741,7 +772,7 @@ class ViewController: UIViewController {
         
         for i in 1...9
         {
-            let image = UIImage(named: "Level 3 - Right " + String(10-i))
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Right " + String(10-i))
             if let anImage = image{
                 rightArmImage.animationImages?.append(anImage)
             }
@@ -749,7 +780,7 @@ class ViewController: UIViewController {
         
         for _ in 1...(x)
         {
-            let image = UIImage(named: "Level 3 - Right 1")
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Right 1")
             if let anImage = image{
                 rightArmImage.animationImages?.append(anImage)
             }
@@ -757,7 +788,7 @@ class ViewController: UIViewController {
         
         for i in 1...9
         {
-            let image = UIImage(named: "Level 3 - Right " + String(i))
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Right " + String(i))
             if let anImage = image{
                 rightArmImage.animationImages?.append(anImage)
             }
@@ -765,7 +796,7 @@ class ViewController: UIViewController {
         
         for _ in 1...(x)
         {
-            let image = UIImage(named: "Level 3 - Right 9")
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Right 9")
             if let anImage = image{
                 rightArmImage.animationImages?.append(anImage)
             }
@@ -773,21 +804,21 @@ class ViewController: UIViewController {
         
         for i in 1...9
         {
-            let image = UIImage(named: "Level 3 - Right " + String(10-i))
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Right " + String(10-i))
             if let anImage = image{
                 rightArmImage.animationImages?.append(anImage)
             }
         }
         for _ in 1...(x)
         {
-            let image = UIImage(named: "Level 3 - Right 1")
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Right 1")
             if let anImage = image{
                 rightArmImage.animationImages?.append(anImage)
             }
         }
         for i in 1...9
         {
-            let image = UIImage(named: "Level 3 - Right " + String(i))
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Right " + String(i))
             if let anImage = image{
                 rightArmImage.animationImages?.append(anImage)
             }
@@ -795,14 +826,14 @@ class ViewController: UIViewController {
         
         for _ in 1...(x)
         {
-            let image = UIImage(named: "Level 3 - Right 9")
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Right 9")
             if let anImage = image{
                 rightArmImage.animationImages?.append(anImage)
             }
         }
         for i in 1...9
         {
-            let image = UIImage(named: "Level 3 - Right " + String(10-i))
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Right " + String(10-i))
             if let anImage = image{
                 rightArmImage.animationImages?.append(anImage)
             }
@@ -810,7 +841,7 @@ class ViewController: UIViewController {
         
         for _ in 1...(x)
         {
-            let image = UIImage(named: "Level 3 - Right 1")
+            let image = UIImage(named: "Level "+String(ViewController.armLevel)+" - Right 1")
             if let anImage = image{
                 rightArmImage.animationImages?.append(anImage)
             }
