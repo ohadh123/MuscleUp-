@@ -63,7 +63,7 @@ class StatisticsViewController: UIViewController {
     }
     
     func setupStatisticsScreen(){
-        view.backgroundColor = .gray
+        createBackgroundImage()
         
         createLabel(label: statsTitleLabel, centerX: view.frame.width/2, centerY: view.frame.height/6, textP: "Statistics", sizeP: 40)
         createBackButton()
@@ -71,6 +71,16 @@ class StatisticsViewController: UIViewController {
         createCircleTitles()
         createCircleInfoLabels()
         createConcentricCircles()
+        
+    }
+    
+    func createBackgroundImage(){
+        let backImage = #imageLiteral(resourceName: "SkyBackNoCloud")
+        let backImageResize = ViewController.resizeImage(image: backImage, newWidth: view.frame.width, newHeight: view.frame.height)
+        //backImage.height = view.frame.width
+        self.view.backgroundColor = UIColor(patternImage: backImageResize)
+        
+        
         
     }
     

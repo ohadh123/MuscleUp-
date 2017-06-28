@@ -22,7 +22,7 @@ class ShopViewController: UIViewController {
     }
     
     func setupShopScreen(){
-        view.backgroundColor = .gray
+        createBackgroundImage()
         
         let backButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 75, height: 40))
         backButton.center.x = view.frame.width/8
@@ -35,6 +35,16 @@ class ShopViewController: UIViewController {
         view.addSubview(backButton)
         
         createCoinDisplay()
+    }
+    
+    func createBackgroundImage(){
+        let backImage = #imageLiteral(resourceName: "SkyBackNoCloud")
+        let backImageResize = ViewController.resizeImage(image: backImage, newWidth: view.frame.width, newHeight: view.frame.height)
+        //backImage.height = view.frame.width
+        self.view.backgroundColor = UIColor(patternImage: backImageResize)
+        
+        
+        
     }
     
     func createCoinDisplay(){

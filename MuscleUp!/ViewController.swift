@@ -386,7 +386,7 @@ class ViewController: UIViewController {
     func setupTitleScreen(){
         view.backgroundColor = .gray
         
-        
+        createBackgroundImage()
         createTitleLabel()
         createHomeScreenButtons()
         createSlider()
@@ -396,6 +396,27 @@ class ViewController: UIViewController {
     }
     
     //MARK: Creates MuscleUp! logo
+    func createBackgroundImage(){
+        let backImage = #imageLiteral(resourceName: "SkyBackVer2")
+        let backImageResize = ViewController.resizeImage(image: backImage, newWidth: view.frame.width, newHeight: view.frame.height)
+        //backImage.height = view.frame.width
+        self.view.backgroundColor = UIColor(patternImage: backImageResize)
+
+        
+
+    }
+    
+    static func resizeImage(image: UIImage, newWidth: CGFloat, newHeight: CGFloat) -> UIImage {
+        
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: newWidth, height: newHeight), false, 1)
+        image.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return newImage!
+    }
+    
     
     func createTitleLabel(){
 
@@ -506,7 +527,8 @@ class ViewController: UIViewController {
         characterBar.center.x = view.frame.width/2
         characterBar.center.y = view.frame.height/4.5
         characterBar.barBorderColor = .blue
-        characterBar.barBackgroundColor = .gray
+        //characterBar.barBackgroundColor = .gray
+        characterBar.barBackgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "SkyBack"))
         characterBar.barFillColor = .blue
         characterBar.barFillInset = 0.4
         characterBar.displayLabel = false
