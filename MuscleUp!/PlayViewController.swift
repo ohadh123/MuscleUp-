@@ -148,6 +148,7 @@ class PlayViewController: UIViewController {
     func backButtonMethod(){
         print("Back pressed")
         //let viewController = ViewController()
+        ViewController.backgroundMusicPlayer.play()
         self.dismiss(animated: true, completion: nil)
     }
 

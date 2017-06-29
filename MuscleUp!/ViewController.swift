@@ -17,8 +17,12 @@ import MaterialMotion
 import StepProgressBar
 import PopupCollectionViewController
 import Bottomsheet
+import SpriteKit
+import AVFoundation
 
-
+enum GenericError: Error {
+    case musicError
+}
 class ViewController: UIViewController {
 
     var titleImageView: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
@@ -31,9 +35,12 @@ class ViewController: UIViewController {
     var shopButton:PressableButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
     var statsButton:PressableButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
     var creditsButton:PressableButton = PressableButton(frame: CGRect(x: 0, y: 0, width: 85, height: 40))
+    
     var musicToggle:TKSimpleSwitch = TKSimpleSwitch(frame: CGRect(x: 0, y: 0, width: 50, height: 30))
     var volumeImagePic:UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-
+    var playingMusic: Bool = true
+    static var backgroundMusicPlayer: AVAudioPlayer = AVAudioPlayer()
+    
     var leftArmImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
     var rightArmImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
     var upperBodyImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
@@ -391,6 +398,7 @@ class ViewController: UIViewController {
         createHomeScreenButtons()
         createSlider()
         updateStrengthBar()
+        createBackgroundMusic()
         addConfettiViews()
         
     }
@@ -421,11 +429,11 @@ class ViewController: UIViewController {
     func createTitleLabel(){
 
         titleImageView.center.x = view.frame.width/2
-        titleImageView.center.y = view.frame.height/7.8
-        titleImageView.image = #imageLiteral(resourceName: "MuscleUp!")
+        titleImageView.center.y = view.frame.height/13    //7.8
+        titleImageView.image = #imageLiteral(resourceName: "MuscleUp!2")
 
         titleImageView.frame.size.width = view.frame.width/1.25
-        titleImageView.frame.size.height = view.frame.height/13.34
+        titleImageView.frame.size.height = view.frame.height/6           //13.34
         
         print(titleImageView.frame.size.width)
         print(titleImageView.frame.size.height)
@@ -434,6 +442,22 @@ class ViewController: UIViewController {
     }
     
     //MARK: Creates Play, Shop, Stats, and more title buttons
+    
+    func createBackgroundMusic(){
+        let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "background-music-aac", ofType: "caf")!)
+        
+        do{
+            try ViewController.backgroundMusicPlayer = AVAudioPlayer(contentsOf: alertSound)
+        }catch{
+            print("Music Error")
+        }
+        
+        ViewController.backgroundMusicPlayer.numberOfLoops = -1
+        ViewController.backgroundMusicPlayer.volume = 0.5
+        ViewController.backgroundMusicPlayer.prepareToPlay()
+        ViewController.backgroundMusicPlayer.play()
+        
+    }
     
     func createHomeScreenButtons(){
         
@@ -526,10 +550,12 @@ class ViewController: UIViewController {
         
         characterBar.center.x = view.frame.width/2
         characterBar.center.y = view.frame.height/4.5
-        characterBar.barBorderColor = .blue
+        //characterBar.barBorderColor = .blue
+        characterBar.barBorderColor = UIColor(patternImage: #imageLiteral(resourceName: "BlueStripesBarBorder"))
         //characterBar.barBackgroundColor = .gray
         characterBar.barBackgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "SkyBack"))
-        characterBar.barFillColor = .blue
+        //characterBar.barFillColor = .blue
+        characterBar.barFillColor = UIColor(patternImage: #imageLiteral(resourceName: "BlueStripesBar"))
         characterBar.barFillInset = 0.4
         characterBar.displayLabel = false
         characterBar.frame.size.width = view.frame.width/1.875
@@ -549,17 +575,32 @@ class ViewController: UIViewController {
     }
     
     func playButtonMethod(){
-        //print("Play pressed")
+
         firstTimeOpeningApp = false
-        let playViewController = PlayViewController()
-        playViewController.modalTransitionStyle = .crossDissolve
-        self.present(playViewController, animated: true, completion: nil)
+        
+        playButton.transform = CGAffineTransform(scaleX: 0, y: 0)
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
+            self.playButton.transform = CGAffineTransform.identity
+        }, completion: nil)
+        
+        
+        let delayInSeconds = 0.8
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {
+            ViewController.backgroundMusicPlayer.stop()
+            let playViewController = PlayViewController()
+            playViewController.modalTransitionStyle = .crossDissolve
+            self.present(playViewController, animated: true, completion: nil)
+        }
+
+        
         
     }
     
     func shopButtonMethod(){
         //print("Shop pressed")
         firstTimeOpeningApp = false
+        ViewController.backgroundMusicPlayer.stop()
+
         /**let popupVC = PopupCollectionViewController(fromVC: self)
         popupVC.presentViewControllers([ShopViewController(), ShopViewControllerTwo()], completion: nil)**/
         
@@ -590,6 +631,7 @@ class ViewController: UIViewController {
     
     func statsButtonMethod(){
         //print("Statistics pressed")
+        ViewController.backgroundMusicPlayer.stop()
         firstTimeOpeningApp = false
         let statisticsViewController = StatisticsViewController()
         statisticsViewController.modalTransitionStyle = .crossDissolve
@@ -600,6 +642,7 @@ class ViewController: UIViewController {
     func creditsButtonMethod(){
         //print("Credits Pressed")
         firstTimeOpeningApp = false
+        ViewController.backgroundMusicPlayer.stop()
         let creditsViewController = CreditsViewController()
         creditsViewController.modalTransitionStyle = .crossDissolve
         self.present(creditsViewController, animated: true, completion: nil)
@@ -651,14 +694,25 @@ class ViewController: UIViewController {
     
     func musicToggleMethod(){
         print("Music Toggled")
+        if playingMusic {
+            print("The button turned off music.")
+            playingMusic = false
+            //backgroundMusicPlayer.pause()
+            ViewController.backgroundMusicPlayer.volume = 0
+        } else {
+            print("the button turned on music.")
+            playingMusic = true
+            //backgroundMusicPlayer.play()
+            ViewController.backgroundMusicPlayer.volume = 0.5
+        }
+        
+        
         
         
     }
     
     //MARK: Animate title character
     func stopAnimateTitleCharacterSequence(){
-//        leftArmImage.stopAnimating()
-//        rightArmImage.stopAnimating()
         leftArmImage.layer.removeAllAnimations()
         rightArmImage.layer.removeAllAnimations()
     }

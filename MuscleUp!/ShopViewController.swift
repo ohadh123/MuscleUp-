@@ -67,6 +67,7 @@ class ShopViewController: UIViewController {
     
     func backButtonMethod(){
         print("Back pressed")
+        ViewController.backgroundMusicPlayer.play()
         self.dismiss(animated: true, completion: nil)
     }
 
