@@ -1,2 +1,2 @@
-# MuscleUp-
+# MuscleUp!
 iOS Arcade Workout Game
