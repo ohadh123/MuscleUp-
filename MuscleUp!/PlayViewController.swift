@@ -16,18 +16,19 @@ import GTProgressBar
 import MaterialMotion
 import StepProgressBar
 import LTMorphingLabel
+import SpriteKit
+import AVFoundation
 
 
 class PlayViewController: UIViewController {
 
-    
     var energyDouble: Int = 10
     var energyBar1: StepProgressBar = StepProgressBar(frame: CGRect(x: 0, y: 0, width: 200, height: 7))
     var energyBar2: StepProgressBar = StepProgressBar(frame: CGRect(x: 0, y: 0, width: 200, height: 7))
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupPlayScreen()
     }
     
@@ -112,13 +113,15 @@ class PlayViewController: UIViewController {
     }
     
     func createTitleLabel(){
-         let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
-         titleLabel.center.x = view.frame.width/2
-         titleLabel.center.y = view.frame.height/4
-         titleLabel.textAlignment = .center
-         titleLabel.text = "Excercises"
-         titleLabel.font = titleLabel.font.withSize(50)
-         view.addSubview(titleLabel)
+        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
+        titleLabel.center.x = view.frame.width/2
+        titleLabel.center.y = view.frame.height/4
+        titleLabel.textAlignment = .center
+        titleLabel.text = "Excercises"
+        titleLabel.font = titleLabel.font.withSize(50)
+        view.addSubview(titleLabel)
+        
+        
     }
     
     func pullUpButtonMethod(){
@@ -133,8 +136,12 @@ class PlayViewController: UIViewController {
         }
     }
     
+    
     func curlsButtonMethod(){
         print("Curls pressed")
+        let curlsViewController = CurlsViewController()
+        self.present(curlsViewController, animated: false, completion: nil)
+        
     }
     
     func squatsButtonMethod(){
@@ -151,7 +158,6 @@ class PlayViewController: UIViewController {
         ViewController.backgroundMusicPlayer.play()
         self.dismiss(animated: true, completion: nil)
     }
-
     
-
+    
 }

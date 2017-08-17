@@ -41,6 +41,9 @@ class ViewController: UIViewController {
     var playingMusic: Bool = true
     static var backgroundMusicPlayer: AVAudioPlayer = AVAudioPlayer()
     
+    var topCloud = UIImageView(image: #imageLiteral(resourceName: "Sky-TopCloud"))
+    //var bottomCloud
+    
     var leftArmImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
     var rightArmImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
     var upperBodyImage: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
@@ -65,10 +68,11 @@ class ViewController: UIViewController {
     var confettiIsActive: Bool = false
     
     var firstTimeOpeningApp: Bool = true
-    
+    var inMenu: Bool = false
     
     // MARK: viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
+        inMenu = true
         if firstTimeOpeningApp {
         super.viewWillAppear(animated)
         titleImageView.center.y -= view.bounds.width
@@ -81,14 +85,58 @@ class ViewController: UIViewController {
         creditsButton.center.y += view.bounds.width
         musicToggle.alpha = 0
         volumeImagePic.alpha = 0
+        
+
+        topCloud.center.x -= view.bounds.width
+        
         }
         
+        
+        
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+//        topCloud.layer.removeAllAnimations()
+        inMenu = false
+    }
+
+    
+    func topCloudMovement2(){
+        if inMenu{
+        print("TCM 2")
+        UIView.animate(withDuration: 52.5, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
+            self.topCloud.center.x -= self.view.bounds.width * 1.9
+            self.view.layoutIfNeeded()
+        }, completion: { (finished: Bool) in
+            self.topCloud.center.x = self.view.bounds.width * 1.175
+            self.topCloudMovement2()
+            
+        })
+        }
+    }
+    func topCloudMovement1(){
+        print("TCM 1")
+        UIView.animate(withDuration: 30, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
+            self.topCloud.center.x -= self.view.bounds.width * 1.1
+            
+            self.view.layoutIfNeeded()
+        }, completion: { (finished: Bool) in
+            self.topCloud.center.x = self.view.bounds.width * 1.15
+            
+            self.topCloudMovement2()
+            
+        })
+    }
+    
+    
 
     // MARK: viewDidAppear
     override func viewDidAppear(_ animated: Bool) {
         
+        
+
         if firstTimeOpeningApp{
+        topCloudMovement1()
         UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
             self.titleImageView.center.y += self.view.bounds.width
         
@@ -129,8 +177,10 @@ class ViewController: UIViewController {
 
             self.view.layoutIfNeeded()
         }, completion: nil)
-            }
-        
+        } else{
+            topCloudMovement2()
+        }
+
         setupCharacterImage()
         animateTitleCharacterSequence()
     
@@ -141,6 +191,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //topCloudMovement1()
         coreDataRetrieval()
         setupLevelSliders()
         setupTitleScreen()
@@ -402,15 +453,24 @@ class ViewController: UIViewController {
         addConfettiViews()
         
     }
-    
     //MARK: Creates MuscleUp! logo
     func createBackgroundImage(){
-        let backImage = #imageLiteral(resourceName: "SkyBackVer2")
+        let backImage = #imageLiteral(resourceName: "Sky-GenericSky")
         let backImageResize = ViewController.resizeImage(image: backImage, newWidth: view.frame.width, newHeight: view.frame.height)
-        //backImage.height = view.frame.width
         self.view.backgroundColor = UIColor(patternImage: backImageResize)
-
         
+        print(self.topCloud.center.x)
+        self.topCloud.center.x += self.view.bounds.width
+        print(self.topCloud.center.x)
+
+        view.addSubview(topCloud)
+
+
+//        UIImageView.animate(withDuration: 0, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
+//            self.topCloud.center.x = self.view.bounds.width
+//            
+//            self.view.layoutIfNeeded()
+//        }, completion: nil)
 
     }
     
@@ -444,7 +504,7 @@ class ViewController: UIViewController {
     //MARK: Creates Play, Shop, Stats, and more title buttons
     
     func createBackgroundMusic(){
-        let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "background-music-aac", ofType: "caf")!)
+        let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "CasualMenu", ofType: "caf")!)
         
         do{
             try ViewController.backgroundMusicPlayer = AVAudioPlayer(contentsOf: alertSound)
