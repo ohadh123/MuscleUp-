@@ -1,0 +1,10 @@
+framework module Bottomsheet {
+  umbrella header "Bottomsheet-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Bottomsheet.__Swift {
+    exclude header "Bottomsheet-Swift.h"
+}

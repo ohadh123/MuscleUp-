@@ -1,0 +1,5 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "cacbc80525cf09e9cb01b52ecb13d0a7"
+build_time: [557807734, 743143000]
+inputs:
+  "/Users/ohadkoronyo/Desktop/MuscleUp-/Pods/Bottomsheet/Sources/Bottomsheet.swift": [556262798, 0]

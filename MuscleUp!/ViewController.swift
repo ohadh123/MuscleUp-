@@ -646,10 +646,19 @@ class ViewController: UIViewController {
         
         let delayInSeconds = 0.8
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {
-            ViewController.backgroundMusicPlayer.stop()
+            //ViewController.backgroundMusicPlayer.stop()
+            
+            JSSAlertView().show(
+                self,
+                title: "In Progress!",
+                text: "Gameplay is almost finished.",
+                color: .cyan
+            )
+
+            /**
             let playViewController = PlayViewController()
             playViewController.modalTransitionStyle = .crossDissolve
-            self.present(playViewController, animated: true, completion: nil)
+            self.present(playViewController, animated: true, completion: nil)**/
         }
 
         
@@ -659,7 +668,7 @@ class ViewController: UIViewController {
     func shopButtonMethod(){
         //print("Shop pressed")
         firstTimeOpeningApp = false
-        ViewController.backgroundMusicPlayer.stop()
+        //ViewController.backgroundMusicPlayer.stop()
 
         /**let popupVC = PopupCollectionViewController(fromVC: self)
         popupVC.presentViewControllers([ShopViewController(), ShopViewControllerTwo()], completion: nil)**/
@@ -683,9 +692,16 @@ class ViewController: UIViewController {
                                         
             ],
                                        completion: nil)**/
-        let shopViewController = ShopViewController()
-        shopViewController.modalTransitionStyle = .crossDissolve
-        self.present(shopViewController, animated: true, completion: nil)
+        
+        JSSAlertView().show(
+            self,
+            title: "In Progress!",
+            text: "Shop will be added soon",
+            color: .cyan
+        )
+//        let shopViewController = ShopViewController()
+//        shopViewController.modalTransitionStyle = .crossDissolve
+//        self.present(shopViewController, animated: true, completion: nil)
 
     }
     
@@ -702,10 +718,18 @@ class ViewController: UIViewController {
     func creditsButtonMethod(){
         //print("Credits Pressed")
         firstTimeOpeningApp = false
-        ViewController.backgroundMusicPlayer.stop()
-        let creditsViewController = CreditsViewController()
-        creditsViewController.modalTransitionStyle = .crossDissolve
-        self.present(creditsViewController, animated: true, completion: nil)
+        //ViewController.backgroundMusicPlayer.stop()
+        
+        JSSAlertView().show(
+            self,
+            title: "In Progress!",
+            text: "Credits will be added soon",
+            color: .cyan
+        )
+        
+//        let creditsViewController = CreditsViewController()
+//        creditsViewController.modalTransitionStyle = .crossDissolve
+//        self.present(creditsViewController, animated: true, completion: nil)
     }
     
     func confettiButtonMethod(){
@@ -721,16 +745,9 @@ class ViewController: UIViewController {
             //delay: 10000
         )
         
-        /**if confettiIsActive {
-            stopConfetti()
-            confettiIsActive = false
-            
-        }**/
-        //else{
+
         startConfetti()
-            //confettiIsActive = true
-            
-        //}
+
         let delayInSeconds = 4.0
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {
             self.stopConfetti()

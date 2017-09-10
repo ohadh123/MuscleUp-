@@ -1,0 +1,38 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/ohadkoronyo/Desktop/MuscleUp-/build/Debug-iphonesimulator/Bottomsheet/Bottomsheet.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Bottomsheet-Swift.h",
+          'external-contents': "/Users/ohadkoronyo/Desktop/MuscleUp-/build/Debug-iphonesimulator/Bottomsheet/Bottomsheet.framework/Headers/Bottomsheet-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "Bottomsheet-umbrella.h",
+          'external-contents': "/Users/ohadkoronyo/Desktop/MuscleUp-/Pods/Target Support Files/Bottomsheet/Bottomsheet-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Bottomsheet.h",
+          'external-contents': "/Users/ohadkoronyo/Desktop/MuscleUp-/Pods/Bottomsheet/Sources/Bottomsheet.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/ohadkoronyo/Desktop/MuscleUp-/build/Debug-iphonesimulator/Bottomsheet/Bottomsheet.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/ohadkoronyo/Desktop/MuscleUp-/build/Pods.build/Debug-iphonesimulator/Bottomsheet.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}
